@@ -13,7 +13,7 @@ public class DBConnect {
 
 	}
 
-	private void showPlayerStatus() {
+	private void showPlayerStats() {
 		try {
 			Class.forName("org.postgresql.Driver");
 		} catch (Exception e) {
