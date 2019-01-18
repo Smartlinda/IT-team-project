@@ -1,11 +1,12 @@
 package commandline;
 
-public class HumanUser {
+public class HumanUser extends GenericUser {
 	
-	String name;
+	private static int userID = 0;
+	private String name;
 	
-	public HumanUser() {
-		
+	public HumanUser(String name) {
+		this.name = name; 
 	}
 	
 	public void setUserName(String name) {
