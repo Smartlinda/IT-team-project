@@ -16,6 +16,7 @@ public class Card {
 	
 	public int[] getAttributeValues() {
 		return attributeValues;
+		// something
 	}
 
 }
