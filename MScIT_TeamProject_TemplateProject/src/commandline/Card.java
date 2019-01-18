@@ -2,8 +2,8 @@ package commandline;
 
 public class Card {
 	
-	String cardName;
-	int[] attributeValues;
+	private String cardName;
+	private int[] attributeValues;
 	
 	public Card(String n, int[] v) {
 		cardName = n;
