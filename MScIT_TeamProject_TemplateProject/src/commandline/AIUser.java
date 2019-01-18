@@ -3,6 +3,7 @@ package commandline;
 public class AIUser extends GenericUser {
 	
 	int userID;
+	int howManyCardsLeft;
 	
 	
 	public AIUser(int userID) {
