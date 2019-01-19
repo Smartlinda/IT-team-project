@@ -87,29 +87,7 @@ public class Model
       }
       return cardValues;
    }
-   //Method to create writeGameLogsToFile
-   //Not sure if it should just be one method that takes all arguments and writes to file
-   //Since it can be messy
-   public static void writeToFile(String sequence)
-   {
-      PrintWriter write = null;
-      String fileName = "toptrumps.log";
-      try
-      {
-         FileOutputStream fileOut = new FileOutputStream(fileName, true);
-         write = new PrintWriter(fileOut);
-      }
-      catch (FileNotFoundException e)
-      {
-         
-         System.err.println("No file was found");
-      }
-      
-      write.println(sequence);
-      write.close();    
-   }
 
-  
    //test area
    public static void main(String[] args)
    {
@@ -118,7 +96,7 @@ public class Model
       // System.out.println(titles.get(0));
       String[] name = getCardHeader(filePath);
       System.out.println(name[0]);
-      writeToFile("Hello, world");
+      
    }
 
 }
