@@ -1,6 +1,5 @@
 package commandline;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -53,7 +52,7 @@ public class Model
    }
    
 //working fine
-   public static ArrayList<String> getCards(String filePath)
+   public ArrayList<String> getCards(String filePath)
    {
       ArrayList<String> cardValues = new ArrayList<String>();
       BufferedReader input = null;
@@ -91,7 +90,7 @@ public class Model
    //Method to create writeGameLogsToFile
    //Not sure if it should just be one method that takes all arguments and writes to file
    //Since it can be messy
-   public void writeToFile(String sequence)
+   public static void writeToFile(String sequence)
    {
       PrintWriter write = null;
       String fileName = "toptrumps.log";
@@ -119,11 +118,7 @@ public class Model
       // System.out.println(titles.get(0));
       String[] name = getCardHeader(filePath);
       System.out.println(name[0]);
-      // for (int i = 0; i < titles.length; i++)
-      // {
-      // System.out.println(titles[i]);
-      // }
+      writeToFile("Hello, world");
    }
-
 
 }
