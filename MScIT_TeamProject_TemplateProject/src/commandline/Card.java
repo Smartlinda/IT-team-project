@@ -1,22 +1,20 @@
 package commandline;
 
 public class Card {
-	
-	private String cardName;
-	private int[] attributeValues;
-	
-	public Card(String n, int[] v) {
-		cardName = n;
-		attributeValues = v;
-	}
-	
-	public String getCardName() {
-		return cardName;
-	}
-	
-	public int[] getAttributeValues() {
-		return attributeValues;
-		// something
+
+	protected String cardName; // The name for a card, e.g. velociraptor
+	protected int[] attributeValues; // The number values for each category for this card
+
+	public Card(String cardName, int[] attributeValues) { // Create a card with given name and attributes
+		this.cardName = cardName;
+		this.attributeValues = attributeValues;
 	}
 
+	public String getCardName() { // Return the card name
+		return cardName;
+	}
+
+	public int[] getAttributeValues() { // Return the values of the attributes
+		return attributeValues;
+	}
 }

@@ -1,36 +1,26 @@
 package commandline;
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class ReadDeck {
-	
-	static List<String> Card = new ArrayList<>();
+public class Model
+{
+   private String filePath;
+   private String[] cardHeader;
+   private String[][] cards;
+   private int numberOfAllCards;
    private int numberOfPlayers;
-	
-	
 
-	public void read_deck() throws IOException {
-		Object[] array = null;
-		BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\ALEXANDRA\\eclipse-workspace\\TeamProject\\StarCitizenDeck.txt"));
-		String line;
-		//br.next(); // ignore the first line
-		while ((line = br.readLine()) != null) {
-			String[] splited = line.split("\\s");
-			Card.add(splited);
-
-
-		}
-		br.close();
-
-
-	}
-
-	public static List<String> get_Card() {
-		return Card;
-
-	}
-	
-	//not working properly yet
+   public Model(String filePath)
+   {
+      this.filePath = filePath;
+   }
+//not working properly yet
    public static String[] getCardHeader(String filePath)
    {
 
@@ -62,7 +52,7 @@ public class ReadDeck {
    }
    
 //working fine
-   public static ArrayList<String> getCards(String filePath)
+   public ArrayList<String> getCards(String filePath)
    {
       ArrayList<String> cardValues = new ArrayList<String>();
       BufferedReader input = null;
@@ -97,37 +87,16 @@ public class ReadDeck {
       }
       return cardValues;
    }
-   //Method to create writeGameLogsToFile
-   //Not sure if it should just be one method that takes all arguments and writes to file
-   //Since it can be messy
-   public void writeToFile(String sequence)
+
+   //test area
+   public static void main(String[] args)
    {
-      PrintWriter write = null;
-      String fileName = "toptrumps.log";
-      try
-      {
-         FileOutputStream fileOut = new FileOutputStream(fileName, true);
-         write = new PrintWriter(fileOut);
-      }
-      catch (FileNotFoundException e)
-      {
-         
-         System.err.println("No file was found");
-      }
+      String filePath = "C:\\Users\\Adriano\\eclipse-workspace\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
+      // ArrayList<String> titles = readCards(filePath);
+      // System.out.println(titles.get(0));
+      String[] name = getCardHeader(filePath);
+      System.out.println(name[0]);
       
-      write.println(sequence);
-      write.close();    
    }
-
-
-	public static void main(String[] args) throws IOException {
-		ReadDeck read_deck = new ReadDeck(); 
-		read_deck.read_deck();       	
-		System.out.println(get_Card());
-		
-		
-		
-		
-	}
 
 }
