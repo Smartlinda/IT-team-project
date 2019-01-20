@@ -22,10 +22,9 @@ public class Model
       this.filePath = filePath;
    }
 //working, 0th position will only contain the word description, you might want to avoid it
-   public static String[] getCardHeader(String filePath)
+   public static String[] getCardHeaders(String filePath)
    {
-
-      
+  
       FileInputStream s;
       String[] headers = null;
       try
@@ -89,19 +88,43 @@ public class Model
       }
       return cardValues;
    }
-   public static ArrayList<String> read_attributeValues(String filePath) throws IOException {
-      
-      ArrayList<String> attributeValues = new ArrayList<>();
-      Object[] array = null;
-      BufferedReader br = new BufferedReader(new FileReader("filePath"));
-      br.readLine();
-      String line = null;
+   
+   //working fine
+   public static ArrayList<String> readCardAttributes(String filePath)
 
-      while ((line = br.readLine()) != null) {
-         String[] splited = line.split(" ");
-         attributeValues.add(splited[0]);
+   {
+      ArrayList<String> attributeValues = new ArrayList<>();
+      BufferedReader br = null;
+      try
+      {
+         br = new BufferedReader(new FileReader(filePath));
+         br.readLine();
+         String line = null;
+         while ((line = br.readLine()) != null)
+         {
+            attributeValues.add(line.substring(line.split(" ")[0].length() + 1,
+                  line.length()));
+         }
       }
-      br.close(); 
+      catch (IOException e)
+      {
+         e.printStackTrace();
+      }
+      finally
+      {
+         if (br != null)
+         {
+            try
+            {
+
+               br.close();
+            }
+            catch (IOException e)
+            {
+               e.printStackTrace();
+            }
+         }
+      }
       return attributeValues;
    }
    //test area
@@ -110,7 +133,7 @@ public class Model
       String filePath = "C:\\Users\\Adriano\\eclipse-workspace\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
        ArrayList<String> titles = getCards(filePath);
        System.out.println(titles.get(0));
-      String[] name = getCardHeader(filePath);
+      String[] name = getCardHeaders(filePath);
       System.out.println(name[0]);
       
       
