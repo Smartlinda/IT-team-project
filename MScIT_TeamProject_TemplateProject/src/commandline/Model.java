@@ -1,5 +1,6 @@
 package commandline;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -20,21 +21,22 @@ public class Model
    {
       this.filePath = filePath;
    }
-//not working properly yet
+//working, 0th position will only contain the word description, you might want to avoid it
    public static String[] getCardHeader(String filePath)
    {
 
-      String[] header = null;
-      FileReader s;
+      
+      FileInputStream s;
+      String[] headers = null;
       try
       {
-         s = new FileReader(filePath);
+         s = new FileInputStream(filePath);
          Scanner rf = new Scanner(s);
-         while (rf.hasNext())
-         {
-            String line = rf.next();
-            header = line.split(" ");
-         }
+         
+         String firstline = rf.nextLine();
+         firstline.trim();
+         headers = firstline.split(" ");
+         
          rf.close();
       }
       catch (FileNotFoundException e)
@@ -42,7 +44,7 @@ public class Model
          e.printStackTrace();
       }
 
-      return header;
+      return headers;
    }
 
    // minimum of 1, maximum of 4, not tested 
@@ -52,7 +54,7 @@ public class Model
    }
    
 //working fine
-   public ArrayList<String> getCards(String filePath)
+   public static  ArrayList<String> getCards(String filePath)
    {
       ArrayList<String> cardValues = new ArrayList<String>();
       BufferedReader input = null;
@@ -87,15 +89,31 @@ public class Model
       }
       return cardValues;
    }
+   public static ArrayList<String> read_attributeValues(String filePath) throws IOException {
+      
+      ArrayList<String> attributeValues = new ArrayList<>();
+      Object[] array = null;
+      BufferedReader br = new BufferedReader(new FileReader("filePath"));
+      br.readLine();
+      String line = null;
 
+      while ((line = br.readLine()) != null) {
+         String[] splited = line.split(" ");
+         attributeValues.add(splited[0]);
+      }
+      br.close(); 
+      return attributeValues;
+   }
    //test area
    public static void main(String[] args)
    {
       String filePath = "C:\\Users\\Adriano\\eclipse-workspace\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
-      // ArrayList<String> titles = readCards(filePath);
-      // System.out.println(titles.get(0));
+       ArrayList<String> titles = getCards(filePath);
+       System.out.println(titles.get(0));
       String[] name = getCardHeader(filePath);
       System.out.println(name[0]);
+      
+      
       
    }
 
