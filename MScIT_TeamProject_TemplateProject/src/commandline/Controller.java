@@ -6,7 +6,6 @@ import java.util.*;
 //things to solve
 //-----------------------------------------
 // - add players to the userArray (in their constructor or what?)
-// - get the number of all cards from the model maybe?
 // - testing if the methods work or not (i will do that (reka))
 
 public class Controller {
@@ -20,6 +19,7 @@ public class Controller {
 	private ArrayList<Card> cardCon; // card content which includes name and values
 	private ArrayList<Card> drawStack; // an arraylist to store the cards in play/in the middle when its a draw
 	private Integer[] shuffledArray;
+	protected Model model;
 
 	public Controller() {
 	}
@@ -38,7 +38,7 @@ public class Controller {
 		// need a number of all cards (numberOfAllCards) - maybe from the model?
 
 		// a loop for the start of the game
-		for (int j = 0; j < numberOfAllCards; j++) {
+		for (int j = 0; j < model.numberOfAllCards; j++) {
 			userArray[j % numberOfUsers].addCard(cardCon.get(shuffledArray[j])); // add the shuffled card to the
 																					// specific player
 		} // for any questions message reka ok ok
@@ -103,8 +103,8 @@ public class Controller {
 		Random randNum = new Random(); // from 1 to #totalcards, for example if #totalcards is 5, then
 		Set<Integer> shuffledDeck = new LinkedHashSet<Integer>(); // it will be sth like [2,5,1,4,3] instead of
 																	// [1,2,3,4,5]
-		while (shuffledDeck.size() < numberOfAllCards) { // maybe need to change to [0,1,2,3,4]
-			Integer next = randNum.nextInt(numberOfAllCards) + 1; // add a random number to the set until there are
+		while (shuffledDeck.size() < model.numberOfAllCards) { // maybe need to change to [0,1,2,3,4]
+			Integer next = randNum.nextInt(model.numberOfAllCards) + 1; // add a random number to the set until there are
 																	// enough
 			shuffledDeck.add(next);
 		}

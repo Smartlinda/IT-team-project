@@ -14,7 +14,7 @@ public class Model
    private String filePath;
    private String[] cardHeader;
    private String[][] cards;
-   private int numberOfAllCards;
+   protected static int numberOfAllCards;
    private int numberOfPlayers;
 
    public Model(String filePath)
@@ -86,6 +86,7 @@ public class Model
 
          }
       }
+      numberOfAllCards = cardValues.size();
       return cardValues;
    }
    
