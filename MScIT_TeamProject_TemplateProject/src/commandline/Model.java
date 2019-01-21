@@ -2,10 +2,8 @@ package commandline;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,8 +19,9 @@ public class Model
    {
       this.filePath = filePath;
    }
-//working, 0th position will only contain the word description, you might want to avoid it
-   public static String[] getCardHeaders(String filePath)
+   //working, 0th position will only contain the word description, you might want to avoid it
+   //   gets the header for the meaning of the values that are collected
+   public String[] getCardHeaders(String filePath)
    {
   
       FileInputStream s;
@@ -52,8 +51,9 @@ public class Model
       this.numberOfPlayers = numbberOfPlayers;
    }
    
-//working fine
-   public static  ArrayList<String> getCards(String filePath)
+   //working fine
+   //collects cards to an arraylist   
+   public ArrayList<String> getCards(String filePath)
    {
       ArrayList<String> cardValues = new ArrayList<String>();
       BufferedReader input = null;
@@ -91,7 +91,8 @@ public class Model
    }
    
    //working fine
-   public static ArrayList<String> readCardAttributes(String filePath)
+   //reads the values of the attributes in the cards
+   public ArrayList<String> readCardAttributes(String filePath)
 
    {
       ArrayList<String> attributeValues = new ArrayList<>();
@@ -132,10 +133,10 @@ public class Model
    public static void main(String[] args)
    {
       String filePath = "C:\\Users\\Adriano\\eclipse-workspace\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
-       ArrayList<String> titles = getCards(filePath);
-       System.out.println(titles.get(0));
-      String[] name = getCardHeaders(filePath);
-      System.out.println(name[0]);
+//       ArrayList<String> titles = getCards(filePath);
+//       System.out.println(titles.get(0));
+//      String[] name = getCardHeaders(filePath);
+//      System.out.println(name[0]);
       
       
       

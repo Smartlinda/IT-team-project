@@ -94,7 +94,7 @@ public class writeToLog
    // working, needs to be tested with the program
    // the content of the communal pile has to be written to file when cards are
    // added or removed
-   public static void writeContentsOFCommunalPileToFile(
+   public void writeContentsOFCommunalPileToFile(
          ArrayList<String> communalPile)
    {
       PrintWriter write = null;
@@ -197,7 +197,7 @@ public class writeToLog
       write.close();
    }
    // tested and working, but needs to be tested with input from the game winner
-   public static void writeWinnerToFile(String gameWinner)
+   public void writeWinnerToFile(String gameWinner)
    {
       PrintWriter write = null;
       String fileName = "toptrumps.log";
@@ -233,6 +233,6 @@ public class writeToLog
       //
       // writeCompleteDeckToFile(arr);
       // writeCompleteShuffledDeckToFile(shuffledDeck);
-      writeWinnerToFile(filePath);
+//      writeWinnerToFile(filePath);
    }
 }
