@@ -2,8 +2,7 @@ package commandline;
 
 public class AIUser extends GenericUser {
 
-	private static int nextID = 1;
-	private int numberOfWinsForUser = 0;
+	private static int nextID = 1;   // to automatically assign incremented id to the AI
 
 	Controller controller = new Controller();
 
@@ -22,8 +21,6 @@ public class AIUser extends GenericUser {
 		}
 		return selectedCategory; // Return the index of the highest value
 	}
-
 }
 
-//Need to make classes properly
-//Adjust controller
+

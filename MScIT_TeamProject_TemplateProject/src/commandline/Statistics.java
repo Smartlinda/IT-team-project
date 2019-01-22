@@ -50,7 +50,7 @@ public class Statistics {
 		return drawsInGame;
 	}
 	
-	private void numberOfRoundsPlayedInAGame() {
+	private int numberOfRoundsPlayedInAGame() {
 		int maxRoundsInGame = 0;
 		/*
 		 * ADD CODE HERE
