@@ -8,6 +8,8 @@ import java.sql.Statement;
 
 public class DBConnect {
 
+	// update comment out some stuff
+	
 	// build constructor
 	public DBConnect() {
 		showPlayerStats();

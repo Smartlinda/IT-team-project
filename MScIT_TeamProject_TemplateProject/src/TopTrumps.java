@@ -16,7 +16,7 @@ public class TopTrumps {
 		
 		
 		/*
-		 * Use this if Player selects to see the stats
+		 * Use this if Player selects to see the statistics
 		 */
 //		DBConnect db = new DBConnect();
 		
