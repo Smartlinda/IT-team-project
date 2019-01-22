@@ -16,7 +16,7 @@ public class ReadDeck {
 		//br.next(); // ignore the first line
 		while ((line = br.readLine()) != null) {
 			String[] splited = line.split("\\s");
-			Card.add(splited);
+			Card.toArray(splited); // Changed this from Card.add(splited) to Card.toArray(splited) - Adamos
 
 
 		}
