@@ -10,7 +10,7 @@ public class DBConnect {
 
 	// build constructor
 	public DBConnect() {
-
+		showPlayerStats();
 	}
 
 	private void showPlayerStats() {
@@ -22,7 +22,7 @@ public class DBConnect {
 		} // try-catch exception
 
 		// the driver is loaded...
-		System.out.println("PostgreSQL JDBC Driver found!");
+//		System.out.println("PostgreSQL JDBC Driver found!");
 
 		// proceed with a database connection
 		Connection connection = null;
@@ -40,7 +40,7 @@ public class DBConnect {
 		// if connection has been established then proceed with the actions
 		if (connection != null) {
 			try {
-				System.out.println("Established connection to database.\n");
+//				System.out.println("Established connection to database.\n");
 				Statement smt = connection.createStatement();
 				// query to display all records from table postgre
 				String q = "SELECT * FROM games_stats";

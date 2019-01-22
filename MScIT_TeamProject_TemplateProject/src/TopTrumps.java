@@ -1,3 +1,4 @@
+import commandline.DBConnect;
 import commandline.TopTrumpsCLIApplication;
 
 import online.TopTrumpsOnlineApplication;
@@ -12,6 +13,15 @@ public class TopTrumps {
 		System.out.println("--------------------");
 		System.out.println("--- Top Trumps   ---");
 		System.out.println("--------------------");
+		
+		
+		/*
+		 * Use this if Player selects to see the stats
+		 */
+//		DBConnect db = new DBConnect();
+		
+		
+		
 		
 		// command line switches
 		boolean onlineMode = false;
