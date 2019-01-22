@@ -23,7 +23,7 @@ public class TopTrumps {
 				"        \\|__|  \\|_______|\\|__|               \\|__|  \\|__|\\|__|\\|_______|\\|__|     \\|__|\\|__|    |\\_________\\\n" + 
 				"                                                                                                \\|_________|\n" + 
 				"                                                                                                            \n" + 
-				"                                                                                                            ");
+				"                                                                                                            \n");
 		
 		
 		
@@ -31,7 +31,7 @@ public class TopTrumps {
 		/*
 		 * Use this if Player selects to see the statistics
 		 */
-//		DBConnect db = new DBConnect();
+		DBConnect db = new DBConnect();
 		
 		
 		
