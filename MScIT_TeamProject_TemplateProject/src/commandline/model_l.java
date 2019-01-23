@@ -18,14 +18,14 @@ public class model_l {
 	private int[] aV;
 	private ArrayList<Card> cardCon; // all cards
 
-	public model_linda() {
+	public model_l() {
 	}
 	
 	public void readContent() {
 		cardCon = new ArrayList<Card>();
 		try {
-			BufferedReader brd = new BufferedReader(new FileReader("StarCitizenDeck.txt"));
-			String head = brd.readLine();//hhgf
+			BufferedReader brd = new BufferedReader(new FileReader("StarCitizenDeck.txt"));   //need to change this to what we were given, so in the default folder
+			String head = brd.readLine();
 			cardHeader = head.split(" ");
 			while (brd.ready()) {
 				String con = brd.readLine();//read in one row

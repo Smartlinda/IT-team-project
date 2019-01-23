@@ -26,8 +26,6 @@ public class Model
 	static List<String> cardName = new ArrayList<>();
 
 
-
-
 	public Model
 	(String filePath)
 	{

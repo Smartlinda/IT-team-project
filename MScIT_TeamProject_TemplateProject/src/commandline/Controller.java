@@ -14,7 +14,7 @@ public class Controller {
 	// ai, so all users in 1 array (userArray)
 	private int numberOfUsers;
 	private int numberOfActivePlayers;
-	private GenericUser[] userArray = new GenericUser[5]; // 5 is the maximum number of players
+	protected GenericUser[] userArray;// = new GenericUser[5]; // 5 is the maximum number of players
 
 	private ArrayList<Card> cardCon; // card content which includes name and values
 	private ArrayList<Card> drawStack; // an arraylist to store the cards in play/in the middle when its a draw
