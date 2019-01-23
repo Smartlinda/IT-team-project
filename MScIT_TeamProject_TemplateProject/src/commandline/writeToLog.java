@@ -63,12 +63,7 @@ public class writeToLog
    // not working this method must write to the file the content
    // of the deck for each user once the deck is allocated to each user
    // it must indicate for each of them if the user is an AI or a human
-   // Will probably take four arguments, that are the distributed decks
-   // and "listen" to the type of use, a method something like, is user human   
-   //Might also be used to get the content of each deck aft
-   public static void writeUsersDeckContentToFile(
-         ArrayList<String> shuffledDeck)
-   {
+   public static void writeUsersDeckContentToFile( ArrayList<String> shuffledDeck){
       PrintWriter write = null;
       String fileName = "toptrumps.log";
       try
@@ -82,7 +77,7 @@ public class writeToLog
          System.err.println("No file was found");
       }
       write.print("\n---------");
-      write.print("\nShuffled deck: ");// needs to be changed
+      write.print("\nCards in deck: ");
       for (int i = 0; i < shuffledDeck.size(); i++)
       {
          String str = shuffledDeck.get(i).toString();
@@ -94,9 +89,7 @@ public class writeToLog
    // working, needs to be tested with the program
    // the content of the communal pile has to be written to file when cards are
    // added or removed
-   public void writeContentsOFCommunalPileToFile(
-         ArrayList<String> communalPile)
-   {
+   public void writeContentsOFCommunalPileToFile(ArrayList<String> communalPile){
       PrintWriter write = null;
       String fileName = "toptrumps.log";
       try
@@ -106,7 +99,6 @@ public class writeToLog
       }
       catch (FileNotFoundException e)
       {
-
          System.err.println("No file was found");
       }
       write.print("\n---------");
@@ -118,9 +110,9 @@ public class writeToLog
       }
       write.close();
    }
-   //not ready
+   //not tested
    //Should take four inputs from each user, meaning they are the cards from the top of the deck
-   public static void writeContentsOFCurrentCardsInPlayToFile(ArrayList<String> communalPile)
+   public static void writeContentsOfCurrentCardsInPlayToFile(Card cardInPlay)
    {
       PrintWriter write = null;
       String fileName = "toptrumps.log";
@@ -135,19 +127,15 @@ public class writeToLog
          System.err.println("No file was found");
       }
       write.print("\n---------");
-      write.print("\nContent of communal pile: ");
-      for (int i = 0; i < communalPile.size(); i++)
-      {
-         String str = communalPile.get(i).toString();
-         write.print("\n" + str);
-      }
+      write.print("\nContent of user's card: ");   
+      String str = cardInPlay.toString();
+      write.print("\n" + str);     
       write.close();
    }
    //not ready
    //only used when a user or computer selects category
-   public static void writeCategorySelectedAndValuesToFile(
-         ArrayList<String> communalPile)
-   {
+   //needs to create a method in the model just to get the headers
+   public static void writeCategorySelectedAndValuesToFile(ArrayList<String> header){
       PrintWriter write = null;
       String fileName = "toptrumps.log";
       try
@@ -161,12 +149,11 @@ public class writeToLog
          System.err.println("No file was found");
       }
       write.print("\n---------");
-      write.print("\nContent of communal pile: ");
-      for (int i = 0; i < communalPile.size(); i++)
-      {
-         String str = communalPile.get(i).toString();
+      write.print("\nSelected category: ");
+      
+         String str = "ff";
          write.print("\n" + str);
-      }
+      
       write.close();
    }
    //not working
