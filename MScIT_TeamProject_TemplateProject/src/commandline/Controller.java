@@ -107,7 +107,7 @@ public class Controller {
 			Integer next = randNum.nextInt(model.getDeckSize()) + 1; // add a random number to the set until there are
 																	// enough
 			shuffledDeck.add(next);
-			
+		
 					}
 		shuffledArray = shuffledDeck.toArray(new Integer[shuffledDeck.size()]);
 		for (int j = 0; j < shuffledArray.length; j++) {

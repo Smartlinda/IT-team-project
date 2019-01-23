@@ -54,7 +54,6 @@ public class Model
       {
          e.printStackTrace();
       }
-     
    }
 
    public int getDeckSize()
