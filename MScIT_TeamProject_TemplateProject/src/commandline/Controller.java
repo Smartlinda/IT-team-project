@@ -36,28 +36,13 @@ public class Controller {
 
 	public void distributeCards() {
 
-		// need a number of all cards (numberOfAllCards) - maybe from the model?
-
 		// a loop for the start of the game
 		for (int j = 0; j < model.getDeckSize(); j++) {
 			userArray[j % numberOfUsers].addCard(cardCon.get(shuffledArray[j])); // add the shuffled card to the
-																					// specific player
-		} // for any questions message reka ok ok
+																				// specific player
+		}
 
-// lindas code, maybe not needed now? replaced by the above.
-//-------------------------------------------------------------------------------------------------
-//		personalDeck = new Card[numberOfAllCards / n + 1][n];     			
-//		int k = 0;
-//		for (int j = 0; j < numberOfAllCards / n; j++) {
-//			for (int i = 0; i < n; i++) {
-//				personalDeck[j][i] = cardCon.get(i + n * k);
-//				k++;
-//			}
-//		}
-//		for (int i = 0; i < numberOfAllCards % n; i++) {
-//			personalDeck[numberOfAllCards / n][i] = cardCon.get(i + n * (numberOfAllCards / n + 1));
-//		}
-// -------------------------------------------------------------------------------------------
+
 	}
 
 	public void changeOwnership(int i) { // i is the winner, the compile deck will regarded as a winner as well
