@@ -8,7 +8,13 @@ import java.sql.Statement;
 
 public class DBConnect {
 
-	// update comment out some stuff
+	String gamesPlayed;
+	String gamesWon;
+	String gamesAIWon;
+	String averageDraws;
+	String drawsRecord;
+	String roundsRecord;
+	String totalRounds;
 	
 	// build constructor
 	public DBConnect() {
@@ -59,6 +65,14 @@ public class DBConnect {
 							"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
 
 					do {
+						gamesPlayed = rs.getString(1);
+						gamesWon = rs.getString(2);
+						gamesAIWon = rs.getString(3);
+						averageDraws = rs.getString(4);
+						drawsRecord = rs.getString(5);
+						roundsRecord = rs.getString(6);
+						totalRounds = rs.getString(7);
+						
 						System.out.format(leftAlignFormat, rs.getString(1), rs.getString(2), rs.getString(3),
 								rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
 					} while (rs.next());
@@ -76,4 +90,73 @@ public class DBConnect {
 			System.out.println("Oups! Something went wrong! Is your machine connected to the Internet?");
 		} // if-else
 	}// end of method
+	
+	/*
+	 * GETTERS AND SETTERS - START
+	 */
+	
+	public String getGamesPlayed() {
+		return gamesPlayed;
+	}
+
+	public void setGamesPlayed(String gamesPlayed) {
+		this.gamesPlayed = gamesPlayed;
+	}
+
+	public String getGamesWon() {
+		return gamesWon;
+	}
+
+	public void setGamesWon(String gamesWon) {
+		this.gamesWon = gamesWon;
+	}
+
+	public String getGamesAIWon() {
+		return gamesAIWon;
+	}
+
+	public void setGamesAIWon(String gamesAIWon) {
+		this.gamesAIWon = gamesAIWon;
+	}
+
+	public String getAverageDraws() {
+		return averageDraws;
+	}
+
+	public void setAverageDraws(String averageDraws) {
+		this.averageDraws = averageDraws;
+	}
+
+	public String getDrawsRecord() {
+		return drawsRecord;
+	}
+
+	public void setDrawsRecord(String drawsRecord) {
+		this.drawsRecord = drawsRecord;
+	}
+
+	public String getRoundsRecord() {
+		return roundsRecord;
+	}
+
+	public void setRoundsRecord(String roundsRecord) {
+		this.roundsRecord = roundsRecord;
+	}
+
+	public String getTotalRounds() {
+		return totalRounds;
+	}
+
+	public void setTotalRounds(String totalRounds) {
+		this.totalRounds = totalRounds;
+	}
+
+	
+	/*
+	 * GETTERS AND SETTERS - END
+	 */
+	
+	
+//	UPDATE games_stats SET games_played = 284
+	
 }// end of class
