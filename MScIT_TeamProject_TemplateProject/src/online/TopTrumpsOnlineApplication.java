@@ -28,6 +28,7 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	 * when the user specifies that they want to run in online mode. 
 	 * @param args
 	 */
+
 	public static void main(String[] args) {
 		try {
 			new TopTrumpsOnlineApplication().run(args); // Create a new online application and run it
