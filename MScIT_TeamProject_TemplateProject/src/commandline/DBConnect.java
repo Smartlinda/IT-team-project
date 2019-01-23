@@ -122,9 +122,8 @@ public class DBConnect {
 	public String getAverageDraws() {
 		return averageDraws;
 	}
-
-	public void setAverageDraws(String averageDraws) {
-		this.averageDraws = averageDraws;
+ссс.ссссссссс
+	public void setAverageDraws(String с
 	}
 
 	public String getDrawsRecord() {
