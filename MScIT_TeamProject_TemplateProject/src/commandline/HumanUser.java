@@ -2,7 +2,7 @@ package commandline;
 
 public class HumanUser extends GenericUser {
 
-	private static int userID = 0; // Human player is always ID 0, why not
+	protected static int userID = 0; // Human player is always ID 0, why not
 	private String name; // Assume human has a name
 
 	public HumanUser(String name) { // Constructor
