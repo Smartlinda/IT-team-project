@@ -58,6 +58,7 @@ public class Model
 
    public String getHeader(int index)
    {
+      
       //+1 to avoid description
       return cardHeader[index + 1];
    }

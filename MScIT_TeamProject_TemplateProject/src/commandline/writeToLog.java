@@ -132,6 +132,7 @@ public class writeToLog
       write.print("\n" + str);     
       write.close();
    }
+   
    //not ready
    //only used when a user or computer selects category
    //needs to create a method in the model just to get the headers
