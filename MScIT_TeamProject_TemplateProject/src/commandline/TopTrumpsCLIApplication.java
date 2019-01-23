@@ -8,62 +8,69 @@ import java.util.Scanner;
 public class TopTrumpsCLIApplication {
 
 	/**
-	 * This main method is called by TopTrumps.java when the user specifies that they want to run in
-	 * command line mode. The contents of args[0] is whether we should write game logs to a file.
- 	 * @param args
+	 * This main method is called by TopTrumps.java when the user specifies that
+	 * they want to run in command line mode. The contents of args[0] is whether we
+	 * should write game logs to a file.
+	 * 
+	 * @param args
 	 */
 	public static void main(String[] args) {
+
+		Controller controller = new Controller();
 		
-		//not in the loop: this is a one time thing i think 
-	//------------------------------------------------------------------------------------------------------	
 		Scanner in = new Scanner(System.in);
-		System.out.println("Welcome! What's your name?");
-		String userName = in.nextLine(); // can be anything, like numbers,symbols we dont care, right?
-		HumanUser player = new HumanUser(userName);  //make human user with username
-//add the player to the userarray in controller
-		
-		/*
-		 * the underneath could be put into the loop but we need to make a variable that indicates if a game is running or not
-		 * for example a player could have finished a game and wants to play another one, and doesnt want to quit so we need to
-		 * give the option to play again without terminating the program. or do we terminate? 
-		 */
-		
-		System.out.println(   
+		System.out.print("Welcome! What's your name? ");
+		String userName = in.nextLine(); 
+		HumanUser player = new HumanUser(userName); // make human user with username
+
+		System.out.println(
 				"Hi " + userName + "! \nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics");
-		int selection = in.nextInt();  //do it this way because otherwise the scanner does weird shit			
-		System.out.print("");																					
-		if (selection == 1) { 
-			System.out.println("Game starts here.");		//start the game
-//			System.out.println("How many AI do you want?");
-// add the AI to the userarray in controller			
+		System.out.print("Enter your selection here: ");
+		int selection = in.nextInt(); 
+		System.out.print("");
+		if (selection == 1) {
+			System.out.print("Choose the number of opponents (1-4): ");
+			selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+			controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of aiplayers+1
+			controller.userArray[player.userID] = player; //add the player to the userarray in controller
+			for (int i = 0; i < selection; i++) {
+				AIUser ai = new AIUser();
+				controller.userArray[ai.userID] = ai;
+				
+			}
+			System.out.print("");
+			
+			System.out.println("Game starts here.");
+			
 		} else if (selection == 2) {
-			System.out.println("Statistics displayed here");		//display the statistics
-		} 
-		
-		in.close();
-//need to catch inputmismatchexceptions for when the user inputs something: when selecting a game or when selecting a statistic
-		//---------------------------------------------------------------------------------------------------
-
-		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-		if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
-		
-		// State
-		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
-		
-		// Loop until the user wants to exit the game
-		while (!userWantsToQuit) {
-
-			
-			// ----------------------------------------------------
-			// Add your game logic here based on the requirements
-			// ----------------------------------------------------
-			
-			
-			
-			userWantsToQuit=true; // use this when the user wants to exit the game
-			
+			System.out.println("Statistics displayed here");
+			// display the statistics
 		}
 
+//need to catch inputmismatchexceptions for when the user inputs something: when selecting a game or when selecting a statistic
+		// ---------------------------------------------------------------------------------------------------
+
+		boolean writeGameLogsToFile = false; // Should we write game logs to file?
+		// ------uncomment this----------if (args[0].equalsIgnoreCase("true"))
+		// writeGameLogsToFile=true; // Command line selection
+
+		// State
+		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
+
+		int roundCounter = 1;
+		// Loop until the user wants to exit the game
+		while (!userWantsToQuit) {
+			
+			System.out.println("Round " + roundCounter);
+			
+
+			roundCounter++;
+			// if () {
+			//	 userWantsToQuit=true; // use this when the user wants to exit the game
+			// }
+		}
+
+		in.close();
 
 	}
 

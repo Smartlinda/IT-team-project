@@ -14,10 +14,11 @@ public class Controller {
 	// ai, so all users in 1 array (userArray)
 	private int numberOfUsers;
 	private int numberOfActivePlayers;
-	private GenericUser[] userArray = new GenericUser[5]; // 5 is the maximum number of players
+	protected GenericUser[] userArray;// = new GenericUser[5]; // 5 is the maximum number of players
 
 	private ArrayList<Card> cardCon; // card content which includes name and values
 	private ArrayList<Card> drawStack; // an arraylist to store the cards in play/in the middle when its a draw
+	private ArrayList<Card> shuffledStack; // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected Model model;
 
@@ -35,28 +36,13 @@ public class Controller {
 
 	public void distributeCards() {
 
-		// need a number of all cards (numberOfAllCards) - maybe from the model?
-
 		// a loop for the start of the game
-		for (int j = 0; j < model.numberOfAllCards; j++) {
+		for (int j = 0; j < model.getDeckSize(); j++) {
 			userArray[j % numberOfUsers].addCard(cardCon.get(shuffledArray[j])); // add the shuffled card to the
-																					// specific player
-		} // for any questions message reka ok ok
+																				// specific player
+		}
 
-// lindas code, maybe not needed now? replaced by the above.
-//-------------------------------------------------------------------------------------------------
-//		personalDeck = new Card[numberOfAllCards / n + 1][n];     			
-//		int k = 0;
-//		for (int j = 0; j < numberOfAllCards / n; j++) {
-//			for (int i = 0; i < n; i++) {
-//				personalDeck[j][i] = cardCon.get(i + n * k);
-//				k++;
-//			}
-//		}
-//		for (int i = 0; i < numberOfAllCards % n; i++) {
-//			personalDeck[numberOfAllCards / n][i] = cardCon.get(i + n * (numberOfAllCards / n + 1));
-//		}
-// -------------------------------------------------------------------------------------------
+
 	}
 
 	public void changeOwnership(int i) { // i is the winner, the compile deck will regarded as a winner as well
@@ -98,17 +84,20 @@ public class Controller {
 		return (int) maxList.get(maxList.size() - 1); // return the winner
 	}
 
-	// i copied this from stackoverflow lol
 	public Integer[] shuffling() { // creates a set of shuffled (non-repeating) numbers
 		Random randNum = new Random(); // from 1 to #totalcards, for example if #totalcards is 5, then
 		Set<Integer> shuffledDeck = new LinkedHashSet<Integer>(); // it will be sth like [2,5,1,4,3] instead of
 																	// [1,2,3,4,5]
-		while (shuffledDeck.size() < model.numberOfAllCards) { // maybe need to change to [0,1,2,3,4]
-			Integer next = randNum.nextInt(model.numberOfAllCards) + 1; // add a random number to the set until there are
+		while (shuffledDeck.size() < model.getDeckSize()) { // maybe need to change to [0,1,2,3,4]
+			Integer next = randNum.nextInt(model.getDeckSize()); // add a random number to the set until there are
 																	// enough
 			shuffledDeck.add(next);
-		}
+		
+					}
 		shuffledArray = shuffledDeck.toArray(new Integer[shuffledDeck.size()]);
+		for (int j = 0; j < shuffledArray.length; j++) {
+		   shuffledStack.add(cardCon.get(shuffledArray[j]));
+		}
 		return shuffledArray; // return the set of shuffled numbers
 	}
 
