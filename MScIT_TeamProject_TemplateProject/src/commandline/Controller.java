@@ -18,6 +18,7 @@ public class Controller {
 
 	private ArrayList<Card> cardCon; // card content which includes name and values
 	private ArrayList<Card> drawStack; // an arraylist to store the cards in play/in the middle when its a draw
+	private ArrayList<Card> shuffledStack; // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected Model model;
 
@@ -98,7 +99,6 @@ public class Controller {
 		return (int) maxList.get(maxList.size() - 1); // return the winner
 	}
 
-	// i copied this from stackoverflow lol
 	public Integer[] shuffling() { // creates a set of shuffled (non-repeating) numbers
 		Random randNum = new Random(); // from 1 to #totalcards, for example if #totalcards is 5, then
 		Set<Integer> shuffledDeck = new LinkedHashSet<Integer>(); // it will be sth like [2,5,1,4,3] instead of
@@ -109,6 +109,9 @@ public class Controller {
 			shuffledDeck.add(next);
 		}
 		shuffledArray = shuffledDeck.toArray(new Integer[shuffledDeck.size()]);
+		for (int j = 0; j < shuffledArray.length; j++) {
+		   shuffledStack.add(cardCon.get(shuffledArray[j]));
+		}
 		return shuffledArray; // return the set of shuffled numbers
 	}
 
