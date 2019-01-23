@@ -89,7 +89,7 @@ public class Controller {
 		Set<Integer> shuffledDeck = new LinkedHashSet<Integer>(); // it will be sth like [2,5,1,4,3] instead of
 																	// [1,2,3,4,5]
 		while (shuffledDeck.size() < model.getDeckSize()) { // maybe need to change to [0,1,2,3,4]
-			Integer next = randNum.nextInt(model.getDeckSize()) + 1; // add a random number to the set until there are
+			Integer next = randNum.nextInt(model.getDeckSize()); // add a random number to the set until there are
 																	// enough
 			shuffledDeck.add(next);
 		
