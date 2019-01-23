@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class model_linda {
+public class model_l {
 	private String filePath;
 	private String[] cardHeader;
 	private String[][] cards;
