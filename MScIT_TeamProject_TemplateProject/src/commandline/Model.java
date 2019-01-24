@@ -10,14 +10,14 @@ import java.util.*;
 public class Model
 {
    private String filePath;
-   private String[] cardHeader;
+   protected String[] cardHeader = new String[6];
    private String[][] cards;
    protected static int numberOfAllCards;
    private int numberOfPlayers;
    private String[] row;
    private String[] subrow;
    private int[] aV;
-   private ArrayList<Card> cardCon; // all cards
+   protected ArrayList<Card> cardCon = new ArrayList<Card>(); // all cards
 
    public Model()
    {
