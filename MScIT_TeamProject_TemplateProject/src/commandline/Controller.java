@@ -22,7 +22,8 @@ public class Controller {
 	protected Model model = new Model();
 	
 
-	public Controller() {
+	public Controller(Model model) {
+		this.model = model;
 	}
 
 	
