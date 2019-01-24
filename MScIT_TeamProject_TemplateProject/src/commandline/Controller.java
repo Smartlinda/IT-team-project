@@ -2,21 +2,14 @@ package commandline;
 
 import java.util.*;
 
-//things to solve
-//-----------------------------------------
-// - add players to the userArray (in their constructor or what?)
-// - testing if the methods work or not (i will do that (reka))
-
 public class Controller {
 	private HumanUser humanUser; // only one human player
-	// private AIUser[] AIUsers; // maybe its stupid to have a separate array for
-	// ai, so all users in 1 array (userArray)
 	private int numberOfUsers;
 	private int numberOfActivePlayers;
 	protected GenericUser[] userArray;// = new GenericUser[5]; // 5 is the maximum number of players
 
-	private ArrayList<Card> drawStack; // an arraylist to store the cards in play/in the middle when its a draw
-	private ArrayList<Card> shuffledStack; // an arraylist to store the shuffled cards
+	private ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the middle when its a draw
+	private ArrayList<Card> shuffledStack = new ArrayList<Card>(); // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected Model model = new Model();
 

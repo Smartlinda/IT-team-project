@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class GenericUser {
 
 	protected int userID; // Users have an ID from 0 to 4.
-	protected int howManyCardsLeft; // How many cards do the players have left?
-	protected int numberOfWinsForUser = 0; // How many wins?
 	protected ArrayList<Card> personalDeck = new ArrayList<Card>(); // Collect all cards that are in my
 	// hand
+	protected int numberOfWinsForUser = 0; // How many wins?
+
 	//private Controller controller = new Controller();
 	protected int selectedCategory; // returns the index of the selected category
 
@@ -19,9 +19,9 @@ public class GenericUser {
 		return personalDeck;
 	}
 
-//	public int selectCategory(Card card) { // Not sure if this is the best way to make a method like this
-//		return selectedCategory;
-//	}
+	public int selectCategory(Card card) { // Not sure if this is the best way to make a method like this
+		return selectedCategory;
+	}
 
 //	public void calculateNumberOfWins() { // If this player is the winner of the round, add one to the number of
 //											// wins.

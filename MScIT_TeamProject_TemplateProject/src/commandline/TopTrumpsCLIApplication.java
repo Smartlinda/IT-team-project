@@ -3,6 +3,11 @@ package commandline;
 import java.util.Random;
 import java.util.Scanner;
 
+//need to
+//take players with 0 cards out of the game somehow
+//display the winner and winning cards
+//at the end of the game display stats
+
 /**
  * Top Trumps command line application
  */
@@ -79,42 +84,76 @@ public class TopTrumpsCLIApplication {
 		// ---------------------------------------------------------------------------------------------------
 
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-		// ------uncomment this----------if (args[0].equalsIgnoreCase("true"))
-		// writeGameLogsToFile=true; // Command line selection
-
+		/*
+		 * UNCOMMENT THIS LATER if (args[0].equalsIgnoreCase("true"))
+		 * writeGameLogsToFile=true; // Command line selection
+		 */
 		// State
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 
 		int roundCounter = 1;
 		Random randNum = new Random();
-		int winner = randNum.nextInt();
+		int winner = randNum.nextInt(controller.userArray.length);
+		int previousWinner = -2;
 		// Loop until the user wants to exit the game
 		while (!userWantsToQuit) {
 
+			if (winner == -1) {
+				winner = previousWinner;
+			}
+
+			System.out.println();
 			System.out.println("Round " + roundCounter);
 			System.out.println("Round " + roundCounter + ": Players have drawn their cards");
+
 			System.out.println("You drew '" + controller.userArray[0].personalDeck.get(0).getCardName() + "':");
+
 			for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
 				System.out.println(model.getHeader(i) + ": "
 						+ controller.userArray[0].personalDeck.get(0).getAttributeValues()[i]);
 			}
-			int numberOfleftCard = controller.userArray[0].personalDeck.size() - 1;
+			int numberOfleftCard = controller.userArray[0].personalDeck.size();
+
 			System.out.println("There are " + numberOfleftCard + " cards in your deck.");
 
-			if (controller.checkRoundWinner() == 0) {
+			if (winner == 0) {
 				System.out.println("It is your turn to select a category, the categories are: ");
 				for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
 					System.out.println(i + 1 + ": " + model.getHeader(i));
 				}
 				System.out.print("Enter the number for your attribute: ");
 				selection = in.nextInt();
-				controller.userArray[0].selectedCategory = selection;
+				controller.userArray[0].selectedCategory = selection - 1; // because the indices are not 1-5 its 0-4
+				System.out.println("You selected " + model.cardHeader[selection] + ".");
+
+			} else {
+				System.out.println("Player " + controller.userArray[winner].userID + "'s turn to select a category. ");
+
+				controller.userArray[winner].selectCategory(controller.userArray[winner].personalDeck.get(0));
+
+				System.out.println("Player " + controller.userArray[winner].userID + " selected "
+						+ model.cardHeader[controller.userArray[winner].selectedCategory] + ".");
+
 			}
 
+			// need to make a thing to show the winner and winning card
+
+			previousWinner = winner; // if there is a draw
+			winner = controller.checkRoundWinner();
+			controller.changeOwnership(winner);
 			roundCounter++;
-			// if () {
-			// userWantsToQuit=true; // use this when the user wants to exit the game
-			// }
+
+			for (int j = 0; j < controller.userArray.length; j++) {
+				if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
+					userWantsToQuit = true;
+					if (j == 0) {
+						System.out.println("Congrats, you win!");
+					} else {
+						System.out.println("The winner is: Player " + j + ".");
+					}
+					System.exit(0);
+				}
+			}
 		}
 
 		in.close();
