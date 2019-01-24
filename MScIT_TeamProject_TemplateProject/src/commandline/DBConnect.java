@@ -148,14 +148,9 @@ public class DBConnect {
 	public double getAverageDraws() {
 		return averageDraws;
 	}
-<<<<<<< HEAD
-ссс.ссссссссс
-	public void setAverageDraws(String с
-=======
 
 	public void setAverageDraws(double averageDraws) {
 		this.averageDraws = averageDraws;
->>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project.git
 	}
 
 	public int getDrawsRecord() {

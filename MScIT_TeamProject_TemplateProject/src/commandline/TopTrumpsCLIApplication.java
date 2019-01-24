@@ -17,9 +17,10 @@ public class TopTrumpsCLIApplication {
 	 */
 	public static void main(String[] args) {
 
-		Controller controller = new Controller();
 		Model model = new Model();
 		model.readContent();
+		
+		Controller controller = new Controller(model);
 
 		Scanner in = new Scanner(System.in);
 		System.out.print("Welcome! What's your name? ");

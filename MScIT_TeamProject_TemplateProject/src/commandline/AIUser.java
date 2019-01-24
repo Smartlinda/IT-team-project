@@ -4,7 +4,6 @@ public class AIUser extends GenericUser {
 
 	private static int nextID = 1; // to automatically assign incremented id to the AI
 
-	Controller controller = new Controller();
 
 	public AIUser() {
 		this.userID = nextID;
