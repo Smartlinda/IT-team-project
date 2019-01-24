@@ -17,7 +17,7 @@ public class Model
    private String[] row;
    private String[] subrow;
    private int[] aV;
-   private ArrayList<Card> cardCon; // all cards
+   protected ArrayList<Card> cardCon; // all cards
 
    public Model()
    {
@@ -54,6 +54,7 @@ public class Model
       {
          e.printStackTrace();
       }
+      numberOfAllCards = cardCon.size();
    }
 
    public String getHeader(int index)

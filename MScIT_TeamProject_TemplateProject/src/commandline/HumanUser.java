@@ -9,9 +9,9 @@ public class HumanUser extends GenericUser {
 		this.name = name;
 	}
 
-	public int selectCategory(Card card) { // We probably don't need this, but I just put it in
-		return selectedCategory; // delete if unnecessary (player selecting his own category)
-	}
+//	public int humanSelectCategory(Card card) { // We probably don't need this, but I just put it in
+//		return selectedCategory; // delete if unnecessary (player selecting his own category)
+//	}
 
 	public void setUserName(String name) { // Set the name
 		this.name = name;
