@@ -29,12 +29,30 @@ public class TopTrumpsCLIApplication {
 
 		System.out.println(
 				"Hi " + userName + "! \nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics");
+		
+		//
+		
+		
+		
 		System.out.print("Enter your selection here: ");
 		int selection = in.nextInt();
 		System.out.print("");
 		if (selection == 1) {
+			
+			//----
+			
+			do {
+			
+			
 			System.out.print("Choose the number of opponents (1-4): ");
+			
+			
 			selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+			
+			
+			try { 
+				if(1<=selection && selection <=4 ) {
+			
 			controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of aiplayers+1
 			controller.userArray[player.userID] = player; // add the player to the userarray in controller
 			for (int i = 0; i < selection; i++) {
@@ -45,8 +63,28 @@ public class TopTrumpsCLIApplication {
 			controller.distributeCards(); // distribute the cards to each player
 
 			System.out.print("");
-			System.out.println("Game starts here.");
-
+			
+						System.out.println("Game starts here.");
+			
+				}else {
+					throw new Exception();
+				}
+				
+			} catch (Exception  e) { 
+				System.out.println("Please choose a number between 1-4"); 
+			} 
+			}while(1>selection || selection>4  );
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//--------------------------------
+			
 		} else if (selection == 2) {
 			System.out.println("Statistics displayed here");
 			// display the statistics
@@ -64,7 +102,7 @@ public class TopTrumpsCLIApplication {
 
 		int roundCounter = 1;
 		Random randNum = new Random();
-		int winner = randNum
+		int winner = randNum.nextInt();
 		// Loop until the user wants to exit the game
 		while (!userWantsToQuit) {
 
