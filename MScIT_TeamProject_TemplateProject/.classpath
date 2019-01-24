@@ -12,6 +12,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/linda_xiong/Documents/GitHub/IT-team-project/MScIT_TeamProject_TemplateProject/src/commandline/postgresql-42.2.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
