@@ -2,7 +2,6 @@ package commandline;
 
 import java.util.*;
 
-
 //things to solve
 //-----------------------------------------
 // - add players to the userArray (in their constructor or what?)
@@ -20,13 +19,10 @@ public class Controller {
 	private ArrayList<Card> shuffledStack; // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected Model model = new Model();
-	
 
 	public Controller(Model model) {
 		this.model = model;
 	}
-
-	
 
 	public void someoneLost() { // to get rid of a player with no cards
 		numberOfActivePlayers--; // maybe not needed, we will see
@@ -36,10 +32,10 @@ public class Controller {
 
 		// a loop for the start of the game
 		for (int j = 0; j < model.numberOfAllCards; j++) {
-			userArray[j % userArray.length].addCard(model.cardCon.get(shuffledArray[j])); // add the shuffled card to the
-																				// specific player
+			userArray[j % userArray.length].addCard(model.cardCon.get(shuffledArray[j])); // add the shuffled card to
+																							// the
+			// specific player
 		}
-
 
 	}
 
@@ -53,8 +49,8 @@ public class Controller {
 
 			}
 			if (!drawStack.isEmpty()) { // if there is something in the draw stack
-				int drawStackSize = drawStack.size();  // need this because if we used drawStack.size in the loop, 
-													//it would change every iteration and it would not be correct
+				int drawStackSize = drawStack.size(); // need this because if we used drawStack.size in the loop,
+														// it would change every iteration and it would not be correct
 				for (int k = 0; k < drawStackSize; k++) {
 					userArray[i].addCard(drawStack.get(0)); // add those cards to the winner
 					drawStack.remove(0);
@@ -91,13 +87,13 @@ public class Controller {
 			Integer next = randNum.nextInt(model.numberOfAllCards); // add a random number to the set until there are
 																	// enough
 			shuffledDeck.add(next);
-		
+
 		}
 		shuffledArray = shuffledDeck.toArray(new Integer[shuffledDeck.size()]);
 		shuffledStack = new ArrayList<Card>();
 		for (int j = 0; j < shuffledArray.length; j++) {
-			
-		   shuffledStack.add(model.cardCon.get(shuffledArray[j]));
+
+			shuffledStack.add(model.cardCon.get(shuffledArray[j]));
 		}
 		return shuffledArray; // return the set of shuffled numbers
 	}

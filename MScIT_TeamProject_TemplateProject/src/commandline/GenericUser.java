@@ -8,7 +8,7 @@ public class GenericUser {
 	protected int howManyCardsLeft; // How many cards do the players have left?
 	protected int numberOfWinsForUser = 0; // How many wins?
 	protected ArrayList<Card> personalDeck = new ArrayList<Card>(); // Collect all cards that are in my
-											// hand
+	// hand
 	private Controller controller = new Controller();
 	protected int selectedCategory; // returns the index of the selected category
 
