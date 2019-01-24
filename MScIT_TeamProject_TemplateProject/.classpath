@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -15,4 +16,3 @@
 	<classpathentry kind="lib" path="C:/Users/szabo/Documents/GitHub/IT-team-project/MScIT_TeamProject_TemplateProject/src/commandline/postgresql-42.2.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
-
