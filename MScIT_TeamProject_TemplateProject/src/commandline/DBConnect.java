@@ -8,13 +8,13 @@ import java.sql.Statement;
 
 public class DBConnect {
 
-	String gamesPlayed;
-	String gamesWon;
-	String gamesAIWon;
-	String averageDraws;
-	String drawsRecord;
-	String roundsRecord;
-	String totalRounds;
+	int gamesPlayed;
+	int gamesWon;
+	int gamesAIWon;
+	double averageDraws;
+	int drawsRecord;
+	int roundsRecord;
+	int totalRounds;
 
 	// proceed with a database connection
 	Connection connection = null;
@@ -73,7 +73,7 @@ public class DBConnect {
 		}
 
 		// here if we uncomment this one we will get the table with the stats
-//		showTheStatsTable();
+		showTheStatsTable();
 
 	}
 	
@@ -94,13 +94,13 @@ public class DBConnect {
 
 				// Add the values within the table and also add the values to a global value
 				do {
-					gamesPlayed = rs.getString(1);
-					gamesWon = rs.getString(2);
-					gamesAIWon = rs.getString(3);
-					averageDraws = rs.getString(4);
-					drawsRecord = rs.getString(5);
-					roundsRecord = rs.getString(6);
-					totalRounds = rs.getString(7);
+					gamesPlayed = rs.getInt(1);
+					gamesWon = rs.getInt(2);
+					gamesAIWon = rs.getInt(3);
+					averageDraws = rs.getDouble(4);
+					drawsRecord = rs.getInt(5);
+					roundsRecord = rs.getInt(6);
+					totalRounds = rs.getInt(7);
 
 					System.out.format(leftAlignFormat, gamesPlayed, gamesWon, gamesAIWon, averageDraws, drawsRecord,
 							roundsRecord, totalRounds);
@@ -121,58 +121,64 @@ public class DBConnect {
 	 * GETTERS AND SETTERS - START
 	 */
 
-	public String getGamesPlayed() {
+	public int getGamesPlayed() {
 		return gamesPlayed;
 	}
 
-	public void setGamesPlayed(String gamesPlayed) {
+	public void setGamesPlayed(int gamesPlayed) {
 		this.gamesPlayed = gamesPlayed;
 	}
 
-	public String getGamesWon() {
+	public int getGamesWon() {
 		return gamesWon;
 	}
 
-	public void setGamesWon(String gamesWon) {
+	public void setGamesWon(int gamesWon) {
 		this.gamesWon = gamesWon;
 	}
 
-	public String getGamesAIWon() {
+	public int getGamesAIWon() {
 		return gamesAIWon;
 	}
 
-	public void setGamesAIWon(String gamesAIWon) {
+	public void setGamesAIWon(int gamesAIWon) {
 		this.gamesAIWon = gamesAIWon;
 	}
 
-	public String getAverageDraws() {
+	public double getAverageDraws() {
 		return averageDraws;
 	}
+<<<<<<< HEAD
 ссс.ссссссссс
 	public void setAverageDraws(String с
+=======
+
+	public void setAverageDraws(double averageDraws) {
+		this.averageDraws = averageDraws;
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project.git
 	}
 
-	public String getDrawsRecord() {
+	public int getDrawsRecord() {
 		return drawsRecord;
 	}
 
-	public void setDrawsRecord(String drawsRecord) {
+	public void setDrawsRecord(int drawsRecord) {
 		this.drawsRecord = drawsRecord;
 	}
 
-	public String getRoundsRecord() {
+	public int getRoundsRecord() {
 		return roundsRecord;
 	}
 
-	public void setRoundsRecord(String roundsRecord) {
+	public void setRoundsRecord(int roundsRecord) {
 		this.roundsRecord = roundsRecord;
 	}
 
-	public String getTotalRounds() {
+	public int getTotalRounds() {
 		return totalRounds;
 	}
 
-	public void setTotalRounds(String totalRounds) {
+	public void setTotalRounds(int totalRounds) {
 		this.totalRounds = totalRounds;
 	}
 

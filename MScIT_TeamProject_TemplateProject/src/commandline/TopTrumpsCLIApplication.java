@@ -30,7 +30,12 @@ public class TopTrumpsCLIApplication {
 		System.out.print("");
 		if (selection == 1) {
 			System.out.print("Choose the number of opponents (1-4): ");
+			
+			
 			selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+			
+			
+			
 			controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of aiplayers+1
 			controller.userArray[player.userID] = player; //add the player to the userarray in controller
 			for (int i = 0; i < selection; i++) {
