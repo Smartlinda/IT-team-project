@@ -45,7 +45,7 @@ public class Model
                                                                              // string[]
                                                                              // to
                                                                              // int[]
-            Card card = new Card(row[0], aV);// make a card object
+            Card card = new Card(row[0], aV, this);// make a card object
             cardCon.add(card); // store into the arraylist that contains all
                                // cards
          }

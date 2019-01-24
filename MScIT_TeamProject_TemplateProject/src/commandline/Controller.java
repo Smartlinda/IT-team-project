@@ -22,7 +22,8 @@ public class Controller {
 	private Integer[] shuffledArray;
 	protected Model model;
 
-	public Controller() {
+	public Controller(Model model) {
+		this.model = model;
 	}
 
 	public void setNumberOfUsers(int numberOfAI) { // to know how many players there are in total
