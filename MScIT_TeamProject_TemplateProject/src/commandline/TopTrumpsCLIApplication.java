@@ -19,7 +19,7 @@ public class TopTrumpsCLIApplication {
 
 		Model model = new Model();
 		model.readContent();
-		
+
 		Controller controller = new Controller(model);
 
 		Scanner in = new Scanner(System.in);
