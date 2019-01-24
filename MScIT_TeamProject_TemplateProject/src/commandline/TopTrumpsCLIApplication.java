@@ -30,14 +30,10 @@ public class TopTrumpsCLIApplication {
 		System.out.println(
 				"Hi " + userName + "! \nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics");
 
-		//
-
 		System.out.print("Enter your selection here: ");
 		int selection = in.nextInt();
 		System.out.print("");
 		if (selection == 1) {
-
-			// ----
 
 			do {
 
@@ -75,6 +71,7 @@ public class TopTrumpsCLIApplication {
 
 		} else if (selection == 2) {
 			System.out.println("Statistics displayed here");
+			System.exit(0);
 			// display the statistics
 		}
 

@@ -56,6 +56,7 @@ public class Controller {
 					drawStack.remove(0);
 				}
 			}
+			userArray[i].numberOfWinsForUser++;       //add a win for the user
 		} else { // if there isn't a winner this round
 			for (int j = 0; j < userArray.length; j++) {
 				drawStack.add(userArray[j].personalDeck.get(0)); // add the top cards to the draw stack
