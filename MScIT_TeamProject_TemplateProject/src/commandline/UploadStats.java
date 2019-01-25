@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Statistics {
-	DBConnect db = new DBConnect();
+public class UploadStats {
+	DownloadStats db = new DownloadStats();
 	Connection connection = null;
 	
 	int gamesPlayed = db.getGamesPlayed();
@@ -30,7 +30,7 @@ public class Statistics {
 
 	// Also HERE add the variables gained from each match
 
-	public Statistics() {
+	public UploadStats() {
 		
 	}// End of constructor
 

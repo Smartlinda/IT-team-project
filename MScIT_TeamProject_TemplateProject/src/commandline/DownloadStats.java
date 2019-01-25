@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBConnect {
+public class DownloadStats {
 
 	int gamesPlayed;
 	int gamesWon;
@@ -24,7 +24,7 @@ public class DBConnect {
 	/*
 	 * Constructor
 	 */
-	public DBConnect() {
+	public DownloadStats() {
 		loadJDBC();
 	}// End of Constructor
 

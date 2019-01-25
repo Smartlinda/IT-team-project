@@ -2,7 +2,7 @@ package commandline;
 
 import java.util.Random;
 import java.util.Scanner;
-import commandline.DBConnect;
+import commandline.DownloadStats;
 
 //need to
 //take players with 0 cards out of the game somehow
@@ -79,7 +79,7 @@ public class TopTrumpsCLIApplication {
 			/*
 			 * Use this if Player selects to see the statistics
 			 */
-			DBConnect db = new DBConnect();
+			DownloadStats db = new DownloadStats();
 			System.exit(0);
 			// display the statistics
 		}
