@@ -2,6 +2,7 @@ package commandline;
 
 import java.util.Random;
 import java.util.Scanner;
+import commandline.DBConnect;
 
 //need to
 //take players with 0 cards out of the game somehow
@@ -76,6 +77,10 @@ public class TopTrumpsCLIApplication {
 
 		} else if (selection == 2) {
 			System.out.println("Statistics displayed here");
+			/*
+			 * Use this if Player selects to see the statistics
+			 */
+			DBConnect db = new DBConnect();
 			System.exit(0);
 			// display the statistics
 		}
