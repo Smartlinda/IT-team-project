@@ -21,25 +21,16 @@ public class DBConnect {
 	ResultSet rs = null;
 	Statement smt = null;
 
-	// build constructor
+	/*
+	 * Constructor 
+	 */
 	public DBConnect() {
 		loadJDBC();
 	}
 
-	void initializeConnection() {
-		// trying for a database connection
-		try {
-			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
-					"teamproject");
-			System.out.println("Connection Established.");
-			showStats();
-		} catch (SQLException e) {
-			System.out.println("Oups! Something went wrong! Fail to connect!");
-			e.printStackTrace();
-		}
-
-	}// end of method
-
+	/*
+	 * This method will load the JDBC jar file
+	 */
 	void loadJDBC() {
 		// TODO Auto-generated method stub
 		// Load JDBC
@@ -52,35 +43,52 @@ public class DBConnect {
 		System.out.println("PostgreSQL JDBC Driver found!");
 		initializeConnection();
 	}
+	
+	/*
+	 * This method will initialize the connection to the server
+	 */
+	void initializeConnection() {
+		// trying for a database connection
+		try {
+			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+					"teamproject");
+			System.out.println("Connection Established.");
+			getTableStats();
+		} catch (SQLException e) {
+			System.out.println("Oups! Something went wrong! Fail to connect!");
+			e.printStackTrace();
+		}
 
-	private void showStats() {
+	}// end of method
+
+	/*
+	 * This method will find and get the table from the DB
+	 */
+	private void getTableStats() {
 
 		try {
 			smt = connection.createStatement();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Oups. That's embarasing. Something went wrong...");
 			e.printStackTrace();
-		}
+		}// End of try-catch
 
-		// query to display all records from table postgres
+		// query to get all records from table postgres
 		String q = "SELECT * FROM games_stats";
 
 		try {
 			rs = smt.executeQuery(q);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Oups. That's embarasing. Something went wrong...");
 			e.printStackTrace();
-		}
-
-		// here if we uncomment this one we will get the table with the stats
-		showTheStatsTable();
-
-	}
+		}// End of try-catch
+		showTableStats();
+	}// End of method
 	
 	/*
 	 * This method will show the table with the statistics of the player
 	 */
-	private void showTheStatsTable() {
+	private void showTableStats() {
 		try {
 			if (rs.next()) {
 				String leftAlignFormat = "| %-12s | %-9s | %-12s | %-13s | %-12s | %-13s | %-12s |%n";
@@ -109,13 +117,13 @@ public class DBConnect {
 						"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
 			} else {
 				System.out.println("Record Not Found...");
-			}
+			}// End of if else
 		} catch (SQLException e) {
 			System.out.println("Oups! Something went wrong!");
 			e.printStackTrace();
-		}
+		}// End of try-catch
 
-	}
+	}// End of method
 
 	/*
 	 * GETTERS AND SETTERS - START

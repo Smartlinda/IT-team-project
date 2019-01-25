@@ -76,7 +76,6 @@ public class TopTrumpsCLIApplication {
 			// --------------------------------
 
 		} else if (selection == 2) {
-			System.out.println("Statistics displayed here");
 			/*
 			 * Use this if Player selects to see the statistics
 			 */

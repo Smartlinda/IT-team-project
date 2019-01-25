@@ -17,10 +17,24 @@ public class Statistics {
 	int roundsRecord = db.getRoundsRecord();
 	int totalRounds = db.getTotalRounds();
 
-	// Also add the variables gained from each match
+	// proceed with a database connection
+	Connection connection = null;
+//	ResultSet rs = null;
+
+	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayed;
+	String query2 = "UPDATE games_stats SET games_won = " + gamesPlayed;
+	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesPlayed;
+	String query4 = "UPDATE games_stats SET avg_draws = " + gamesPlayed;
+	String query5 = "UPDATE games_stats SET draws_record = " + gamesPlayed;
+	String query6 = "UPDATE games_stats SET rounds_record = " + gamesPlayed;
+	String query7 = "UPDATE games_stats SET total_rounds = " + gamesPlayed;
+
+	String[] queries = { query1, query2, query3, query4, query5, query6, query7 };
+
+	// Also HERE add the variables gained from each match
 
 	public Statistics() {
-
+		
 	}// End of constructor
 
 	private void updateValuesInDB() {
@@ -33,7 +47,6 @@ public class Statistics {
 			// the driver is loaded...
 		System.out.println("PostgreSQL JDBC Driver found!");
 		// proceed with a database connection
-		Connection connection = null;
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
 					"teamproject");
@@ -47,8 +60,15 @@ public class Statistics {
 			try {
 				System.out.println("Established connection to database.\n");
 				Statement statement = connection.createStatement();
-				String sql = "UPDATE games_stats SET games_played = " + gamesPlayed;
-				ResultSet rs = statement.executeQuery(sql);
+
+				connection.setAutoCommit(false);
+
+				for (int i = 0; i < queries.length; i++) {
+					statement.addBatch(queries[i]);
+				}
+
+				statement.executeBatch();
+				connection.commit();
 
 				// do not forget to close the connection to the database
 				connection.close();
