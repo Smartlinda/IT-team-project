@@ -8,7 +8,8 @@ import java.sql.Statement;
 
 public class Statistics {
 	DBConnect db = new DBConnect();
-
+	Connection connection = null;
+	
 	int gamesPlayed = db.getGamesPlayed();
 	int gamesWon = db.getGamesWon();
 	int gamesAIWon = db.getGamesAIWon();
@@ -16,10 +17,6 @@ public class Statistics {
 	int drawsRecord = db.getDrawsRecord();
 	int roundsRecord = db.getRoundsRecord();
 	int totalRounds = db.getTotalRounds();
-
-	// proceed with a database connection
-	Connection connection = null;
-//	ResultSet rs = null;
 
 	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayed;
 	String query2 = "UPDATE games_stats SET games_won = " + gamesPlayed;
