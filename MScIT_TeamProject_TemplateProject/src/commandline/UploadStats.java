@@ -9,7 +9,8 @@ import java.sql.Statement;
 public class UploadStats {
 	DownloadStats db = new DownloadStats();
 	Connection connection = null;
-	
+
+	// Get the values already on the database
 	int gamesPlayed = db.getGamesPlayed();
 	int gamesWon = db.getGamesWon();
 	int gamesAIWon = db.getGamesAIWon();
@@ -18,20 +19,32 @@ public class UploadStats {
 	int roundsRecord = db.getRoundsRecord();
 	int totalRounds = db.getTotalRounds();
 
-	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayed;
-	String query2 = "UPDATE games_stats SET games_won = " + gamesPlayed;
-	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesPlayed;
-	String query4 = "UPDATE games_stats SET avg_draws = " + gamesPlayed;
-	String query5 = "UPDATE games_stats SET draws_record = " + gamesPlayed;
-	String query6 = "UPDATE games_stats SET rounds_record = " + gamesPlayed;
-	String query7 = "UPDATE games_stats SET total_rounds = " + gamesPlayed;
+	// Also HERE add the variables gained from each match
+
+	// This variables are when they are the final values to be uploaded
+	int gamesPlayedFinal;
+	int gamesWonFinal;
+	int gamesAIWonFinal;
+	double averageDrawsFinal;
+	int drawsRecordFinal;
+	int roundsRecordFinal;
+	int totalRoundsFinal;
+
+	// Create an String array list and add the queries inside
+	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
+	String query2 = "UPDATE games_stats SET games_won = " + gamesWonFinal;
+	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal;
+	String query4 = "UPDATE games_stats SET avg_draws = " + averageDrawsFinal;
+	String query5 = "UPDATE games_stats SET draws_record = " + drawsRecordFinal;
+	String query6 = "UPDATE games_stats SET rounds_record = " + roundsRecordFinal;
+	String query7 = "UPDATE games_stats SET total_rounds = " + totalRoundsFinal;
 
 	String[] queries = { query1, query2, query3, query4, query5, query6, query7 };
 
-	// Also HERE add the variables gained from each match
-
 	public UploadStats() {
-		
+		/*
+		 * Here we add the method to start!
+		 */
 	}// End of constructor
 
 	private void updateValuesInDB() {
@@ -50,23 +63,19 @@ public class UploadStats {
 		} catch (SQLException e) {
 			System.out.println("Connection failed!");
 			e.printStackTrace();
-		}
+		} // End of try-catch
 
 		// connection to the database is done
 		if (connection != null) {
 			try {
 				System.out.println("Established connection to database.\n");
 				Statement statement = connection.createStatement();
-
 				connection.setAutoCommit(false);
-
 				for (int i = 0; i < queries.length; i++) {
 					statement.addBatch(queries[i]);
 				}
-
 				statement.executeBatch();
 				connection.commit();
-
 				// do not forget to close the connection to the database
 				connection.close();
 			} catch (SQLException e) {
@@ -75,36 +84,37 @@ public class UploadStats {
 		} else {
 			System.out.println("Failed to establish connection!");
 		} // if-else
-
 	}// End of method
 
 	private void numberOfGamesPlayed(int dbValue, int gameValue) {
-		dbValue = dbValue + gameValue;
-	}
+		gamesPlayedFinal = dbValue + gameValue;
+	}// End of method
 
 	private void numberOfTimesAIWon(int dbValue, int gameValue) {
-		dbValue = dbValue + gameValue;
-	}
+		gamesWonFinal = dbValue + gameValue;
+	}// End of method
 
 	private void numberOfTimesHumanWon(int dbValue, int gameValue) {
-		dbValue = dbValue + gameValue;
-	}
+		gamesAIWonFinal = dbValue + gameValue;
+	}// End of method
 
 	private void averageNumberOfDraws(double dbValue, double gameValue) {
-		dbValue = (dbValue + gameValue) / 2;
-	}
+		averageDrawsFinal = (dbValue + gameValue) / 2;
+	}// End of method
 
 	private void largestNumberOfRoundsPlayed(int dbValue, int gameValue) {
 		if (dbValue <= gameValue) {
-			dbValue = gameValue;
+			drawsRecordFinal = gameValue;
 		}
-	}
+	}// End of method
 
+	// HERE IS A MISTAKE --------------------------------------------------- FIX
+	// THIS! TODO
 	private void numberOfDrawsInAGame(int dbValue, int gameValue) {
 //		dbValue = dbValue + gameValue;
-	}
+	}// End of method
 
 	private void numberOfRoundsPlayedInAGame(int dbValue, int gameValue) {
-//		dbValue = dbValue + gameValue;
-	}
-}
+//		roundsRecordFinal = dbValue + gameValue;
+	}// End of method
+}// End of class

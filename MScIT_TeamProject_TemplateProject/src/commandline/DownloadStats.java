@@ -183,4 +183,4 @@ public class DownloadStats {
 	/*
 	 * GETTERS AND SETTERS - END
 	 */
-}// end of class
+}// End of class
