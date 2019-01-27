@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 //need to
 //take players with 0 cards out of the game somehow
-//display the winner and winning cards
 //at the end of the game display stats
 
 /**
@@ -51,6 +50,9 @@ public class TopTrumpsCLIApplication {
 
 						controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
 																				// aiplayers+1
+						for(int i=0;i<controller.userArray.length;i++) {  //activeUser contains the ID for active users
+							controller.activeUser.add(i);
+						}
 						controller.userArray[player.userID] = player; // add the player to the userarray in controller
 						for (int i = 0; i < selection; i++) {
 							AIUser ai = new AIUser();
@@ -136,12 +138,26 @@ public class TopTrumpsCLIApplication {
 
 			}
 
-			// need to make a thing to show the winner and winning card
 
 			previousWinner = winner; // if there is a draw
 			winner = controller.checkRoundWinner();
+			// need to make a thing to show the winner and winning card
+			if (winner == -1) {
+				System.out.println("Round " + roundCounter + ": This round was a draw.");
+			}else {
+				System.out.println("Round " + roundCounter + ": Player " + winner + " won this round");
+			}
+			int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1);
+			System.out.println("The winning card was " + controller.userArray[winnerInDraw].personalDeck.get(0).getCardName() + "':");
+			for (int i = 0; i < controller.userArray[winnerInDraw].personalDeck.get(0).getAttributeValues().length; i++) {
+				System.out.println(model.getHeader(i) + ": "
+						+ controller.userArray[winnerInDraw].personalDeck.get(0).getAttributeValues()[i]);
+			}
+			
 			controller.changeOwnership(winner);
+			System.out.println("Common pile now has " + controller.drawStack.size() + " cards");
 			roundCounter++;
+			
 
 			for (int j = 0; j < controller.userArray.length; j++) {
 				if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win

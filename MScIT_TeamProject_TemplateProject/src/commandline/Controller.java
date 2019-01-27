@@ -6,11 +6,13 @@ public class Controller {
 	private HumanUser humanUser; // only one human player
 	private int numberOfUsers;
 	private int numberOfActivePlayers;
+	protected List<Integer> activeUser;
 	protected GenericUser[] userArray;// = new GenericUser[5]; // 5 is the maximum number of players
 
-	private ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the middle when its a draw
+	protected ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the middle when its a draw
 	private ArrayList<Card> shuffledStack = new ArrayList<Card>(); // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
+	protected List<Integer> maxList = new ArrayList<Integer>();
 	protected Model model = new Model();
 
 	public Controller(Model model) {
@@ -20,6 +22,7 @@ public class Controller {
 	public void someoneLost() { // to get rid of a player with no cards
 		numberOfActivePlayers--; // maybe not needed, we will see
 	}
+	
 
 	public void distributeCards() {
 
@@ -60,12 +63,13 @@ public class Controller {
 
 	public int checkRoundWinner() { // check the winner of the round
 		int max = -10; // arbitrary negative value
-		List<Integer> maxList = new ArrayList<Integer>();
 		for (int i = 0; i < userArray.length; i++) {
 			if (userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory] > max) {
 				max = userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory];
 				maxList.add(i);
 			} else if (userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory] == max) {
+				max = userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory];
+				maxList.add(i);
 				return -1; // if there is a draw, return -1, cos theres no winner.
 			}
 		}
@@ -90,6 +94,14 @@ public class Controller {
 			shuffledStack.add(model.cardCon.get(shuffledArray[j]));
 		}
 		return shuffledArray; // return the set of shuffled numbers
+	}
+	
+	public void excludeLoser() {  //methods for skipping the losers
+		for (int i=0;i<userArray.length;i++) {
+			if (userArray[i].personalDeck.size()==0) {
+				activeUser.remove(i);
+			}
+		}
 	}
 
 }
