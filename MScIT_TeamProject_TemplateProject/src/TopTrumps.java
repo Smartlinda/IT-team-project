@@ -34,7 +34,7 @@ public class TopTrumps {
 			
 		}
 		
-		// We cannot run online and command line mode simultaniously
+		// We cannot run online and command line mode simultaneously
 		if (onlineMode && commandLineMode) {
 			System.out.println("ERROR: Both online and command line mode selected, select one or the other!");
 			System.exit(0);
@@ -43,7 +43,7 @@ public class TopTrumps {
 		// Start the appropriate application
 		if (onlineMode) {
 			// Start the online application
-			String[] commandArgs = {"server", "TopTrumps.json"};
+			String[] commandArgs = {"server", "../TopTrumps.json"};
 			TopTrumpsOnlineApplication.main(commandArgs);
 		} else if (commandLineMode) {
 			// Start the command line application
