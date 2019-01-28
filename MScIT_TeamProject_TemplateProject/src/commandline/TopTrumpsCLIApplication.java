@@ -4,11 +4,18 @@ import java.util.Random;
 import java.util.Scanner;
 import commandline.DownloadStats;
 
+/* TO RUN ON COMMANDLINE ON **WINDOWS**; mac users sorry........................
+ * go to IT-team-project\MScIT_TeamProject_TemplateProject\src
+ * >javac commandline\*.java
+ * >java commandline/TopTrumpsCLIApplication
+ */
+
 //need to
 //display the statistics at the end
 //add the log files - catch other input too
 //try catch for the scanner
 //method sleeps
+//connect to the yacata database pls thx
 
 /**
  * Top Trumps command line application
