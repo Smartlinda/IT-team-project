@@ -40,8 +40,8 @@ public class Controller {
 		// int winner = checkRoundWinner(); do this in main
 		if (i != -1) { // if there is a winner this round
 			for (int j : activeUser) {
-				userArray[i].addCard(userArray[j].personalDeck.get(0)); // add top card to winner's deck from
-																		// everyones decks
+				userArray[i].addCard(getTopCard(j)); // add top card to winner's deck from
+														// everyones decks
 				userArray[j].personalDeck.remove(0); // remove card from own deck
 
 			}
@@ -56,7 +56,7 @@ public class Controller {
 			userArray[i].numberOfWinsForUser++; // add a win for the user
 		} else { // if there isn't a winner this round
 			for (int j : activeUser) {
-				drawStack.add(userArray[j].personalDeck.get(0)); // add the top cards to the draw stack
+				drawStack.add(getTopCard(j)); // add the top cards to the draw stack
 				userArray[j].personalDeck.remove(0);
 			}
 		}
@@ -65,15 +65,16 @@ public class Controller {
 	public int checkRoundWinner() { // check the winner of the round
 		int max = -10; // arbitrary negative value
 		for (int i : activeUser) {
-			if (userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory] > max) {
-				max = userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory];
+			if (getTopCard(i).attributeValues[userArray[i].selectedCategory] > max) {
+				max = getTopCard(i).attributeValues[userArray[i].selectedCategory];
 				maxList.add(i);
-			} else if (userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory] == max) {
-				max = userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory];
+			} else if (getTopCard(i).attributeValues[userArray[i].selectedCategory] == max) {
+				max = getTopCard(i).attributeValues[userArray[i].selectedCategory];
 				maxList.add(i);
-				return -1; // if there is a draw, return -1, cos theres no winner.
+				return -1; // if there is a draw, return -1, cos there's no winner.
 			}
 		}
+		System.out.println(maxList.get(maxList.size() - 1));
 		return (int) maxList.get(maxList.size() - 1); // return the winner
 	}
 
@@ -101,8 +102,8 @@ public class Controller {
 		copy = (ArrayList<Integer>) activeUser.clone();
 		for (int k : activeUser) {
 			if (userArray[k].personalDeck.size() == 0) {
-				for(int i=0;i<activeUser.size();i++) {
-					if(copy.get(i)==k) {
+				for (int i = 0; i < activeUser.size(); i++) {
+					if (copy.get(i) == k) {
 						copy.remove(i);
 						break;
 					}
@@ -110,6 +111,12 @@ public class Controller {
 			}
 		}
 		activeUser = (ArrayList<Integer>) copy.clone();
+	}
+
+	public Card getTopCard(int player) { // shorten the code to get player's top card
+		Card topCard;
+		topCard = userArray[player].personalDeck.get(0);
+		return topCard;
 	}
 
 }
