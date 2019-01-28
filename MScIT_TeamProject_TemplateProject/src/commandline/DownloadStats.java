@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBConnect {
+public class DownloadStats {
 
 	int gamesPlayed;
 	int gamesWon;
@@ -21,28 +21,18 @@ public class DBConnect {
 	ResultSet rs = null;
 	Statement smt = null;
 
-	// build constructor
-	public DBConnect() {
+	/*
+	 * Constructor
+	 */
+	public DownloadStats() {
 		loadJDBC();
-	}
+	}// End of Constructor
 
-	void initializeConnection() {
-		// trying for a database connection
-		try {
-			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
-					"teamproject");
-			System.out.println("Connection Established.");
-			showStats();
-		} catch (SQLException e) {
-			System.out.println("Oups! Something went wrong! Fail to connect!");
-			e.printStackTrace();
-		}
-
-	}// end of method
-
+	/*
+	 * This method will load the JDBC jar file
+	 */
 	void loadJDBC() {
-		// TODO Auto-generated method stub
-		// Load JDBC
+		// Try and load JDBC
 		try {
 			Class.forName("org.postgresql.Driver");
 		} catch (Exception e) {
@@ -51,36 +41,52 @@ public class DBConnect {
 		} // try-catch exception
 		System.out.println("PostgreSQL JDBC Driver found!");
 		initializeConnection();
-	}
+	}// End of method
 
-	private void showStats() {
+	/*
+	 * This method will initialize the connection to the server
+	 */
+	void initializeConnection() {
+		// trying for a database connection
+		try {
+			// Connect to the server with username and passwd
+			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+					"teamproject");
+			System.out.println("Connection Established.");
+			getTableStats();
+		} catch (SQLException e) {
+			System.out.println("Oups! Something went wrong! Fail to connect!");
+			e.printStackTrace();
+		} // End of try-catch
+	}// End of method
 
+	/*
+	 * This method will find and get the table from the DB
+	 */
+	private void getTableStats() {
 		try {
 			smt = connection.createStatement();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Oups. That's embarasing. Something went wrong...");
 			e.printStackTrace();
-		}
+		} // End of try-catch
 
-		// query to display all records from table postgres
+		// query to get all records from table postgres
 		String q = "SELECT * FROM games_stats";
 
 		try {
 			rs = smt.executeQuery(q);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Oups. That's embarasing. Something went wrong...");
 			e.printStackTrace();
-		}
+		} // End of try-catch
+		showTableStats();
+	}// End of method
 
-		// here if we uncomment this one we will get the table with the stats
-		showTheStatsTable();
-
-	}
-	
 	/*
 	 * This method will show the table with the statistics of the player
 	 */
-	private void showTheStatsTable() {
+	private void showTableStats() {
 		try {
 			if (rs.next()) {
 				String leftAlignFormat = "| %-12s | %-9s | %-12s | %-13s | %-12s | %-13s | %-12s |%n";
@@ -109,18 +115,16 @@ public class DBConnect {
 						"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
 			} else {
 				System.out.println("Record Not Found...");
-			}
+			} // End of if else
 		} catch (SQLException e) {
 			System.out.println("Oups! Something went wrong!");
 			e.printStackTrace();
-		}
-
-	}
+		} // End of try-catch
+	}// End of method
 
 	/*
 	 * GETTERS AND SETTERS - START
 	 */
-
 	public int getGamesPlayed() {
 		return gamesPlayed;
 	}
@@ -176,8 +180,7 @@ public class DBConnect {
 	public void setTotalRounds(int totalRounds) {
 		this.totalRounds = totalRounds;
 	}
-
 	/*
 	 * GETTERS AND SETTERS - END
 	 */
-}// end of class
+}// End of class

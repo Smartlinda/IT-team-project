@@ -1,4 +1,3 @@
-import commandline.DBConnect;
 import commandline.TopTrumpsCLIApplication;
 import online.TopTrumpsOnlineApplication;
 
@@ -10,10 +9,6 @@ public class TopTrumps {
 	/** This is the main class for the TopTrumps Application */
 	public static void main(String[] args) {
 		
-//		System.out.println("--------------------");
-//		System.out.println("--- Top Trumps   ---");
-//		System.out.println("--------------------");
-		
 		System.err.print(" _________  ________  ________        _________  ________  ___  ___  _____ ______   ________  ________      \n" + 
 				"|\\___   ___\\\\   __  \\|\\   __  \\      |\\___   ___\\\\   __  \\|\\  \\|\\  \\|\\   _ \\  _   \\|\\   __  \\|\\   ____\\     \n" + 
 				"\\|___ \\  \\_\\ \\  \\|\\  \\ \\  \\|\\  \\     \\|___ \\  \\_\\ \\  \\|\\  \\ \\  \\\\\\  \\ \\  \\\\\\__\\ \\  \\ \\  \\|\\  \\ \\  \\___|_    \n" + 
@@ -24,17 +19,6 @@ public class TopTrumps {
 				"                                                                                                \\|_________|\n" + 
 				"                                                                                                            \n" + 
 				"                                                                                                            \n");
-		
-		
-		
-		
-		/*
-		 * Use this if Player selects to see the statistics
-		 */
-		DBConnect db = new DBConnect();
-		
-		
-		
 		
 		// command line switches
 		boolean onlineMode = false;
@@ -50,7 +34,7 @@ public class TopTrumps {
 			
 		}
 		
-		// We cannot run online and command line mode simultaniously
+		// We cannot run online and command line mode simultaneously
 		if (onlineMode && commandLineMode) {
 			System.out.println("ERROR: Both online and command line mode selected, select one or the other!");
 			System.exit(0);
@@ -59,7 +43,7 @@ public class TopTrumps {
 		// Start the appropriate application
 		if (onlineMode) {
 			// Start the online application
-			String[] commandArgs = {"server", "TopTrumps.json"};
+			String[] commandArgs = {"server", "../TopTrumps.json"};
 			TopTrumpsOnlineApplication.main(commandArgs);
 		} else if (commandLineMode) {
 			// Start the command line application

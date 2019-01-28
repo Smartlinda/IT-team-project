@@ -2,6 +2,7 @@ package commandline;
 
 import java.util.Random;
 import java.util.Scanner;
+import commandline.DownloadStats;
 
 //need to
 //take players with 0 cards out of the game somehow
@@ -77,7 +78,10 @@ public class TopTrumpsCLIApplication {
 			// --------------------------------
 
 		} else if (selection == 2) {
-			System.out.println("Statistics displayed here");
+			/*
+			 * Use this if Player selects to see the statistics
+			 */
+			DownloadStats db = new DownloadStats();
 			System.exit(0);
 			// display the statistics
 		}
@@ -109,7 +113,7 @@ public class TopTrumpsCLIApplication {
 			System.out.println("Round " + roundCounter + ": Players have drawn their cards");
 
 			System.out.println("You drew '" + controller.userArray[0].personalDeck.get(0).getCardName() + "':");
-
+			//print out the card
 			for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
 				System.out.println(model.getHeader(i) + ": "
 						+ controller.userArray[0].personalDeck.get(0).getAttributeValues()[i]);

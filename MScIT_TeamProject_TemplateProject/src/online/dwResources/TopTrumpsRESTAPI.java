@@ -1,8 +1,11 @@
 package online.dwResources;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -42,9 +45,8 @@ public class TopTrumpsRESTAPI {
 	 * @param conf
 	 */
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
-		// ----------------------------------------------------
-		// Add relevant initalization here
-		// ----------------------------------------------------
+		conf.getDeckFile();
+		conf.getNumAIPlayers();
 	}
 	
 	// ----------------------------------------------------
