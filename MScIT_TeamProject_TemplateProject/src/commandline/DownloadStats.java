@@ -67,7 +67,7 @@ public class DownloadStats {
 		try {
 			smt = connection.createStatement();
 		} catch (SQLException e) {
-			System.out.println("Oups. That's embarasing. Something went wrong...");
+			System.out.println("Oups. That's embarrassing. Something went wrong...");
 			e.printStackTrace();
 		} // End of try-catch
 
@@ -77,7 +77,7 @@ public class DownloadStats {
 		try {
 			rs = smt.executeQuery(q);
 		} catch (SQLException e) {
-			System.out.println("Oups. That's embarasing. Something went wrong...");
+			System.out.println("Oups. That's embarrassing. Something went wrong...");
 			e.printStackTrace();
 		} // End of try-catch
 		showTableStats();

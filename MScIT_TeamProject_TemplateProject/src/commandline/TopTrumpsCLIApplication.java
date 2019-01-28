@@ -5,8 +5,10 @@ import java.util.Scanner;
 import commandline.DownloadStats;
 
 //need to
-//take players with 0 cards out of the game somehow
-//at the end of the game display stats
+//display the statistics at the end
+//add the log files - catch other input too
+//try catch for the scanner
+//method sleeps
 
 /**
  * Top Trumps command line application
@@ -40,44 +42,50 @@ public class TopTrumpsCLIApplication {
 		System.out.print("");
 		if (selection == 1) {
 
-			do {
+			// do {
 
-				System.out.print("Choose the number of opponents (1-4): ");
+			System.out.print("Choose the number of opponents (1-4): ");
 
-				selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+			selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
 
-				try {
-					if (1 <= selection && selection <= 4) {
+			// try {
+			// if (1 <= selection && selection <= 4) {
 
-						controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
-																				// aiplayers+1
-						for(int i=0;i<controller.userArray.length;i++) {  //activeUser contains the ID for active users
-							controller.activeUser.add(i);
-						}
-						controller.userArray[player.userID] = player; // add the player to the userarray in controller
-						for (int i = 0; i < selection; i++) {
-							AIUser ai = new AIUser();
-							controller.userArray[ai.userID] = ai;
-						}
-						controller.shuffling(); // shuffle the card
-						controller.distributeCards(); // distribute the cards to each player
+			controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
+																	// aiplayers+1
 
-						System.out.print("");
+			controller.userArray[player.userID] = player; // add the player to the userarray in controller
+			for (int i = 0; i < selection; i++) {
+				AIUser ai = new AIUser();
+				controller.userArray[ai.userID] = ai;
+				System.out.println(controller.userArray[i]);
+			}
 
-						System.out.println("Game starts here.");
+			for (int i = 0; i < controller.userArray.length; i++) { // activeUser contains the ID for active
+				// users
+				controller.activeUser.add(i);
+			}
+			controller.shuffling(); // shuffle the card
+			controller.distributeCards(); // distribute the cards to each player
 
-					} else {
-						throw new Exception();
-					}
+			System.out.print("");
 
-				} catch (Exception e) {
-					System.out.println("Please choose a number between 1-4");
-				}
-			} while (1 > selection || selection > 4);
+			System.out.println("Game starts here.");
+
+			// } else {
+			// throw new Exception();
+			// }
+
+			// } catch (Exception e) {
+			// System.out.println("Please choose a number between 1-4");
+			// }
+			// } while (1 > selection || selection > 4);
 
 			// --------------------------------
 
-		} else if (selection == 2) {
+		} else if (selection == 2)
+
+		{
 			/*
 			 * Use this if Player selects to see the statistics
 			 */
@@ -112,16 +120,17 @@ public class TopTrumpsCLIApplication {
 			System.out.println("Round " + roundCounter);
 			System.out.println("Round " + roundCounter + ": Players have drawn their cards");
 
-			System.out.println("You drew '" + controller.userArray[0].personalDeck.get(0).getCardName() + "':");
-			//print out the card
-			for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
-				System.out.println(model.getHeader(i) + ": "
-						+ controller.userArray[0].personalDeck.get(0).getAttributeValues()[i]);
+			if (controller.activeUser.contains(0)) {
+				System.out.println("You drew '" + controller.userArray[0].personalDeck.get(0).getCardName() + "':");
+
+				for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
+					System.out.println(model.getHeader(i) + ": "
+							+ controller.userArray[0].personalDeck.get(0).getAttributeValues()[i]);
+				}
+				int numberOfleftCard = controller.userArray[0].personalDeck.size();
+
+				System.out.println("There are " + numberOfleftCard + " cards in your deck.");
 			}
-			int numberOfleftCard = controller.userArray[0].personalDeck.size();
-
-			System.out.println("There are " + numberOfleftCard + " cards in your deck.");
-
 			if (winner == 0) {
 				System.out.println("It is your turn to select a category, the categories are: ");
 				for (int i = 0; i < controller.userArray[0].personalDeck.get(0).getAttributeValues().length; i++) {
@@ -142,26 +151,27 @@ public class TopTrumpsCLIApplication {
 
 			}
 
-
 			previousWinner = winner; // if there is a draw
 			winner = controller.checkRoundWinner();
 			// need to make a thing to show the winner and winning card
 			if (winner == -1) {
 				System.out.println("Round " + roundCounter + ": This round was a draw.");
-			}else {
+			} else {
 				System.out.println("Round " + roundCounter + ": Player " + winner + " won this round");
 			}
 			int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1);
-			System.out.println("The winning card was " + controller.userArray[winnerInDraw].personalDeck.get(0).getCardName() + "':");
-			for (int i = 0; i < controller.userArray[winnerInDraw].personalDeck.get(0).getAttributeValues().length; i++) {
+			System.out.println("The winning card was "
+					+ controller.userArray[winnerInDraw].personalDeck.get(0).getCardName() + "':");
+			for (int i = 0; i < controller.userArray[winnerInDraw].personalDeck.get(0)
+					.getAttributeValues().length; i++) {
 				System.out.println(model.getHeader(i) + ": "
 						+ controller.userArray[winnerInDraw].personalDeck.get(0).getAttributeValues()[i]);
 			}
-			
+
 			controller.changeOwnership(winner);
 			System.out.println("Common pile now has " + controller.drawStack.size() + " cards");
+			controller.excludeLoser();
 			roundCounter++;
-			
 
 			for (int j = 0; j < controller.userArray.length; j++) {
 				if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win

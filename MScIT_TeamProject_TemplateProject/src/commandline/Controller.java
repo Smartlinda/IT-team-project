@@ -6,10 +6,12 @@ public class Controller {
 	private HumanUser humanUser; // only one human player
 	private int numberOfUsers;
 	private int numberOfActivePlayers;
-	protected List<Integer> activeUser;
+	protected ArrayList<Integer> activeUser = new ArrayList<Integer>();
+	private ArrayList<Integer> copy = new ArrayList<Integer>();
 	protected GenericUser[] userArray;// = new GenericUser[5]; // 5 is the maximum number of players
 
-	protected ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the middle when its a draw
+	protected ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the
+																	// middle when its a draw
 	private ArrayList<Card> shuffledStack = new ArrayList<Card>(); // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected List<Integer> maxList = new ArrayList<Integer>();
@@ -22,7 +24,6 @@ public class Controller {
 	public void someoneLost() { // to get rid of a player with no cards
 		numberOfActivePlayers--; // maybe not needed, we will see
 	}
-	
 
 	public void distributeCards() {
 
@@ -38,7 +39,7 @@ public class Controller {
 	public void changeOwnership(int i) { // i is the winner, the compile deck will regarded as a winner as well
 		// int winner = checkRoundWinner(); do this in main
 		if (i != -1) { // if there is a winner this round
-			for (int j = 0; j < userArray.length; j++) {
+			for (int j : activeUser) {
 				userArray[i].addCard(userArray[j].personalDeck.get(0)); // add top card to winner's deck from
 																		// everyones decks
 				userArray[j].personalDeck.remove(0); // remove card from own deck
@@ -52,9 +53,9 @@ public class Controller {
 					drawStack.remove(0);
 				}
 			}
-			userArray[i].numberOfWinsForUser++;       //add a win for the user
+			userArray[i].numberOfWinsForUser++; // add a win for the user
 		} else { // if there isn't a winner this round
-			for (int j = 0; j < userArray.length; j++) {
+			for (int j : activeUser) {
 				drawStack.add(userArray[j].personalDeck.get(0)); // add the top cards to the draw stack
 				userArray[j].personalDeck.remove(0);
 			}
@@ -63,7 +64,7 @@ public class Controller {
 
 	public int checkRoundWinner() { // check the winner of the round
 		int max = -10; // arbitrary negative value
-		for (int i = 0; i < userArray.length; i++) {
+		for (int i : activeUser) {
 			if (userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory] > max) {
 				max = userArray[i].personalDeck.get(0).attributeValues[userArray[i].selectedCategory];
 				maxList.add(i);
@@ -95,13 +96,20 @@ public class Controller {
 		}
 		return shuffledArray; // return the set of shuffled numbers
 	}
-	
-	public void excludeLoser() {  //methods for skipping the losers
-		for (int i=0;i<userArray.length;i++) {
-			if (userArray[i].personalDeck.size()==0) {
-				activeUser.remove(i);
+
+	public void excludeLoser() { // methods for skipping the losers
+		copy = (ArrayList<Integer>) activeUser.clone();
+		for (int k : activeUser) {
+			if (userArray[k].personalDeck.size() == 0) {
+				for(int i=0;i<activeUser.size();i++) {
+					if(copy.get(i)==k) {
+						copy.remove(i);
+						break;
+					}
+				}
 			}
 		}
+		activeUser = (ArrayList<Integer>) copy.clone();
 	}
 
 }
