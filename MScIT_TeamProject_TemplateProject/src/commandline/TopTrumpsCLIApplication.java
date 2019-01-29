@@ -11,11 +11,11 @@ import commandline.DownloadStats;
  * >java commandline/TopTrumpsCLIApplication
  */
 
-/** THINGS TO DO 
+/** THINGS TO DO <--------------------------------------------
+ * have the game looping so that at the end you can play again - does not terminate
  * display all game statistics at the very end (have the stats for *CURRENT* game already)
- * add the log files - catch other input too
  * connect to the yacata database pls thx
- * optional - add setters and getters so that the code is not so long (reka will do??)
+ * optional - add setters and getters so that the code is not so long (reka requests this ok ok)
  */
 
 /**
@@ -31,9 +31,17 @@ public class TopTrumpsCLIApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		boolean writeGameLogsToFile = false; // Should we write game logs to file?
+
+		// -------------UNCOMMENT AFTER MAKING JAR FILE----if (args[0].equalsIgnoreCase("true")) {
+		writeGameLogsToFile = true;
+		// ------UNCOMMENT--------} // Command line selection
 
 		Model model = new Model();
 		model.readContent();
+		if (writeGameLogsToFile) {
+			writeToLog.writeCompleteDeckToFile(model.cardCon);
+		}
 
 		Controller controller = new Controller(model);
 
@@ -104,7 +112,17 @@ public class TopTrumpsCLIApplication {
 				controller.activeUser.add(i);
 			}
 			controller.shuffling(); // shuffle the cards
+			if (writeGameLogsToFile) {
+				writeToLog.writeCompleteShuffledDeckToFile(controller.shuffledStack);
+			}
+
 			controller.distributeCards(); // distribute the cards to each player
+			if (writeGameLogsToFile) {
+				for (int j = 0; j < controller.userArray.length; j++) {
+					writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
+							controller.userArray[j]);
+				}
+			}
 
 			System.out.print("");
 
@@ -118,13 +136,6 @@ public class TopTrumpsCLIApplication {
 			System.exit(0);
 			// display the statistics
 		}
-
-		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-
-		/*
-		 * UNCOMMENT THIS LATER if (args[0].equalsIgnoreCase("true"))
-		 * writeGameLogsToFile=true; // Command line selection
-		 */
 
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 
@@ -187,26 +198,66 @@ public class TopTrumpsCLIApplication {
 
 			}
 
+			if (writeGameLogsToFile) {
+				writeToLog.writeCategorySelectedAndValuesToFile(roundCounter, model.cardHeader,
+						controller.userArray[winner].selectedCategory, controller.getTopCard(winner),
+						controller.userArray[winner]);
+			}
+			
 			previousWinner = winner; // if there is a draw
-			winner = controller.checkRoundWinner();
+			winner = controller.checkRoundWinner(previousWinner);
+
+			if (writeGameLogsToFile) {
+				for (int j : controller.activeUser) {
+					writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(j),
+							controller.userArray[j]);
+				}
+			}
 
 			if (winner == -1) {
+
+				int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's a
+																								// draw, display one of
+																								// the winning cards
 				System.out.println("Round " + roundCounter + ": This round was a draw.");
+				System.out.println("The winning card was '" + controller.getTopCard(winnerInDraw).getCardName() + "':");
+				for (int i = 0; i < controller.getTopCard(winnerInDraw).getAttributeValues().length; i++) {
+					System.out.println(
+							model.getHeader(i) + ": " + controller.getTopCard(winnerInDraw).getAttributeValues()[i]);
+				}
 			} else {
 				if (winner == 0) {
 					System.out.println("Round " + roundCounter + ": You won this round");
 				} else {
 					System.out.println("Round " + roundCounter + ": Player " + winner + " won this round");
 				}
-			}
-			int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1);   // even though it's a draw, display one of the winning cards
-			System.out.println("The winning card was '" + controller.getTopCard(winnerInDraw).getCardName() + "':");
-			for (int i = 0; i < controller.getTopCard(winnerInDraw).getAttributeValues().length; i++) {
-				System.out.println(
-						model.getHeader(i) + ": " + controller.getTopCard(winnerInDraw).getAttributeValues()[i]);
+				System.out.println("The winning card was '" + controller.getTopCard(winner).getCardName() + "':");
+				for (int i = 0; i < controller.getTopCard(winner).getAttributeValues().length; i++) {
+					System.out
+							.println(model.getHeader(i) + ": " + controller.getTopCard(winner).getAttributeValues()[i]);
+
+				}
 			}
 
+			boolean writeDrawStackToFileQuestionMark = false; // only write drawstack to file if its size changed
+			if (!controller.drawStack.isEmpty() || winner == -1) {
+				writeDrawStackToFileQuestionMark = true;
+			} else {
+				writeDrawStackToFileQuestionMark = false;
+			}
 			controller.changeOwnership(winner); // add losers' cards to winner deck
+
+			if (writeGameLogsToFile) {
+				for (int j = 0; j < controller.userArray.length; j++) {
+					writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
+							controller.userArray[j]);
+				}
+			}
+
+			if (writeGameLogsToFile && writeDrawStackToFileQuestionMark) {
+				writeToLog.writeContentsOFCommunalPileToFile(controller.drawStack);
+			}
+
 			System.out.println("Common pile now has " + controller.drawStack.size() + " cards");
 			controller.excludeLoser(); // if someone has no cards left, get rid of them
 			roundCounter++;
@@ -222,6 +273,11 @@ public class TopTrumpsCLIApplication {
 					userWantsToQuit = true;
 
 					System.out.println();
+
+					if (writeGameLogsToFile) {
+						writeToLog.writeWinnerToFile(controller.userArray[j]);
+					}
+
 					if (j == 0) {
 						System.out.println("Congrats " + userName + ", you win!");
 					} else {

@@ -12,7 +12,7 @@ public class Controller {
 
 	protected ArrayList<Card> drawStack = new ArrayList<Card>(); // an arraylist to store the cards in play/in the
 																	// middle when its a draw
-	private ArrayList<Card> shuffledStack = new ArrayList<Card>(); // an arraylist to store the shuffled cards
+	protected ArrayList<Card> shuffledStack = new ArrayList<Card>(); // an arraylist to store the shuffled cards
 	private Integer[] shuffledArray;
 	protected List<Integer> maxList = new ArrayList<Integer>();
 	protected Model model = new Model();
@@ -37,7 +37,6 @@ public class Controller {
 	}
 
 	public void changeOwnership(int i) { // i is the winner, the compile deck will regarded as a winner as well
-		// int winner = checkRoundWinner(); do this in main
 		if (i != -1) { // if there is a winner this round
 			for (int j : activeUser) {
 				userArray[i].addCard(getTopCard(j)); // add top card to winner's deck from
@@ -62,19 +61,18 @@ public class Controller {
 		}
 	}
 
-	public int checkRoundWinner() { // check the winner of the round
+	public int checkRoundWinner(int prevWinner) { // check the winner of the round
 		int max = -10; // arbitrary negative value
 		for (int i : activeUser) {
-			if (getTopCard(i).attributeValues[userArray[i].selectedCategory] > max) {
-				max = getTopCard(i).attributeValues[userArray[i].selectedCategory];
+			if (getTopCard(i).attributeValues[userArray[prevWinner].selectedCategory] > max) {
+				max = getTopCard(i).attributeValues[userArray[prevWinner].selectedCategory];
 				maxList.add(i);
-			} else if (getTopCard(i).attributeValues[userArray[i].selectedCategory] == max) {
-				max = getTopCard(i).attributeValues[userArray[i].selectedCategory];
+			} else if (getTopCard(i).attributeValues[userArray[prevWinner].selectedCategory] == max) {
+				max = getTopCard(i).attributeValues[userArray[prevWinner].selectedCategory];
 				maxList.add(i);
 				return -1; // if there is a draw, return -1, cos there's no winner.
 			}
 		}
-		System.out.println(maxList.get(maxList.size() - 1));
 		return (int) maxList.get(maxList.size() - 1); // return the winner
 	}
 

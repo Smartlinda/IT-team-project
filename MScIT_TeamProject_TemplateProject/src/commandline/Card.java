@@ -20,19 +20,11 @@ public class Card {
 		return attributeValues;
 	}
 	
-	//does not want to return the header strings for some reason (only this class is messed up)
+
 	public String toString() {
-//		StringBuilder returned = new StringBuilder();
-//		returned.append("'"+cardName + "'\n");
-//		for (int i = 0; i < attributeValues.length;i++) {
-//			returned.append(model.cardHeader[i+1] + ": " + attributeValues[i]+ "\n");
-//		}
-//		String str = String.format("'%s': \n %s: %d\n%s: %d\\n%s: %d\\n%s: %d\\n%s: %d\\n", 
-//				cardName,model.cardHeader[1],attributeValues[0],model.cardHeader[2],attributeValues[1],model.cardHeader[3],
-//				attributeValues[2],model.cardHeader[4],attributeValues[3],model.cardHeader[5],attributeValues[4]);
-		String str = String.format("'%s': \n %s: %d", 
-				cardName,model.cardHeader[1],attributeValues[0],model.cardHeader[2],attributeValues[1],model.cardHeader[3],
-				attributeValues[2],model.cardHeader[4],attributeValues[3],model.cardHeader[5],attributeValues[4]);
+		String str = String.format("%-13s: %2d %2d %2d %2d %2d", 
+				cardName,attributeValues[0],attributeValues[1],
+				attributeValues[2],attributeValues[3],attributeValues[4]);
 		
 		return str.toString();
 	}
