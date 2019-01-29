@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class Model {
-	private String filePath = System.getProperty("user.dir") + "\\commandline\\StarCitizenDeck.txt" ;
+	private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt" ;
 	protected String[] cardHeader = new String[6];
 	private String[][] cards;
 	protected static int numberOfAllCards;
