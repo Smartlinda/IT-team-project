@@ -30,6 +30,8 @@ public class UploadStats {
 	int roundsRecordFinal;
 	int totalRoundsFinal;
 
+	numberOfGamesPlayed(gamesPlayed, valueFromGame);
+	
 	// Create an String array list and add the queries inside
 	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
 	String query2 = "UPDATE games_stats SET games_won = " + gamesWonFinal;
@@ -90,16 +92,20 @@ public class UploadStats {
 		gamesPlayedFinal = dbValue + gameValue;
 	}// End of method
 
-	private void numberOfTimesAIWon(int dbValue, int gameValue) {
-		gamesWonFinal = dbValue + gameValue;
+	private void numberOfTimesHumanWon(int dbValue, int gameValue) {
+		gamesHumanWonFinal = dbValue + gameValue;
 	}// End of method
 
-	private void numberOfTimesHumanWon(int dbValue, int gameValue) {
+	private void numberOfTimesAIWon(int dbValue, int gameValue) {
 		gamesAIWonFinal = dbValue + gameValue;
 	}// End of method
 
 	private void averageNumberOfDraws(double dbValue, double gameValue) {
-		averageDrawsFinal = (dbValue + gameValue) / 2;
+		averageDrawsFinal = (dbValue + gameValue) / gamesPlayedFinal;
+	}// End of method
+
+	private void numberOfDrawsInAGame(int dbValue, int gameValue) {
+		numberOfDrawsFinal = dbValue + gameValue;
 	}// End of method
 
 	private void largestNumberOfRoundsPlayed(int dbValue, int gameValue) {
@@ -108,13 +114,7 @@ public class UploadStats {
 		}
 	}// End of method
 
-	// HERE IS A MISTAKE --------------------------------------------------- FIX
-	// THIS! TODO
-	private void numberOfDrawsInAGame(int dbValue, int gameValue) {
-//		dbValue = dbValue + gameValue;
-	}// End of method
-
-	private void numberOfRoundsPlayedInAGame(int dbValue, int gameValue) {
-//		roundsRecordFinal = dbValue + gameValue;
+	private void numberOfTotalRounds(int dbValue, int gameValue) {
+		roundsRecordFinal = dbValue + gameValue;
 	}// End of method
 }// End of class
