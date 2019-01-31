@@ -22,6 +22,7 @@ public class UploadStats {
 	// Also HERE add the variables gained from each match
 
 	// This variables are when they are the final values to be uploaded
+	int gamesHumanWonFinal;
 	int gamesPlayedFinal;
 	int gamesWonFinal;
 	int gamesAIWonFinal;
@@ -29,8 +30,7 @@ public class UploadStats {
 	int drawsRecordFinal;
 	int roundsRecordFinal;
 	int totalRoundsFinal;
-
-	numberOfGamesPlayed(gamesPlayed, valueFromGame);
+	int numberOfDrawsFinal;
 	
 	// Create an String array list and add the queries inside
 	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
