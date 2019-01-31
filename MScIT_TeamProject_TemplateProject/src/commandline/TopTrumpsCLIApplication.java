@@ -20,7 +20,7 @@ import commandline.DownloadStats;
 
 /**
  * Top Trumps command line application
- */
+ */	
 public class TopTrumpsCLIApplication {
 
 	/**
@@ -30,7 +30,15 @@ public class TopTrumpsCLIApplication {
 	 * 
 	 * @param args
 	 */
+
+
+//	public TopTrumpsCLIApplication(UploadStats uploadStats) {
+//		this.uploadStats = uploadStats;
+//	}
+	
 	public static void main(String[] args) {
+		
+
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
@@ -40,6 +48,8 @@ public class TopTrumpsCLIApplication {
 		writeGameLogsToFile = true;
 		// ------UNCOMMENT--------} // Command line selection
 
+		UploadStats uploadStats = new UploadStats();
+		
 		Model model = new Model();
 		model.readContent();
 		if (writeGameLogsToFile) {
@@ -289,10 +299,19 @@ public class TopTrumpsCLIApplication {
 							writeToLog.writeWinnerToFile(controller.userArray[j]);
 						}
 
+						int totalRounds = roundCounter - 1;
+//						UploadStats.readRounds(totalRounds);
+//						uploadStats.roundsRecord = totalRounds;
+						
+						
+						
 						if (j == 0) {
 							System.out.println("Congrats " + userName + ", you win!");
+							System.out.println("Number of rounds total: " + totalRounds);
+							uploadStats.getValuesFromMain(totalRounds, totalRounds, totalRounds, totalRounds, totalRounds);
 						} else {
 							System.out.println("The winner is: AI Player " + j + ".");
+							System.out.println("Number of rounds total: " + totalRounds);
 						}
 						System.out.println("Scores:");
 						for (int l = 0; l < controller.userArray.length; l++) {
@@ -305,8 +324,8 @@ public class TopTrumpsCLIApplication {
 							}
 						}
 						System.exit(0);
-					}
-				}
+					}// End of if
+				}// End of for
 			}
 		}
 		in.close();

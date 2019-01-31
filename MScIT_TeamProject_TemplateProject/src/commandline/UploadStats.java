@@ -20,7 +20,19 @@ public class UploadStats {
 	int totalRounds = db.getTotalRounds();
 
 	// Also HERE add the variables gained from each match
-
+	int humanWon_GameData=0;
+	int gamePlayerWon_GameData=0;
+	int gameAIWon_GameData=0;
+	int totalRoundsPlayed_GameData=0;
+	int totalDraws_GameData=0;
+	
+	// for method
+	private int a=0;
+	private int b=0;
+	private int c=0;
+	private int d=0;
+	private int e=0;
+	
 	// This variables are when they are the final values to be uploaded
 	int gamesHumanWonFinal;
 	int gamesPlayedFinal;
@@ -33,16 +45,29 @@ public class UploadStats {
 	int numberOfDrawsFinal;
 	
 	// Create an String array list and add the queries inside
-	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
-	String query2 = "UPDATE games_stats SET games_won = " + gamesWonFinal;
-	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal;
-	String query4 = "UPDATE games_stats SET avg_draws = " + averageDrawsFinal;
-	String query5 = "UPDATE games_stats SET draws_record = " + drawsRecordFinal;
-	String query6 = "UPDATE games_stats SET rounds_record = " + roundsRecordFinal;
-	String query7 = "UPDATE games_stats SET total_rounds = " + totalRoundsFinal;
+//	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
+//	String query2 = "UPDATE games_stats SET games_won = " + gamesWonFinal;
+//	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal;
+//	String query4 = "UPDATE games_stats SET avg_draws = " + averageDrawsFinal;
+//	String query5 = "UPDATE games_stats SET draws_record = " + drawsRecordFinal;
+//	String query6 = "UPDATE games_stats SET rounds_record = " + roundsRecordFinal;
+//	String query7 = "UPDATE games_stats SET total_rounds = " + totalRoundsFinal;
 
-	String[] queries = { query1, query2, query3, query4, query5, query6, query7 };
+	String[] queries = {
+			"UPDATE games_stats SET games_played = " + gamesPlayedFinal, 
+			"UPDATE games_stats SET games_won = " + gamesWonFinal,
+			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal,
+			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
+			"UPDATE games_stats SET draws_record = " + drawsRecordFinal, 
+			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
+			"UPDATE games_stats SET total_rounds = " + totalRoundsFinal
+			};
 
+	
+	public void read(int numberOfRounds) {
+//		this.numberOfRounds = numberOfRounds;
+		
+	}
 	public UploadStats() {
 		/*
 		 * Here we add the method to start!
@@ -117,4 +142,12 @@ public class UploadStats {
 	private void numberOfTotalRounds(int dbValue, int gameValue) {
 		roundsRecordFinal = dbValue + gameValue;
 	}// End of method
+
+	void getValuesFromMain(int a, int b, int c, int d, int e) {
+		this.a = humanWon_GameData;
+		this.b = gamePlayerWon_GameData;
+		this.c = gameAIWon_GameData;
+		this.d = totalRoundsPlayed_GameData;
+		this.e = totalDraws_GameData;
+	}
 }// End of class
