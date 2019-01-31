@@ -144,7 +144,7 @@ public class TopTrumpsCLIApplication {
 //			System.exit(0);
 				// display the statistics
 			} else if (selection == 3) {
-				userWantsToQuit = true;
+//				userWantsToQuit = true;
 				System.exit(0);
 			}
 
@@ -218,6 +218,7 @@ public class TopTrumpsCLIApplication {
 				previousWinner = winner; // if there is a draw
 				winner = controller.checkRoundWinner(previousWinner);
 
+
 				if (writeGameLogsToFile) {
 					for (int j : controller.activeUser) {
 						writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(j),
@@ -277,11 +278,11 @@ public class TopTrumpsCLIApplication {
 				controller.excludeLoser(); // if someone has no cards left, get rid of them
 				roundCounter++;
 
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					System.err.println("You woke up the thread!");
-				}
+//				try {
+//					Thread.sleep(500);
+//				} catch (InterruptedException e) {
+//					System.err.println("You woke up the thread!");
+//				}
 
 				for (int j = 0; j < controller.userArray.length; j++) {
 					if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
@@ -311,7 +312,7 @@ public class TopTrumpsCLIApplication {
 								
 							}
 						}
-						System.exit(0);
+//						System.exit(0);
 					}
 				}
 			}
