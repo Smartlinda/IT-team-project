@@ -15,12 +15,12 @@ import commandline.DownloadStats;
  * have the game looping so that at the end you can play again - does not terminate
  * display all game statistics at the very end (have the stats for *CURRENT* game already)
  * connect to the yacata database pls thx
- * optional - add setters and getters so that the code is not so long (reka requests this ok ok
+ * optional - add setters and getters so that the code is not so long (reka requests this ok ok)
  */
 
 /**
  * Top Trumps command line application
- */	
+ */
 public class TopTrumpsCLIApplication {
 
 	/**
@@ -30,26 +30,19 @@ public class TopTrumpsCLIApplication {
 	 * 
 	 * @param args
 	 */
-
-
-//	public TopTrumpsCLIApplication(UploadStats uploadStats) {
-//		this.uploadStats = uploadStats;
-//	}
-	
 	public static void main(String[] args) {
-		
-
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
+		int numberOfDraws = 0;
+		int gamesHumanWonFinal = 0;
+		int gamesAIWonFinal = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
 		writeGameLogsToFile = true;
 		// ------UNCOMMENT--------} // Command line selection
 
-		UploadStats uploadStats = new UploadStats();
-		
 		Model model = new Model();
 		model.readContent();
 		if (writeGameLogsToFile) {
@@ -151,7 +144,7 @@ public class TopTrumpsCLIApplication {
 //			System.exit(0);
 				// display the statistics
 			} else if (selection == 3) {
-				userWantsToQuit = true;
+//				userWantsToQuit = true;
 				System.exit(0);
 			}
 
@@ -225,6 +218,7 @@ public class TopTrumpsCLIApplication {
 				previousWinner = winner; // if there is a draw
 				winner = controller.checkRoundWinner(previousWinner);
 
+
 				if (writeGameLogsToFile) {
 					for (int j : controller.activeUser) {
 						writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(j),
@@ -233,6 +227,7 @@ public class TopTrumpsCLIApplication {
 				}
 
 				if (winner == -1) {
+					numberOfDraws++;
 
 					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's
 																									// a
@@ -283,11 +278,11 @@ public class TopTrumpsCLIApplication {
 				controller.excludeLoser(); // if someone has no cards left, get rid of them
 				roundCounter++;
 
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					System.err.println("You woke up the thread!");
-				}
+//				try {
+//					Thread.sleep(500);
+//				} catch (InterruptedException e) {
+//					System.err.println("You woke up the thread!");
+//				}
 
 				for (int j = 0; j < controller.userArray.length; j++) {
 					if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
@@ -299,19 +294,12 @@ public class TopTrumpsCLIApplication {
 							writeToLog.writeWinnerToFile(controller.userArray[j]);
 						}
 
-						int totalRounds = roundCounter - 1;
-//						UploadStats.readRounds(totalRounds);
-//						uploadStats.roundsRecord = totalRounds;
-						
-						
-						
 						if (j == 0) {
 							System.out.println("Congrats " + userName + ", you win!");
-							System.out.println("Number of rounds total: " + totalRounds);
-							uploadStats.getValuesFromMain(totalRounds, totalRounds, totalRounds, totalRounds);
+							gamesHumanWonFinal++;
 						} else {
 							System.out.println("The winner is: AI Player " + j + ".");
-							System.out.println("Number of rounds total: " + totalRounds);
+							gamesAIWonFinal++;
 						}
 						System.out.println("Scores:");
 						for (int l = 0; l < controller.userArray.length; l++) {
@@ -321,11 +309,12 @@ public class TopTrumpsCLIApplication {
 							} else {
 								System.out.println(
 										"    AI Player " + l + ": " + controller.userArray[l].numberOfWinsForUser);
+								
 							}
 						}
-						System.exit(0);
-					}// End of if
-				}// End of for
+//						System.exit(0);
+					}
+				}
 			}
 		}
 		in.close();
