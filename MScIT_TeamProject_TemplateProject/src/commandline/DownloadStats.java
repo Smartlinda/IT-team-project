@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 public class DownloadStats {
 
+	int game_id;
 	int gamesPlayed;
 	int gamesWon;
 	int gamesAIWon;
@@ -50,8 +51,11 @@ public class DownloadStats {
 		// trying for a database connection
 		try {
 			// Connect to the server with username and passwd
-			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
-					"2416090c");
+			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+					"teamproject");
+			
+//			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
+//					"2416090c");
 			System.out.println("Connection Established.");
 			getTableStats();
 		} catch (SQLException e) {
@@ -89,30 +93,33 @@ public class DownloadStats {
 	private void showTableStats() {
 		try {
 			if (rs.next()) {
-				String leftAlignFormat = "| %-12s | %-9s | %-12s | %-13s | %-12s | %-13s | %-12s |%n";
+				String leftAlignFormat = "| %-12s | %-12s | %-13s | %-13s | %-13s | %-14s | %-13s | %-14s |%n";
 
 				System.out.format(
-						"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
+						"+--------------+--------------+---------------+---------------+---------------+----------------+---------------+----------------+%n");
 				System.out.format(
-						"| Games Played | Games won | Games AI Won | Average Draws | Draws Record | Rounds Record | Total Rounds |%n");
+						"|   Game ID    | Games Played |   Games won   | Games AI Won  | Average Draws |  Draws Record  | Rounds Record |  Total Rounds  |%n");
 				System.out.format(
-						"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
+						"+--------------+--------------+---------------+---------------+---------------+----------------+---------------+----------------+%n");
 
 				// Add the values within the table and also add the values to a global value
 				do {
-					gamesPlayed = rs.getInt(1);
-					gamesWon = rs.getInt(2);
-					gamesAIWon = rs.getInt(3);
-					averageDraws = rs.getDouble(4);
-					drawsRecord = rs.getInt(5);
-					roundsRecord = rs.getInt(6);
-					totalRounds = rs.getInt(7);
+					game_id = rs.getInt(1);
+					gamesPlayed = rs.getInt(2);
+					gamesWon = rs.getInt(3);
+					gamesAIWon = rs.getInt(4);
+					averageDraws = rs.getDouble(5);
+					drawsRecord = rs.getInt(6);
+					roundsRecord = rs.getInt(7);
+					totalRounds = rs.getInt(8);
+					
 
-					System.out.format(leftAlignFormat, gamesPlayed, gamesWon, gamesAIWon, averageDraws, drawsRecord,
+					System.out.format(leftAlignFormat, game_id, gamesPlayed, gamesWon, gamesAIWon, averageDraws, drawsRecord,
 							roundsRecord, totalRounds);
+					System.out.format(
+							"+--------------+--------------+---------------+---------------+---------------+----------------+---------------+----------------+%n");					
 				} while (rs.next());
-				System.out.format(
-						"+--------------+-----------+--------------+---------------+--------------+---------------+--------------+%n");
+
 			} else {
 				System.out.println("Record Not Found...");
 			} // End of if else
