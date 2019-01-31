@@ -20,7 +20,6 @@ public class UploadStats {
 	int totalRounds = db.getTotalRounds();
 
 	// Also HERE add the variables gained from each match
-	int humanWon_GameData=0;
 	int gamePlayerWon_GameData=0;
 	int gameAIWon_GameData=0;
 	int totalRoundsPlayed_GameData=0;
@@ -31,7 +30,6 @@ public class UploadStats {
 	private int b=0;
 	private int c=0;
 	private int d=0;
-	private int e=0;
 	
 	// This variables are when they are the final values to be uploaded
 	int gamesHumanWonFinal;
@@ -143,11 +141,10 @@ public class UploadStats {
 		roundsRecordFinal = dbValue + gameValue;
 	}// End of method
 
-	void getValuesFromMain(int a, int b, int c, int d, int e) {
-		this.a = humanWon_GameData;
-		this.b = gamePlayerWon_GameData;
-		this.c = gameAIWon_GameData;
-		this.d = totalRoundsPlayed_GameData;
-		this.e = totalDraws_GameData;
+	void getValuesFromMain(int a, int b, int c, int d) {
+		this.a = gamePlayerWon_GameData;
+		this.b = gameAIWon_GameData;
+		this.c = totalRoundsPlayed_GameData;
+		this.d = totalDraws_GameData;
 	}
 }// End of class
