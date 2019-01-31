@@ -34,6 +34,9 @@ public class TopTrumpsCLIApplication {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
+		int numberOfDraws = 0;
+		int gamesHumanWonFinal = 0;
+		int gamesAIWonFinal = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
@@ -223,6 +226,7 @@ public class TopTrumpsCLIApplication {
 				}
 
 				if (winner == -1) {
+					numberOfDraws++;
 
 					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's
 																									// a
@@ -291,8 +295,10 @@ public class TopTrumpsCLIApplication {
 
 						if (j == 0) {
 							System.out.println("Congrats " + userName + ", you win!");
+							gamesHumanWonFinal++;
 						} else {
 							System.out.println("The winner is: AI Player " + j + ".");
+							gamesAIWonFinal++;
 						}
 						System.out.println("Scores:");
 						for (int l = 0; l < controller.userArray.length; l++) {
@@ -302,6 +308,7 @@ public class TopTrumpsCLIApplication {
 							} else {
 								System.out.println(
 										"    AI Player " + l + ": " + controller.userArray[l].numberOfWinsForUser);
+								
 							}
 						}
 						System.exit(0);
