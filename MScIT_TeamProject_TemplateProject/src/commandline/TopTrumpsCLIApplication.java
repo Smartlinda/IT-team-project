@@ -308,7 +308,7 @@ public class TopTrumpsCLIApplication {
 						if (j == 0) {
 							System.out.println("Congrats " + userName + ", you win!");
 							System.out.println("Number of rounds total: " + totalRounds);
-							uploadStats.getValuesFromMain(totalRounds, totalRounds, totalRounds, totalRounds, totalRounds);
+							uploadStats.getValuesFromMain(totalRounds, totalRounds, totalRounds, totalRounds);
 						} else {
 							System.out.println("The winner is: AI Player " + j + ".");
 							System.out.println("Number of rounds total: " + totalRounds);

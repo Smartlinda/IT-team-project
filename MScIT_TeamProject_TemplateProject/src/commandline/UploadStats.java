@@ -41,18 +41,10 @@ public class UploadStats {
 	int roundsRecordFinal;
 	int totalRoundsFinal;
 	int numberOfDrawsFinal;
-	
-	// Create an String array list and add the queries inside
-//	String query1 = "UPDATE games_stats SET games_played = " + gamesPlayedFinal;
-//	String query2 = "UPDATE games_stats SET games_won = " + gamesWonFinal;
-//	String query3 = "UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal;
-//	String query4 = "UPDATE games_stats SET avg_draws = " + averageDrawsFinal;
-//	String query5 = "UPDATE games_stats SET draws_record = " + drawsRecordFinal;
-//	String query6 = "UPDATE games_stats SET rounds_record = " + roundsRecordFinal;
-//	String query7 = "UPDATE games_stats SET total_rounds = " + totalRoundsFinal;
 
+	
 	String[] queries = {
-			"UPDATE games_stats SET games_played = " + gamesPlayedFinal, 
+			"UPDATE games_stats SET games_played = " + gamesPlayed + gamePlayerWon_GameData + gameAIWon_GameData, 
 			"UPDATE games_stats SET games_won = " + gamesWonFinal,
 			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal,
 			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
@@ -60,6 +52,18 @@ public class UploadStats {
 			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
 			"UPDATE games_stats SET total_rounds = " + totalRoundsFinal
 			};
+	
+	
+	
+//	String[] queries = {
+//			"UPDATE games_stats SET games_played = " + gamesPlayedFinal, 
+//			"UPDATE games_stats SET games_won = " + gamesWonFinal,
+//			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal,
+//			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
+//			"UPDATE games_stats SET draws_record = " + drawsRecordFinal, 
+//			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
+//			"UPDATE games_stats SET total_rounds = " + totalRoundsFinal
+//			};
 
 	
 	public void read(int numberOfRounds) {
