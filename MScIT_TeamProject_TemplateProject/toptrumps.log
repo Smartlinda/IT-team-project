@@ -1,0 +1,3742 @@
+------------------------------
+Complete deck: 
+Description    Size Speed Range Firepower Cargo
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Hurricane    :  2  5  3  5  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Hurricane    :  2  5  3  5  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Hurricane    :  2  5  3  5  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+=======
+Avenger      :  2  5  4  3  2
+------------------------------
+Shuffled deck: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+=======
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Orion        : 10  1  6  2  9
+<<<<<<< HEAD
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+=======
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+=======
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+Hornet       :  2  5  3  4  1
+Hawk         :  1  3  2  4  0
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+=======
+Orion        : 10  1  6  2  9
+Merchantman  :  7  3  5  6  8
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Merchantman  :  7  3  5  6  8
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Merchantman  :  7  3  5  6  8
+Hurricane    :  2  5  3  5  0
+Orion        : 10  1  6  2  9
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+Hawk         :  1  3  2  4  0
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Merchantman  :  7  3  5  6  8
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+Hawk         :  1  3  2  4  0
+Idris        :  8  2  7 10  6
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Carrack      :  6  2 10  4  6
+Orion        : 10  1  6  2  9
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 1
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 4 selected Speed: 5
+=======
+Human selected Size: 1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+=======
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+Idris        :  8  2  7 10  6
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+Hornet       :  2  5  3  4  1
+Hawk         :  1  3  2  4  0
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+=======
+Merchantman  :  7  3  5  6  8
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+=======
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Merchantman  :  7  3  5  6  8
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+Orion        : 10  1  6  2  9
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+Vanguard     :  3  4  5  5  2
+Hawk         :  1  3  2  4  0
+Idris        :  8  2  7 10  6
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+350r         :  1  9  2  3  0
+Carrack      :  6  2 10  4  6
+Orion        : 10  1  6  2  9
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+=======
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 2
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Cargo: 2
+=======
+AI Player 1 selected Cargo: 8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+=======
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Vanguard     :  3  4  5  5  2
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+350r         :  1  9  2  3  0
+=======
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+Idris        :  8  2  7 10  6
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+=======
+Hornet       :  2  5  3  4  1
+Hawk         :  1  3  2  4  0
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+=======
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Merchantman  :  7  3  5  6  8
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+Orion        : 10  1  6  2  9
+Hurricane    :  2  5  3  5  0
+=======
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+m50          :  1 10  2  2  0
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Orion        : 10  1  6  2  9
+<<<<<<< HEAD
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+Hawk         :  1  3  2  4  0
+Idris        :  8  2  7 10  6
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Carrack      :  6  2 10  4  6
+Orion        : 10  1  6  2  9
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+------------------------------
+Content of communal pile: 
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+=======
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 3
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Speed: 2
+=======
+AI Player 1 selected Range: 5
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Merchantman  :  7  3  5  6  8
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Orion        : 10  1  6  2  9
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Carrack      :  6  2 10  4  6
+=======
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+=======
+Hornet       :  2  5  3  4  1
+Hawk         :  1  3  2  4  0
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+Orion        : 10  1  6  2  9
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+=======
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Constellation:  4  5  7  3  4
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+Idris        :  8  2  7 10  6
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Orion        : 10  1  6  2  9
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+------------------------------
+Content of communal pile: 
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+=======
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 4
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Speed: 2
+=======
+Human selected Cargo: 1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+=======
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Orion        : 10  1  6  2  9
+=======
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+=======
+Hawk         :  1  3  2  4  0
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+=======
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Constellation:  4  5  7  3  4
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+=======
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+Content of communal pile: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+=======
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 5
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Cargo: 2
+=======
+Human selected Cargo: 0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Orion        : 10  1  6  2  9
+------------------------------
+<<<<<<< HEAD
+AI PLAYER 2
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+------------------------------
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+=======
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+=======
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Hawk         :  1  3  2  4  0
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Avenger      :  2  5  4  3  2
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+=======
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+Content of communal pile: 
+
+ROUND 6
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Speed: 5
+=======
+AI Player 1 selected Speed: 7
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+=======
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Hurricane    :  2  5  3  5  0
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+=======
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+350r         :  1  9  2  3  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Avenger      :  2  5  4  3  2
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+=======
+Constellation:  4  5  7  3  4
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Hurricane    :  2  5  3  5  0
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+Constellation:  4  5  7  3  4
+------------------------------
+Content of communal pile: 
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+=======
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 7
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Speed: 10
+=======
+AI Player 1 selected Speed: 5
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+Hurricane    :  2  5  3  5  0
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+=======
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Constellation:  4  5  7  3  4
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+=======
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+=======
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+m50          :  1 10  2  2  0
+<<<<<<< HEAD
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+Constellation:  4  5  7  3  4
+------------------------------
+Content of communal pile: 
+=======
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 8
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Range: 7
+=======
+Human selected Cargo: 0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+=======
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Constellation:  4  5  7  3  4
+<<<<<<< HEAD
+------------------------------
+AI PLAYER 2
+Content of user's card: 
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 3
+Content of user's card: 
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 4
+Content of user's card: 
+Constellation:  4  5  7  3  4
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+=======
+Avenger      :  2  5  4  3  2
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+=======
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Constellation:  4  5  7  3  4
+
+ROUND 9
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Speed: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+=======
+AI Player 1 selected Speed: 9
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+=======
+350r         :  1  9  2  3  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+=======
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+=======
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 10
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Speed: 3
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+=======
+AI Player 1 selected Range: 7
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+=======
+Constellation:  4  5  7  3  4
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+Constellation:  4  5  7  3  4
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Idris        :  8  2  7 10  6
+Hurricane    :  2  5  3  5  0
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 11
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Size: 1
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+=======
+AI Player 1 selected Firepower: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Constellation:  4  5  7  3  4
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+=======
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Merchantman  :  7  3  5  6  8
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+=======
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+=======
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 12
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Speed: 3
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+=======
+AI Player 1 selected Speed: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+=======
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+Avenger      :  2  5  4  3  2
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+=======
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 13
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Speed: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+=======
+AI Player 1 selected Range: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+=======
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Sabre        :  2  7  2  5  0
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+=======
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 14
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Range: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+=======
+AI Player 1 selected Range: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+=======
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+m50          :  1 10  2  2  0
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+=======
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 15
+--------------------------------------------------
+AI Player 1 selected Range: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+=======
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+Hurricane    :  2  5  3  5  0
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 16
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Firepower: 10
+=======
+Human selected Cargo: 0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Idris        :  8  2  7 10  6
+=======
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 17
+--------------------------------------------------
+AI Player 1 selected Speed: 7
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+=======
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Constellation:  4  5  7  3  4
+Vanguard     :  3  4  5  5  2
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+Idris        :  8  2  7 10  6
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Hawk         :  1  3  2  4  0
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 18
+--------------------------------------------------
+<<<<<<< HEAD
+Human selected Cargo: 0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+m50          :  1 10  2  2  0
+=======
+Human selected Speed: 2
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+=======
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Constellation:  4  5  7  3  4
+Vanguard     :  3  4  5  5  2
+=======
+Vanguard     :  3  4  5  5  2
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Idris        :  8  2  7 10  6
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Merchantman  :  7  3  5  6  8
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+
+ROUND 19
+--------------------------------------------------
+Human selected Cargo: 0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+=======
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+m50          :  1 10  2  2  0
+<<<<<<< HEAD
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Idris        :  8  2  7 10  6
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+=======
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Constellation:  4  5  7  3  4
+<<<<<<< HEAD
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Constellation:  4  5  7  3  4
+=======
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Vanguard     :  3  4  5  5  2
+<<<<<<< HEAD
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+=======
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Idris        :  8  2  7 10  6
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+Content of communal pile: 
+=======
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+<<<<<<< HEAD
+=======
+ROUND 19
+--------------------------------------------------
+AI Player 1 selected Cargo: 8
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Vanguard     :  3  4  5  5  2
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+ROUND 20
+--------------------------------------------------
+AI Player 1 selected Cargo: 8
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+=======
+Avenger      :  2  5  4  3  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Constellation:  4  5  7  3  4
+Vanguard     :  3  4  5  5  2
+=======
+Idris        :  8  2  7 10  6
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+m50          :  1 10  2  2  0
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 21
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Size: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+=======
+AI Player 1 selected Speed: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Idris        :  8  2  7 10  6
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+=======
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Orion        : 10  1  6  2  9
+Constellation:  4  5  7  3  4
+Vanguard     :  3  4  5  5  2
+=======
+Vanguard     :  3  4  5  5  2
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Orion        : 10  1  6  2  9
+m50          :  1 10  2  2  0
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 22
+--------------------------------------------------
+<<<<<<< HEAD
+AI Player 1 selected Firepower: 4
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Orion        : 10  1  6  2  9
+=======
+AI Player 1 selected Size: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Vanguard     :  3  4  5  5  2
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Hawk         :  1  3  2  4  0
+=======
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+Vanguard     :  3  4  5  5  2
+=======
+350r         :  1  9  2  3  0
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+=======
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+m50          :  1 10  2  2  0
+<<<<<<< HEAD
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 23
+--------------------------------------------------
+AI Player 1 selected Speed: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Constellation:  4  5  7  3  4
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+=======
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+=======
+Avenger      :  2  5  4  3  2
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+<<<<<<< HEAD
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+Hawk         :  1  3  2  4  0
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+Hornet       :  2  5  3  4  1
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+=======
+Merchantman  :  7  3  5  6  8
+Hawk         :  1  3  2  4  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Carrack      :  6  2 10  4  6
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Constellation:  4  5  7  3  4
+Carrack      :  6  2 10  4  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+=======
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+
+ROUND 24
+--------------------------------------------------
+AI Player 1 selected Cargo: 8
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Avenger      :  2  5  4  3  2
+------------------------------
+<<<<<<< HEAD
+=======
+AI PLAYER 1
+Content of user's card: 
+Merchantman  :  7  3  5  6  8
+------------------------------
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+HUMAN PLAYER
+<<<<<<< HEAD
+=======
+Cards in deck: 
+m50          :  1 10  2  2  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Hawk         :  1  3  2  4  0
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+
+ROUND 25
+--------------------------------------------------
+AI Player 1 selected Firepower: 4
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+m50          :  1 10  2  2  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Hawk         :  1  3  2  4  0
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Carrack      :  6  2 10  4  6
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Hawk         :  1  3  2  4  0
+
+ROUND 26
+--------------------------------------------------
+AI Player 1 selected Range: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Carrack      :  6  2 10  4  6
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+
+ROUND 27
+--------------------------------------------------
+AI Player 1 selected Speed: 5
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+Sabre        :  2  7  2  5  0
+350r         :  1  9  2  3  0
+Hornet       :  2  5  3  4  1
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+
+ROUND 28
+--------------------------------------------------
+Human selected Cargo: 0
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+------------------------------
+AI PLAYER 1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Content of user's card: 
+<<<<<<< HEAD
+Vanguard     :  3  4  5  5  2
+=======
+Hornet       :  2  5  3  4  1
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+350r         :  1  9  2  3  0
+Hornet       :  2  5  3  4  1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+------------------------------
+AI PLAYER 1
+<<<<<<< HEAD
+Content of user's card: 
+Carrack      :  6  2 10  4  6
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Idris        :  8  2  7 10  6
+Orion        : 10  1  6  2  9
+Vanguard     :  3  4  5  5  2
+m50          :  1 10  2  2  0
+Constellation:  4  5  7  3  4
+Hurricane    :  2  5  3  5  0
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Sabre        :  2  7  2  5  0
+Hawk         :  1  3  2  4  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+350r         :  1  9  2  3  0
+=======
+Cards in deck: 
+Orion        : 10  1  6  2  9
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hornet       :  2  5  3  4  1
+
+ROUND 29
+--------------------------------------------------
+AI Player 1 selected Size: 10
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+350r         :  1  9  2  3  0
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Orion        : 10  1  6  2  9
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+Hornet       :  2  5  3  4  1
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Sabre        :  2  7  2  5  0
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+Hawk         :  1  3  2  4  0
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+Hornet       :  2  5  3  4  1
+350r         :  1  9  2  3  0
+Orion        : 10  1  6  2  9
+
+ROUND 30
+--------------------------------------------------
+AI Player 1 selected Speed: 7
+------------------------------
+HUMAN PLAYER
+Content of user's card: 
+Hornet       :  2  5  3  4  1
+------------------------------
+AI PLAYER 1
+Content of user's card: 
+Sabre        :  2  7  2  5  0
+------------------------------
+HUMAN PLAYER
+Cards in deck: 
+------------------------------
+AI PLAYER 1
+Cards in deck: 
+Hurricane    :  2  5  3  5  0
+Constellation:  4  5  7  3  4
+Avenger      :  2  5  4  3  2
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Constellation:  4  5  7  3  4
+Constellation:  4  5  7  3  4
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Hurricane    :  2  5  3  5  0
+Avenger      :  2  5  4  3  2
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+Carrack      :  6  2 10  4  6
+Hurricane    :  2  5  3  5  0
+Carrack      :  6  2 10  4  6
+Idris        :  8  2  7 10  6
+Hawk         :  1  3  2  4  0
+Vanguard     :  3  4  5  5  2
+Merchantman  :  7  3  5  6  8
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Vanguard     :  3  4  5  5  2
+Orion        : 10  1  6  2  9
+350r         :  1  9  2  3  0
+m50          :  1 10  2  2  0
+Avenger      :  2  5  4  3  2
+Merchantman  :  7  3  5  6  8
+m50          :  1 10  2  2  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Hawk         :  1  3  2  4  0
+<<<<<<< HEAD
+350r         :  1  9  2  3  0
+Sabre        :  2  7  2  5  0
+Vanguard     :  3  4  5  5  2
+=======
+Hornet       :  2  5  3  4  1
+Carrack      :  6  2 10  4  6
+Sabre        :  2  7  2  5  0
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+Hornet       :  2  5  3  4  1
+<<<<<<< HEAD
+Avenger      :  2  5  4  3  2
+Avenger      :  2  5  4  3  2
+Carrack      :  6  2 10  4  6
+Avenger      :  2  5  4  3  2
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+Idris        :  8  2  7 10  6
+m50          :  1 10  2  2  0
+350r         :  1  9  2  3  0
+Constellation:  4  5  7  3  4
+Merchantman  :  7  3  5  6  8
+Merchantman  :  7  3  5  6  8
+Orion        : 10  1  6  2  9
+Orion        : 10  1  6  2  9
+Hawk         :  1  3  2  4  0
+Constellation:  4  5  7  3  4
+Carrack      :  6  2 10  4  6
+Vanguard     :  3  4  5  5  2
+Carrack      :  6  2 10  4  6
+------------------------------
+AI PLAYER 2
+Cards in deck: 
+------------------------------
+AI PLAYER 3
+Cards in deck: 
+------------------------------
+AI PLAYER 4
+Cards in deck: 
+------------------------------
+The winner of the game is: AI Player 1
+=======
+350r         :  1  9  2  3  0
+Orion        : 10  1  6  2  9
+Hornet       :  2  5  3  4  1
+Sabre        :  2  7  2  5  0
+------------------------------
+The winner of the game is: AI Player 1
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project
+>>>>>>> branch 'master' of https://github.com/Smartlinda/IT-team-project.git
