@@ -129,7 +129,7 @@ public class DownloadStats {
 
 					System.out.format(leftAlignFormat, game_id, numberOfRounds, winner, numberOfDraws);
 					System.out.format("+-------------+------------------+------------+-----------------+%n");
-
+//a sasd
 				} while (rs0.next() && rs1.next());
 
 			} else {

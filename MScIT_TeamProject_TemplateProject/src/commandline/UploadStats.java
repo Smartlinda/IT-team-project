@@ -84,6 +84,7 @@ public class UploadStats {
 				statement.executeBatch();
 				connection.commit();
 				// do not forget to close the connection to the database
+				//asd asd
 				connection.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
