@@ -45,8 +45,8 @@ public class UploadStats {
 	
 	String[] queries = {
 			"UPDATE games_stats SET games_played = " + gamesPlayed + gamePlayerWon_GameData + gameAIWon_GameData, 
-			"UPDATE games_stats SET games_won = " + gamesWonFinal,
-			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal,
+			"UPDATE games_stats SET games_won = " + gamesWonFinal + gamePlayerWon_GameData,
+			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal + gameAIWon_GameData,
 			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
 			"UPDATE games_stats SET draws_record = " + drawsRecordFinal, 
 			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
