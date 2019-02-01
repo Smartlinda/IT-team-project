@@ -11,13 +11,10 @@ public class UploadStats {
 	Connection connection = null;
 
 	// Get the values already on the database
-	int gamesPlayed = db.getGamesPlayed();
-	int gamesWon = db.getGamesWon();
-	int gamesAIWon = db.getGamesAIWon();
-	double averageDraws = db.getAverageDraws();
-	int drawsRecord = db.getDrawsRecord();
-	int roundsRecord = db.getRoundsRecord();
-	int totalRounds = db.getTotalRounds();
+	int game_id = db.getGameID();
+	int numberOfRounds = db.getNumberOfRounds();
+	String winner = db.getWinner();
+	int numberOfDraws = db.getNumberOfDraws();
 
 	// Also HERE add the variables gained from each match
 	int gamePlayerWon_GameData=0;
@@ -32,44 +29,25 @@ public class UploadStats {
 	private int d=0;
 	
 	// This variables are when they are the final values to be uploaded
-	int gamesHumanWonFinal;
-	int gamesPlayedFinal;
-	int gamesWonFinal;
-	int gamesAIWonFinal;
-	double averageDrawsFinal;
-	int drawsRecordFinal;
-	int roundsRecordFinal;
-	int totalRoundsFinal;
-	int numberOfDrawsFinal;
+//	int gamesHumanWonFinal;
+//	int gamesPlayedFinal;
+//	int gamesWonFinal;
+//	int gamesAIWonFinal;
+//	double averageDrawsFinal;
+//	int drawsRecordFinal;
+//	int roundsRecordFinal;
+//	int totalRoundsFinal;
+//	int numberOfDrawsFinal;
 
 	
 	String[] queries = {
-			"UPDATE games_stats SET games_played = " + gamesPlayed + gamePlayerWon_GameData + gameAIWon_GameData, 
-			"UPDATE games_stats SET games_won = " + gamesWonFinal + gamePlayerWon_GameData,
-			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal + gameAIWon_GameData,
-			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
-			"UPDATE games_stats SET draws_record = " + drawsRecordFinal, 
-			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
-			"UPDATE games_stats SET total_rounds = " + totalRoundsFinal
+			"SELECT COUNT(game_id) FROM games_stats", 
+			"SELECT COUNT(winner) FROM games_stats WHERE winner='AI'",
+			"SELECT COUNT(winner) FROM games_stats WHERE winner='Human'",
+			"SELECT ROUND(AVG(number_of_draws),2) FROM games_stats", 
+			"SELECT MAX(number_of_rounds) FROM games_stats", 
 			};
 	
-	
-	
-//	String[] queries = {
-//			"UPDATE games_stats SET games_played = " + gamesPlayedFinal, 
-//			"UPDATE games_stats SET games_won = " + gamesWonFinal,
-//			"UPDATE games_stats SET games_ai_won = " + gamesAIWonFinal,
-//			"UPDATE games_stats SET avg_draws = " + averageDrawsFinal, 
-//			"UPDATE games_stats SET draws_record = " + drawsRecordFinal, 
-//			"UPDATE games_stats SET rounds_record = " + roundsRecordFinal, 
-//			"UPDATE games_stats SET total_rounds = " + totalRoundsFinal
-//			};
-
-	
-	public void read(int numberOfRounds) {
-//		this.numberOfRounds = numberOfRounds;
-		
-	}
 	public UploadStats() {
 		/*
 		 * Here we add the method to start!
@@ -115,40 +93,41 @@ public class UploadStats {
 		} // if-else
 	}// End of method
 
-	private void numberOfGamesPlayed(int dbValue, int gameValue) {
-		gamesPlayedFinal = dbValue + gameValue;
-	}// End of method
-
-	private void numberOfTimesHumanWon(int dbValue, int gameValue) {
-		gamesHumanWonFinal = dbValue + gameValue;
-	}// End of method
-
-	private void numberOfTimesAIWon(int dbValue, int gameValue) {
-		gamesAIWonFinal = dbValue + gameValue;
-	}// End of method
-
-	private void averageNumberOfDraws(double dbValue, double gameValue) {
-		averageDrawsFinal = (dbValue + gameValue) / gamesPlayedFinal;
-	}// End of method
-
-	private void numberOfDrawsInAGame(int dbValue, int gameValue) {
-		numberOfDrawsFinal = dbValue + gameValue;
-	}// End of method
-
-	private void largestNumberOfRoundsPlayed(int dbValue, int gameValue) {
-		if (dbValue <= gameValue) {
-			drawsRecordFinal = gameValue;
-		}
-	}// End of method
-
-	private void numberOfTotalRounds(int dbValue, int gameValue) {
-		roundsRecordFinal = dbValue + gameValue;
-	}// End of method
-
 	void getValuesFromMain(int a, int b, int c, int d) {
 		this.a = gamePlayerWon_GameData;
 		this.b = gameAIWon_GameData;
 		this.c = totalRoundsPlayed_GameData;
 		this.d = totalDraws_GameData;
 	}
+	
+//	private void numberOfGamesPlayed(int dbValue, int gameValue) {
+//		gamesPlayedFinal = dbValue + gameValue;
+//	}// End of method
+//
+//	private void numberOfTimesHumanWon(int dbValue, int gameValue) {
+//		gamesHumanWonFinal = dbValue + gameValue;
+//	}// End of method
+//
+//	private void numberOfTimesAIWon(int dbValue, int gameValue) {
+//		gamesAIWonFinal = dbValue + gameValue;
+//	}// End of method
+//
+//	private void averageNumberOfDraws(double dbValue, double gameValue) {
+//		averageDrawsFinal = (dbValue + gameValue) / gamesPlayedFinal;
+//	}// End of method
+//
+//	private void numberOfDrawsInAGame(int dbValue, int gameValue) {
+//		numberOfDrawsFinal = dbValue + gameValue;
+//	}// End of method
+//
+//	private void largestNumberOfRoundsPlayed(int dbValue, int gameValue) {
+//		if (dbValue <= gameValue) {
+//			drawsRecordFinal = gameValue;
+//		}
+//	}// End of method
+//
+//	private void numberOfTotalRounds(int dbValue, int gameValue) {
+//		roundsRecordFinal = dbValue + gameValue;
+//	}// End of method
+
 }// End of class
