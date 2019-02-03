@@ -24,7 +24,7 @@ public class Model {
 	public void readContent() {
 		cardCon = new ArrayList<Card>();
 		try {
-			BufferedReader brd = new BufferedReader(new FileReader(filePath));
+			BufferedReader brd = new BufferedReader(new FileReader("StarCitizenDeck.txt"));
 			String head = brd.readLine(); // read in the first line which are the
 											// headers
 			cardHeader = head.split(" ");

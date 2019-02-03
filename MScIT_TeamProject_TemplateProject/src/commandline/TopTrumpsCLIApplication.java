@@ -37,19 +37,14 @@ public class TopTrumpsCLIApplication {
 		int numberOfDraws = 0;
 		int gamesHumanWonFinal = 0;
 		int gamesAIWonFinal = 0;
+		int numberOfGame = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
 		writeGameLogsToFile = true;
 		// ------UNCOMMENT--------} // Command line selection
 
-		Model model = new Model();
-		model.readContent();
-		if (writeGameLogsToFile) {
-			writeToLog.writeCompleteDeckToFile(model.cardCon);
-		}
-
-		Controller controller = new Controller(model);
+		
 
 		System.err.print(
 				" _________  ________  ________        _________  ________  ___  ___  _____ ______   ________  ________      \n"
@@ -68,6 +63,14 @@ public class TopTrumpsCLIApplication {
 		String userName = in.nextLine();
 		HumanUser player = new HumanUser(userName); // make human user with username
 		while (!userWantsToQuit) {
+			gameEnd = false;
+			Model model = new Model();
+			model.readContent();
+			if (writeGameLogsToFile) {
+				writeToLog.writeCompleteDeckToFile(model.cardCon);
+			}
+
+			Controller controller = new Controller(model);
 			System.out.println("Hi " + userName
 					+ "! \nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics\nPress 3 to quit the game");
 
@@ -107,6 +110,7 @@ public class TopTrumpsCLIApplication {
 
 				controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
 																		// aiplayers+1
+				System.out.println(controller.userArray.length);
 
 				controller.userArray[player.userID] = player; // add the player to the userarray in controller
 
@@ -228,7 +232,7 @@ public class TopTrumpsCLIApplication {
 
 				if (winner == -1) {
 					numberOfDraws++;
-
+					
 					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's
 																									// a
 																									// draw, display one
@@ -316,9 +320,11 @@ public class TopTrumpsCLIApplication {
 					}
 				}
 			}
+			numberOfGame++;
+			AIUser.nextID = 1;
 		}
 		in.close();
-
+		
 	}
 
 }

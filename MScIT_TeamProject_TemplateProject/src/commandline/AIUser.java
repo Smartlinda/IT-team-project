@@ -2,7 +2,7 @@ package commandline;
 
 public class AIUser extends GenericUser {
 
-	private static int nextID = 1; // to automatically assign incremented id to the AI
+	protected static int nextID = 1; // to automatically assign incremented id to the AI
 
 
 	public AIUser() {
