@@ -11,10 +11,12 @@ public class UploadStats {
 	Connection connection = null;
 
 	// Get the values already on the database
-	int game_id = db.getGameID();
-	int numberOfRounds = db.getNumberOfRounds();
-	String winner = db.getWinner();
-	int numberOfDraws = db.getNumberOfDraws();
+	//----------------------------------------------
+//	int game_id = db.getGameID();
+//	int numberOfRounds = db.getNumberOfRounds();
+//	String winner = db.getWinner();
+//	int numberOfDraws = db.getNumberOfDraws();#
+	//---------------------------------------------
 
 	// Also HERE add the variables gained from each match
 	int gamePlayerWon_GameData=0;
