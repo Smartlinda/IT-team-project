@@ -24,6 +24,9 @@
     	
     	<div class="container">
 
+
+
+           <h1> New game </h1>
 			<!-- Add your HTML Here -->
 		
 		</div>
