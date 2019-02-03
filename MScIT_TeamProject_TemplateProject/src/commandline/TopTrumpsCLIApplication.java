@@ -35,9 +35,9 @@ public class TopTrumpsCLIApplication {
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
 		int numberOfDraws = 0;
-		int gamesHumanWonFinal = 0;
-		int gamesAIWonFinal = 0;
-		int numberOfGame = 0;
+		int gamesHumanWonFinal;
+		int gamesAIWonFinal;
+		//int numberOfGame = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
@@ -74,6 +74,8 @@ public class TopTrumpsCLIApplication {
 
 		HumanUser player = new HumanUser(userName); // make human user with username
 		while (!userWantsToQuit) {
+			gamesHumanWonFinal = 0;
+			gamesAIWonFinal = 0;
 			gameEnd = false;
 			Model model = new Model();
 			model.readContent();
@@ -335,7 +337,14 @@ public class TopTrumpsCLIApplication {
 					}
 				}
 			}
-			numberOfGame++;
+			//THESE ARE THE VARIABLES YOU WANT FOR UPLOAD STATS
+			//COURTESY OF LINDA THANK YOU LINDA
+			//GAMEID FROM THE DB++ IS THE NEW GAMEID
+			System.out.println(gamesHumanWonFinal);
+			System.out.println(gamesAIWonFinal);
+			System.out.println(roundCounter-1); //THE -1 IS VERY IMPORTANT
+			System.out.println(numberOfDraws);
+			//numberOfGame++; MAYBE NOT NEEDED
 			AIUser.nextID = 1;
 		}
 		in.close();

@@ -8,10 +8,11 @@ import java.sql.Statement;
 
 public class DownloadStats {
 
-	int game_id;
-	int numberOfRounds;
-	String winner;
-	int numberOfDraws;
+	private int game_id;
+	private int numberOfRounds;
+	private String winner;
+	private int numberOfDraws;
+	
 
 	Connection connection = null;
 

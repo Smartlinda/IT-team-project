@@ -10,6 +10,20 @@ public class UploadStats {
 	DownloadStats db = new DownloadStats();
 	Connection connection = null;
 
+	
+	/*WHOEVER IS WORKING ON THIS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	 * ATTENTION PLEASE  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+	 * PLEASE THANK YOU  [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+	 * 
+	 * 
+	 * 
+	 * FOR EVERYTHING YOU WOULD EVER NEED PLEASE GO TO THE MAIN
+	 * LINE 340
+	 * DO YOUR STUFF THERE TOO
+	 * THANK YOU LOVE YOU
+	 */
+	
+	
 	// Get the values already on the database
 	//----------------------------------------------
 //	int game_id = db.getGameID();
@@ -50,7 +64,7 @@ public class UploadStats {
 			"SELECT MAX(number_of_rounds) FROM games_stats", 
 			};
 	
-	public UploadStats() {
+	public UploadStats() {     //AFTER EVERY GAME, UPDATE DB
 		/*
 		 * Here we add the method to start!
 		 */
