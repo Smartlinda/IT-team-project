@@ -35,16 +35,14 @@ public class TopTrumpsCLIApplication {
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
 		int numberOfDraws = 0;
-		int gamesHumanWonFinal = 0;
-		int gamesAIWonFinal = 0;
-		int numberOfGame = 0;
+		int gamesHumanWonFinal;
+		int gamesAIWonFinal;
+		//int numberOfGame = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
 		writeGameLogsToFile = true;
 		// ------UNCOMMENT--------} // Command line selection
-
-		
 
 		System.err.print(
 				" _________  ________  ________        _________  ________  ___  ___  _____ ______   ________  ________      \n"
@@ -60,96 +58,117 @@ public class TopTrumpsCLIApplication {
 
 		Scanner in = new Scanner(System.in);
 		System.out.print("Welcome! What's your name? ");
-		String userName = in.nextLine();
+		String userName;
+
+		while (true) {
+			try {
+				userName = in.nextLine();
+				if (userName.equals("")) {
+					throw (new Exception());
+				}
+				break;
+			} catch (Exception e) {
+				System.out.println("Type something!");
+			}
+		}
+
 		HumanUser player = new HumanUser(userName); // make human user with username
 		while (!userWantsToQuit) {
+			gamesHumanWonFinal = 0;
+			gamesAIWonFinal = 0;
 			gameEnd = false;
 			Model model = new Model();
 			model.readContent();
-			if (writeGameLogsToFile) {
-				writeToLog.writeCompleteDeckToFile(model.cardCon);
-			}
-
 			Controller controller = new Controller(model);
-			System.out.println("Hi " + userName
-					+ "! \nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics\nPress 3 to quit the game");
+			int selection = -1;
+			System.out.println("Hi " + userName + "!");
 
-			System.out.print("Enter your selection here: ");
-			int selection = -1; // assign to a random number, so it's a global var not local
+			while (selection != 1 && selection != 3) {
+				System.out.println(
+						"\nSelect an option:\nPress 1 to start a game\nPress 2 to see statistics\nPress 3 to quit the game");
 
-			while (true) {
-				try {
-					selection = in.nextInt(); // need to check if input is 1 or 2 or 3 (exception catching)
-					if (selection == 1 || selection == 2 || selection == 3) {
-						break;
-					}
-					throw (new InputMismatchException());
-				} catch (InputMismatchException e) {
-					in.nextLine();
-					System.err.println("That's not a valid choice, try again.");
-				}
-			}
-
-			System.out.print("");
-			if (selection == 1) {
-
-				System.out.print("Choose the number of opponents (1-4): ");
+				System.out.print("Enter your selection here: ");
 
 				while (true) {
 					try {
-						selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
-						if (selection <= 4 && selection >= 1) {
+						selection = in.nextInt(); // need to check if input is 1 or 2 or 3 (exception catching)
+						if (selection == 1 || selection == 2 || selection == 3) {
 							break;
 						}
 						throw (new InputMismatchException());
-					} catch (InputMismatchException e) { // is inputmismatchexception appropriate?
+					} catch (InputMismatchException e) {
 						in.nextLine();
 						System.err.println("That's not a valid choice, try again.");
 					}
 				}
 
-				controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
-																		// aiplayers+1
-				System.out.println(controller.userArray.length);
-
-				controller.userArray[player.userID] = player; // add the player to the userarray in controller
-
-				for (int i = 0; i < selection; i++) {
-					AIUser ai = new AIUser();
-					controller.userArray[ai.userID] = ai;
-				}
-
-				for (int i = 0; i < controller.userArray.length; i++) {
-					// activeUser contains the ID for users in play
-					controller.activeUser.add(i);
-				}
-				controller.shuffling(); // shuffle the cards
-				if (writeGameLogsToFile) {
-					writeToLog.writeCompleteShuffledDeckToFile(controller.shuffledStack);
-				}
-
-				controller.distributeCards(); // distribute the cards to each player
-				if (writeGameLogsToFile) {
-					for (int j = 0; j < controller.userArray.length; j++) {
-						writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
-								controller.userArray[j]);
-					}
-				}
-
 				System.out.print("");
 
-				System.out.println("Game starts here.");
+				if (selection == 1) {
 
-			} else if (selection == 2) {
-				/*
-				 * Use this if Player selects to see the statistics
-				 */
-				DownloadStats db = new DownloadStats();
-//			System.exit(0);
-				// display the statistics
-			} else if (selection == 3) {
+					System.out.print("Choose the number of opponents (1-4): ");
+
+					while (true) {
+						try {
+							selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+							if (selection <= 4 && selection >= 1) {
+								break;
+							}
+							throw (new InputMismatchException());
+						} catch (InputMismatchException e) { // is inputmismatchexception appropriate?
+							in.nextLine();
+							System.err.println("That's not a valid choice, try again.");
+						}
+					}
+
+					controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
+																			// aiplayers+1
+					System.out.println(controller.userArray.length);
+
+					controller.userArray[player.userID] = player; // add the player to the userarray in controller
+
+					for (int i = 0; i < selection; i++) {
+						AIUser ai = new AIUser();
+						controller.userArray[ai.userID] = ai;
+					}
+
+					for (int i = 0; i < controller.userArray.length; i++) {
+						// activeUser contains the ID for users in play
+						controller.activeUser.add(i);
+					}
+					controller.shuffling(); // shuffle the cards
+					if (writeGameLogsToFile) {
+						writeToLog.writeCompleteShuffledDeckToFile(controller.shuffledStack);
+					}
+
+					controller.distributeCards(); // distribute the cards to each player
+					if (writeGameLogsToFile) {
+						for (int j = 0; j < controller.userArray.length; j++) {
+							writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
+									controller.userArray[j]);
+						}
+					}
+
+					System.out.print("");
+
+					System.out.println("Game starts here.");
+					break;
+
+				} else if (selection == 2) {
+					/*
+					 * Use this if Player selects to see the statistics
+					 */
+					// System.out.println("STATISTICS");
+					DownloadStats db = new DownloadStats();
+
+				} else if (selection == 3) {
 //				userWantsToQuit = true;
-				System.exit(0);
+					System.exit(0);
+				}
+			}
+
+			if (writeGameLogsToFile) {
+				writeToLog.writeCompleteDeckToFile(model.cardCon);
 			}
 
 			int roundCounter = 1; // start on round 1
@@ -222,7 +241,6 @@ public class TopTrumpsCLIApplication {
 				previousWinner = winner; // if there is a draw
 				winner = controller.checkRoundWinner(previousWinner);
 
-
 				if (writeGameLogsToFile) {
 					for (int j : controller.activeUser) {
 						writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(j),
@@ -232,7 +250,7 @@ public class TopTrumpsCLIApplication {
 
 				if (winner == -1) {
 					numberOfDraws++;
-					
+
 					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's
 																									// a
 																									// draw, display one
@@ -298,10 +316,10 @@ public class TopTrumpsCLIApplication {
 							writeToLog.writeWinnerToFile(controller.userArray[j]);
 						}
 
-						if (j == 0) {
+						if (j == 0) {   // if user won
 							System.out.println("Congrats " + userName + ", you win!");
 							gamesHumanWonFinal++;
-						} else {
+						} else {		// if AI won
 							System.out.println("The winner is: AI Player " + j + ".");
 							gamesAIWonFinal++;
 						}
@@ -313,18 +331,24 @@ public class TopTrumpsCLIApplication {
 							} else {
 								System.out.println(
 										"    AI Player " + l + ": " + controller.userArray[l].numberOfWinsForUser);
-								
+
 							}
 						}
-//						System.exit(0);
 					}
 				}
 			}
-			numberOfGame++;
+			//THESE ARE THE VARIABLES YOU WANT FOR UPLOAD STATS
+			//COURTESY OF LINDA THANK YOU LINDA
+			//GAMEID FROM THE DB++ IS THE NEW GAMEID
+			System.out.println(gamesHumanWonFinal);
+			System.out.println(gamesAIWonFinal);
+			System.out.println(roundCounter-1); //THE -1 IS VERY IMPORTANT
+			System.out.println(numberOfDraws);
+			//numberOfGame++; MAYBE NOT NEEDED
 			AIUser.nextID = 1;
 		}
 		in.close();
-		
+
 	}
 
 }
