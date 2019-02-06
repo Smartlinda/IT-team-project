@@ -1,5 +1,6 @@
 package commandline;
 
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -37,7 +38,7 @@ public class TopTrumpsCLIApplication {
 		int numberOfDraws = 0;
 		int gamesHumanWonFinal;
 		int gamesAIWonFinal;
-		//int numberOfGame = 0;
+		int numberOfGame = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
@@ -172,6 +173,7 @@ public class TopTrumpsCLIApplication {
 			}
 
 			int roundCounter = 1; // start on round 1
+			numberOfDraws = 0; //adriano initialize draws at 0
 			Random randNum = new Random();
 			int winner = randNum.nextInt(controller.userArray.length); // first winner chosen randomly
 			int previousWinner = -2; // random number to say who was the previous winner
@@ -344,8 +346,12 @@ public class TopTrumpsCLIApplication {
 			System.out.println(gamesAIWonFinal);
 			System.out.println(roundCounter-1); //THE -1 IS VERY IMPORTANT
 			System.out.println(numberOfDraws);
-			//numberOfGame++; MAYBE NOT NEEDED
+			numberOfGame++; //MAYBE NOT NEEDED
 			AIUser.nextID = 1;
+			
+			UploadStats a = new UploadStats(gamesHumanWonFinal,gamesAIWonFinal,roundCounter,numberOfDraws,numberOfGame);
+			a.test_variables();
+			//a.updateValuesInDB();
 		}
 		in.close();
 
