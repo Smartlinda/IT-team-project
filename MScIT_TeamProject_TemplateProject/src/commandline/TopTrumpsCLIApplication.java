@@ -30,8 +30,9 @@ public class TopTrumpsCLIApplication {
 	 * should write game logs to a file.
 	 * 
 	 * @param args
+	 * @throws SQLException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
@@ -75,6 +76,7 @@ public class TopTrumpsCLIApplication {
 
 		HumanUser player = new HumanUser(userName); // make human user with username
 		while (!userWantsToQuit) {
+			numberOfDraws = 0; //adriano initialize draws at 0
 			gamesHumanWonFinal = 0;
 			gamesAIWonFinal = 0;
 			gameEnd = false;
@@ -173,7 +175,6 @@ public class TopTrumpsCLIApplication {
 			}
 
 			int roundCounter = 1; // start on round 1
-			numberOfDraws = 0; //adriano initialize draws at 0
 			Random randNum = new Random();
 			int winner = randNum.nextInt(controller.userArray.length); // first winner chosen randomly
 			int previousWinner = -2; // random number to say who was the previous winner
@@ -302,11 +303,11 @@ public class TopTrumpsCLIApplication {
 				controller.excludeLoser(); // if someone has no cards left, get rid of them
 				roundCounter++;
 
-				try {
-					Thread.sleep(500);
-				} catch (InterruptedException e) {
-					System.err.println("You woke up the thread!");
-				}
+//				try {
+//					Thread.sleep(500);
+//				} catch (InterruptedException e) {
+//					System.err.println("You woke up the thread!");
+//				}
 
 				for (int j = 0; j < controller.userArray.length; j++) {
 					if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
@@ -342,16 +343,20 @@ public class TopTrumpsCLIApplication {
 			//THESE ARE THE VARIABLES YOU WANT FOR UPLOAD STATS
 			//COURTESY OF LINDA THANK YOU LINDA
 			//GAMEID FROM THE DB++ IS THE NEW GAMEID
-			System.out.println(gamesHumanWonFinal);
-			System.out.println(gamesAIWonFinal);
-			System.out.println(roundCounter-1); //THE -1 IS VERY IMPORTANT
-			System.out.println(numberOfDraws);
+			System.out.println("human won? "+gamesHumanWonFinal);
+			System.out.println("ai won? "+gamesAIWonFinal);
+			System.out.println("rounds? "+ (roundCounter-1)); //THE -1 IS VERY IMPORTANT
+			System.out.println("draws? "+numberOfDraws);
 			numberOfGame++; //MAYBE NOT NEEDED
 			AIUser.nextID = 1;
 			
 			UploadStats a = new UploadStats(gamesHumanWonFinal,gamesAIWonFinal,roundCounter,numberOfDraws,numberOfGame);
 			a.test_variables();
-			//a.updateValuesInDB();
+//			try {
+//			a.updateValuesInDB();
+//			} catch (SQLException e) {
+//				System.out.println("CANT DO THIS ANYMORE ");
+//			}
 		}
 		in.close();
 
