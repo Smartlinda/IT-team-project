@@ -15,6 +15,7 @@ import io.dropwizard.views.ViewBundle;
 import online.configuration.TopTrumpsJSONConfiguration;
 import online.dwResources.GameWebPagesResource;
 import online.dwResources.TopTrumpsRESTAPI;
+//import io.dropwizard.assets.AssetsBundle;
 
 /**
  * Top Trumps Web Application. This class is complete, you do not need to edit
@@ -82,14 +83,13 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	}
 
 	/**
-	 * An initalization method that attaches the Configuration to the views
+	 * An initialization method that attaches the Configuration to the views
 	 */
 	@Override
 	public void initialize(Bootstrap<TopTrumpsJSONConfiguration> bootstrap) {
 		bootstrap.addBundle(new ViewBundle<TopTrumpsJSONConfiguration>());
 		// HERE CHANGE --------------------------------------
-//		TopTrumpsJSONConfiguration.addBundle(new AssetsBundle("/ITSD2018Template/src/online", "/assets/", "index.html"));
-//		TopTrumpsJSONConfiguration.addBundle(new AssetsBundle("/assets", "/", "index.html"));
+//		bootstrap.addBundle(new AssetsBundle("/assets", "/myassets/", "index.html"));
 	}
 
 }
