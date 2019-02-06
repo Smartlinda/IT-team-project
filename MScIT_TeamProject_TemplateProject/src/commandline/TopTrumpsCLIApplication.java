@@ -63,12 +63,12 @@ public class TopTrumpsCLIApplication {
 		while (true) {
 			try {
 				userName = in.nextLine();
-				if (userName.equals("")) {
+				if (userName.equals("") || (userName.length() > 20)) {
 					throw (new Exception());
 				}
 				break;
 			} catch (Exception e) {
-				System.out.println("Type something!");
+				System.out.println("You stupid fuck!");
 			}
 		}
 
@@ -300,11 +300,11 @@ public class TopTrumpsCLIApplication {
 				controller.excludeLoser(); // if someone has no cards left, get rid of them
 				roundCounter++;
 
-//				try {
-//					Thread.sleep(500);
-//				} catch (InterruptedException e) {
-//					System.err.println("You woke up the thread!");
-//				}
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					System.err.println("You woke up the thread!");
+				}
 
 				for (int j = 0; j < controller.userArray.length; j++) {
 					if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
