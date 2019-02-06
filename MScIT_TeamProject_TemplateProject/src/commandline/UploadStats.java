@@ -10,10 +10,11 @@ import java.sql.Statement;
 // Get variables from the main --------------------------
 public class UploadStats {
     
-	private int gamesHumanWonFinal;
-	private int gamesAIWonFinal;
+//	private int gamesHumanWonFinal;
+//	private int gamesAIWonFinal;
 	private int roundCounter;
 	private int numberOfDraws;
+	private String winner;
 	protected int i;
 	private Connection connection = null;
 	private ResultSet result;
@@ -21,8 +22,13 @@ public class UploadStats {
 
 public UploadStats(int gamesHumanWonFinal2, int gamesAIWonFinal2, int roundCounter2, int numberOfDraws2, int i2) {
 
-		this.gamesHumanWonFinal = gamesHumanWonFinal2;
-		this.gamesAIWonFinal = gamesAIWonFinal2;
+		if (gamesHumanWonFinal2 == 1) {
+			winner = "Human";
+		} else if (gamesAIWonFinal2 == 1) {
+			winner = "AI";
+		}
+		//this.gamesHumanWonFinal = gamesHumanWonFinal2;
+		//this.gamesAIWonFinal = gamesAIWonFinal2;
 		this.roundCounter = roundCounter2;
 		this.numberOfDraws = numberOfDraws2;
 		this.i=i2;
@@ -31,8 +37,9 @@ public UploadStats(int gamesHumanWonFinal2, int gamesAIWonFinal2, int roundCount
 
 public void test_variables() {
 	System.out.println("The variables are:");
-	System.out.println(gamesHumanWonFinal);
-	System.out.println(gamesAIWonFinal);
+	System.out.println(winner);
+//	System.out.println(gamesHumanWonFinal);
+//	System.out.println(gamesAIWonFinal);
 	System.out.println(roundCounter-1);
 	System.out.println(numberOfDraws);	
 	System.out.println(i);	
@@ -72,7 +79,7 @@ public void updateValuesInDB() throws SQLException {
 			
 			System.out.println("Established connection to database.\n");
 			Statement statement = connection.createStatement();
-			statement.executeUpdate("INSERT INTO games_stats " +  "VALUES ('"+ i + "', '"+ gamesHumanWonFinal + "' , '"+ gamesAIWonFinal + "', '"+ newroundCounter + "', '"+ numberOfDraws + "')");
+			statement.executeUpdate("INSERT INTO games_stats " +  "VALUES ('"+ i + "', '"+ newroundCounter + "' , '"+ winner +  "', '"+ numberOfDraws + "')");
 			connection.setAutoCommit(false);
 
 			statement.executeBatch();
