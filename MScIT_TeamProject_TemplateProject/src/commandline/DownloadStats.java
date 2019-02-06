@@ -55,12 +55,12 @@ public class DownloadStats {
 		// trying for a database connection
 		try {
 			// Connect to the server with username and passwd
-			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
-					"teamproject");
+//			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+//					"teamproject");
 
 			// change to this when we running the game from the labs
-//			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
-//					"2416090c");
+			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
+					"2416090c");
 			System.out.println("Connection Established.");
 			getTableStats();
 		} catch (SQLException e) {

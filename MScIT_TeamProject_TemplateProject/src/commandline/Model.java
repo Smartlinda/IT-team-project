@@ -8,7 +8,9 @@ import java.io.IOException;
 import java.util.*;
 
 public class Model {
-	private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt" ;
+	
+	private String filePath = "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt" ;
+	//private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt" ;
 	protected String[] cardHeader = new String[6];
 	private String[][] cards;
 	protected static int numberOfAllCards;
@@ -24,7 +26,7 @@ public class Model {
 	public void readContent() {
 		cardCon = new ArrayList<Card>();
 		try {
-			BufferedReader brd = new BufferedReader(new FileReader("StarCitizenDeck.txt"));
+			BufferedReader brd = new BufferedReader(new FileReader(filePath));
 			String head = brd.readLine(); // read in the first line which are the
 											// headers
 			cardHeader = head.split(" ");
