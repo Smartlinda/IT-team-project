@@ -19,10 +19,10 @@
 	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/Smartlinda/IT-team-project/master/MScIT_TeamProject_TemplateProject/src/main/resources/assets/css/bootstrap.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
 	<!-- FROM DOWN HERE, ITS THE STYLING -->
-<!--
+
 	<style>
 		body {
 	  background-color: black;
@@ -35,7 +35,9 @@
 		z-index:1;
 		color: white;
 	}
-
+	br {
+		line-height: 50%;
+	}
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	  font-family: inherit;
 	  font-weight: 500;
@@ -85,6 +87,7 @@
 
 	h5, .h5 {
 	  font-size: 14px
+		font-family: "Impact", Times, serif;
 	}
 
 	h6, .h6 {
@@ -108,7 +111,6 @@ img {
 	left:0px;
 	top:0px;
 	z-index:-1;
-
 }
 
 /* navigation bar */
@@ -400,7 +402,35 @@ section{
 }
 /* end of nevigation bar */
 
-</style> -->
+
+.animated {
+	 padding-top:95px;
+	 margin-bottom:60px;
+	 -webkit-animation-duration: 7s;
+	 animation-duration: 7s;
+	 -webkit-animation-fill-mode: both;
+	 animation-fill-mode: both;
+	 padding-left: 19%;
+	 text-shadow: 2px 2px 4px #000000;
+}
+
+@-webkit-keyframes fadeIn {
+	 0% {opacity: 0;}
+	 100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	 0% {opacity: 0;}
+	 100% {opacity: 1;}
+}
+
+.fadeIn {
+	 -webkit-animation-name: fadeIn;
+	 animation-name: fadeIn;
+}
+
+
+</style>
 
 </head>
 
@@ -420,22 +450,24 @@ section{
 					<input type="checkbox" name="" id="open">
 					<nav>
 						<a href="../toptrumps/">Home</a>
-						<a href="../toptrumps/game">Play now!</a>
+						<a href="../toptrumps/game" style="color:red;">Play now!</a>
 						<a href="../toptrumps/statistics">Statistics</a>
 					</nav>
 				</div>
 			</div>
 		</header>
 
-
-
 		<!-- Add your HTML Here -->
-
-		<h1> HELLO </h1>
-
+      <div id = "animated-example" class = "animated fadeIn">
+		<h1 class="first-text">Welcome to Top Trumps Game!</h1>
+		<h4 class="first-text">Are you ready for the battle?</h1><br><br>
+			<h4 class="first-text"><i>Get ready to face your fears in to the battlefield of wild cards.<br>
+				You have one objective. Defeat every opponent within your<br>
+				battlefield in order to survive and become the next biggest warrior.<br>
+				Goodluck in there.</i></h4>
+</div>
 	</div>
-
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		// Method that is called on page load
 		function initalize() {
 
@@ -444,8 +476,8 @@ section{
 			// --------------------------------------------------------------------------
 
 			// For example, lets call our sample methods
-			helloJSONList();
-			helloWord("Student");
+			 helloJSONList();
+			 helloWord("Student");
 
 		}
 
@@ -477,10 +509,10 @@ section{
 			}
 			return xhr;
 		}
-	</script>
+	</script> -->
 
 	<!-- Here are examples of how to call REST API Methods -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		// This calls the helloJSONList REST method from TopTrumpsRESTAPI
 		function helloJSONList() {
 
@@ -519,12 +551,12 @@ section{
 			xhr.onload = function(e) {
 				var responseText = xhr.response; // the text of the response
 				alert(responseText); // lets produce an alert
-			};
+			}; -->
 
-			// We have done everything we need to prepare the CORS request, so send it
+			<!-- // We have done everything we need to prepare the CORS request, so send it
 			xhr.send();
 		}
-	</script>
+	</script> -->
 
 
 
