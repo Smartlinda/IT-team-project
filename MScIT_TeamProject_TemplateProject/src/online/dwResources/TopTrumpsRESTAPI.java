@@ -16,6 +16,8 @@ import javax.ws.rs.core.MediaType;
 
 import online.configuration.TopTrumpsJSONConfiguration;
 
+import commandline.DownloadStats;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -34,6 +36,8 @@ import com.fasterxml.jackson.databind.ObjectWriter;
  */
 public class TopTrumpsRESTAPI {
 
+	private DownloadStats db;
+	
 	/** A Jackson Object writer. It allows us to turn Java objects
 	 * into JSON strings easily. */
 	ObjectWriter oWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
@@ -72,6 +76,15 @@ public class TopTrumpsRESTAPI {
 		String listAsJSONString = oWriter.writeValueAsString(listOfWords);
 		
 		return listAsJSONString;
+	}
+	
+	@GET
+	@Path("statistics/download_stats")
+	public String downloadStats() throws IOException {
+		String dbGotStats = db.passStats();
+		Number[] gotStats = {0};
+		gotStats = db.passStats();
+		return gotStats;		
 	}
 	
 	@GET

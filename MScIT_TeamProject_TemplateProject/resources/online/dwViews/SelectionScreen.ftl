@@ -464,7 +464,7 @@ section{
 			<h4 class="first-text"><i>Get ready to face your fears in to the battlefield of wild cards.<br>
 				You have one objective. Defeat every opponent within your<br>
 				battlefield in order to survive and become the next biggest warrior.<br>
-				Goodluck in there.</i></h4>
+				Goodluck out there.</i></h4>
 </div>
 	</div>
 	<!-- <script type="text/javascript">
