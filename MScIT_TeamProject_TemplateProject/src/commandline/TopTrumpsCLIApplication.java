@@ -1,5 +1,6 @@
 package commandline;
 
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -29,15 +30,16 @@ public class TopTrumpsCLIApplication {
 	 * should write game logs to a file.
 	 * 
 	 * @param args
+	 * @throws SQLException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean gameEnd = false;
 		int numberOfDraws = 0;
 		int gamesHumanWonFinal;
 		int gamesAIWonFinal;
-		//int numberOfGame = 0;
+		int numberOfGame = 0;
 
 		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
 		// (args[0].equalsIgnoreCase("true")) {
@@ -63,17 +65,18 @@ public class TopTrumpsCLIApplication {
 		while (true) {
 			try {
 				userName = in.nextLine();
-				if (userName.equals("")) {
+				if (userName.equals("") || (userName.length() > 20)) {
 					throw (new Exception());
 				}
 				break;
 			} catch (Exception e) {
-				System.out.println("Type something!");
+				System.out.println("You stupid fuck!");
 			}
 		}
 
 		HumanUser player = new HumanUser(userName); // make human user with username
 		while (!userWantsToQuit) {
+			numberOfDraws = 0; //adriano initialize draws at 0
 			gamesHumanWonFinal = 0;
 			gamesAIWonFinal = 0;
 			gameEnd = false;
@@ -340,12 +343,20 @@ public class TopTrumpsCLIApplication {
 			//THESE ARE THE VARIABLES YOU WANT FOR UPLOAD STATS
 			//COURTESY OF LINDA THANK YOU LINDA
 			//GAMEID FROM THE DB++ IS THE NEW GAMEID
-			System.out.println(gamesHumanWonFinal);
-			System.out.println(gamesAIWonFinal);
-			System.out.println(roundCounter-1); //THE -1 IS VERY IMPORTANT
-			System.out.println(numberOfDraws);
-			//numberOfGame++; MAYBE NOT NEEDED
+			System.out.println("human won? "+gamesHumanWonFinal);
+			System.out.println("ai won? "+gamesAIWonFinal);
+			System.out.println("rounds? "+ (roundCounter-1)); //THE -1 IS VERY IMPORTANT
+			System.out.println("draws? "+numberOfDraws);
+			numberOfGame++; //MAYBE NOT NEEDED
 			AIUser.nextID = 1;
+			
+			UploadStats a = new UploadStats(gamesHumanWonFinal,gamesAIWonFinal,roundCounter,numberOfDraws,numberOfGame);
+			a.test_variables();
+//			try {
+//			a.updateValuesInDB();
+//			} catch (SQLException e) {
+//				System.out.println("CANT DO THIS ANYMORE ");
+//			}
 		}
 		in.close();
 

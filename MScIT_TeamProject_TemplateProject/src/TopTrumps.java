@@ -1,8 +1,7 @@
+import java.sql.SQLException;
+
 import commandline.TopTrumpsCLIApplication;
 import online.TopTrumpsOnlineApplication;
-
-
-
 
 public class TopTrumps {
 
@@ -43,14 +42,17 @@ public class TopTrumps {
 		// Start the appropriate application
 		if (onlineMode) {
 			// Start the online application
-			String[] commandArgs = {"server", "../TopTrumps.json"};
+			String[] commandArgs = {"server", "TopTrumps.json"};
 			TopTrumpsOnlineApplication.main(commandArgs);
 		} else if (commandLineMode) {
 			// Start the command line application
 			String[] commandArgs = {String.valueOf(printTestLog)};
-			TopTrumpsCLIApplication.main(commandArgs);
+			try {
+				TopTrumpsCLIApplication.main(commandArgs);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		
 	}
-	
 }
