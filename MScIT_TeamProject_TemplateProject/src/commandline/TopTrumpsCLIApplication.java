@@ -1,23 +1,7 @@
 package commandline;
 
-import java.sql.SQLException;
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
-import commandline.DownloadStats;
-
-/** TO RUN ON COMMANDLINE ON **WINDOWS**; mac users sorry........................
- * go to IT-team-project\MScIT_TeamProject_TemplateProject\src
- * >javac commandline\*.java
- * >java commandline/TopTrumpsCLIApplication
- */
-
-/** THINGS TO DO <--------------------------------------------
- * have the game looping so that at the end you can play again - does not terminate
- * display all game statistics at the very end (have the stats for *CURRENT* game already)
- * connect to the yacata database pls thx
- * optional - add setters and getters so that the code is not so long (reka requests this ok ok)
- */
 
 /**
  * Top Trumps command line application
@@ -30,21 +14,17 @@ public class TopTrumpsCLIApplication {
 	 * should write game logs to a file.
 	 * 
 	 * @param args
-	 * @throws SQLException 
 	 */
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
+		boolean userWantsToQuit = false;
 		boolean gameEnd = false;
-		int numberOfDraws = 0;
-		int gamesHumanWonFinal;
-		int gamesAIWonFinal;
-		int numberOfGame = 0;
+		boolean didHumanWin = false;
+		int numberOfDraws;
 
-		// -------------UNCOMMENT AFTER MAKING JAR FILE----if
-		// (args[0].equalsIgnoreCase("true")) {
-		writeGameLogsToFile = true;
-		// ------UNCOMMENT--------} // Command line selection
+		if (args[0].equalsIgnoreCase("true")) {
+			writeGameLogsToFile = true;
+		} // Command line selection
 
 		System.err.print(
 				" _________  ________  ________        _________  ________  ___  ___  _____ ______   ________  ________      \n"
@@ -59,6 +39,8 @@ public class TopTrumpsCLIApplication {
 						+ "                                                                                                            \n");
 
 		Scanner in = new Scanner(System.in);
+
+		// User inputs a sensible username.
 		System.out.print("Welcome! What's your name? ");
 		String userName;
 
@@ -70,19 +52,24 @@ public class TopTrumpsCLIApplication {
 				}
 				break;
 			} catch (Exception e) {
-				System.out.println("You stupid fuck!");
+				System.err.println("A sensible name please!");
 			}
 		}
 
-		HumanUser player = new HumanUser(userName); // make human user with username
+		// While the program is running.
 		while (!userWantsToQuit) {
-			numberOfDraws = 0; //adriano initialize draws at 0
-			gamesHumanWonFinal = 0;
-			gamesAIWonFinal = 0;
+
+			// Reset the game.
+			HumanUser player = new HumanUser(userName); // Make a new human user with given username.
+			numberOfDraws = 0;
+			didHumanWin = false;
 			gameEnd = false;
 			Model model = new Model();
 			model.readContent();
+
 			Controller controller = new Controller(model);
+
+			// Selection screen.
 			int selection = -1;
 			System.out.println("Hi " + userName + "!");
 
@@ -92,14 +79,15 @@ public class TopTrumpsCLIApplication {
 
 				System.out.print("Enter your selection here: ");
 
+				// Checking for a sensible input.
 				while (true) {
 					try {
-						selection = in.nextInt(); // need to check if input is 1 or 2 or 3 (exception catching)
+						selection = in.nextInt();
 						if (selection == 1 || selection == 2 || selection == 3) {
 							break;
 						}
-						throw (new InputMismatchException());
-					} catch (InputMismatchException e) {
+						throw (new Exception());
+					} catch (Exception e) {
 						in.nextLine();
 						System.err.println("That's not a valid choice, try again.");
 					}
@@ -107,48 +95,55 @@ public class TopTrumpsCLIApplication {
 
 				System.out.print("");
 
+				// Set up the game.
 				if (selection == 1) {
 
 					System.out.print("Choose the number of opponents (1-4): ");
 
+					// Checking for a sensible input.
 					while (true) {
 						try {
-							selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+							selection = in.nextInt();
 							if (selection <= 4 && selection >= 1) {
 								break;
 							}
-							throw (new InputMismatchException());
-						} catch (InputMismatchException e) { // is inputmismatchexception appropriate?
+							throw (new Exception());
+						} catch (Exception e) {
 							in.nextLine();
 							System.err.println("That's not a valid choice, try again.");
 						}
 					}
 
-					controller.userArray = new GenericUser[selection + 1]; // make the array to be the size of
-																			// aiplayers+1
-					System.out.println(controller.userArray.length);
-
-					controller.userArray[player.userID] = player; // add the player to the userarray in controller
+					controller.setUserArray(new GenericUser[selection + 1]);
+					controller.getUserArray()[player.getUserID()] = player; // Add the human to the userArray.
 
 					for (int i = 0; i < selection; i++) {
 						AIUser ai = new AIUser();
-						controller.userArray[ai.userID] = ai;
+						controller.getUserArray()[ai.userID] = ai; // Add the AI to the userArray.
 					}
 
 					for (int i = 0; i < controller.userArray.length; i++) {
 						// activeUser contains the ID for users in play
-						controller.activeUser.add(i);
-					}
-					controller.shuffling(); // shuffle the cards
-					if (writeGameLogsToFile) {
-						writeToLog.writeCompleteShuffledDeckToFile(controller.shuffledStack);
+						controller.getActiveUser().add(i);
 					}
 
-					controller.distributeCards(); // distribute the cards to each player
+					// Write the deck to file.
 					if (writeGameLogsToFile) {
-						for (int j = 0; j < controller.userArray.length; j++) {
-							writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
-									controller.userArray[j]);
+						writeToLog.writeCompleteDeckToFile(model.getDeck());
+					}
+
+					// Shuffle the cards and write the deck to file.
+					controller.shuffling();
+					if (writeGameLogsToFile) {
+						writeToLog.writeCompleteShuffledDeckToFile(controller.getShuffledStack());
+					}
+
+					// Distribute the cards to each player, then write to log.
+					controller.distributeCards();
+					if (writeGameLogsToFile) {
+						for (int user = 0; user < controller.userArray.length; user++) {
+							writeToLog.writeUsersDeckContentToFile(controller.getUserArray()[user].personalDeck,
+									controller.getUserArray()[user]);
 						}
 					}
 
@@ -157,31 +152,28 @@ public class TopTrumpsCLIApplication {
 					System.out.println("Game starts here.");
 					break;
 
+					// Show statistics.
 				} else if (selection == 2) {
-					/*
-					 * Use this if Player selects to see the statistics
-					 */
-					// System.out.println("STATISTICS");
+
 					DownloadStats db = new DownloadStats();
 
+					// Quit the game.
 				} else if (selection == 3) {
-//				userWantsToQuit = true;
 					System.exit(0);
 				}
 			}
 
-			if (writeGameLogsToFile) {
-				writeToLog.writeCompleteDeckToFile(model.cardCon);
-			}
-
-			int roundCounter = 1; // start on round 1
+			// Start on round one and choose a random person to start.
+			int roundCounter = 1;
 			Random randNum = new Random();
-			int winner = randNum.nextInt(controller.userArray.length); // first winner chosen randomly
-			int previousWinner = -2; // random number to say who was the previous winner
+			int winner = randNum.nextInt(controller.getUserArray().length);
+			int previousWinner = -2; // Arbitrary small number.
 
-			while (!gameEnd) { // Loop until the user wants to exit the game
+			// Loop until the game finished
+			while (!gameEnd) {
 
-				if (winner == -1) { // if there was a draw, the previous winner chooses the category again
+				// If there was a draw, the previous winner chooses the category again.
+				if (winner == -1) {
 					winner = previousWinner;
 				}
 
@@ -189,17 +181,19 @@ public class TopTrumpsCLIApplication {
 				System.out.println("Round " + roundCounter);
 				System.out.println("Round " + roundCounter + ": Players have drawn their cards");
 
-				if (controller.activeUser.contains(0)) { // if human still in play
+				// If human still in play.
+				if (controller.getActiveUser().contains(0)) {
 					System.out.println("You drew '" + controller.getTopCard(0).getCardName() + "':");
 
 					for (int i = 0; i < controller.getTopCard(0).getAttributeValues().length; i++) {
 						System.out.println(
 								"   > " + model.getHeader(i) + ": " + controller.getTopCard(0).getAttributeValues()[i]);
 					}
-					int numberOfleftCard = controller.userArray[0].personalDeck.size();
-
-					System.out.println("There are " + numberOfleftCard + " cards in your deck.");
+					System.out.println(
+							"There are " + controller.userArray[0].personalDeck.size() + " cards in your deck.");
 				}
+
+				// If human won the round.
 				if (winner == 0) {
 					System.out.println("It is your turn to select a category, the categories are: ");
 					for (int i = 0; i < controller.getTopCard(0).getAttributeValues().length; i++) {
@@ -207,58 +201,61 @@ public class TopTrumpsCLIApplication {
 					}
 					System.out.print("Enter the number for your attribute: ");
 
+					// Sensible input checking.
 					while (true) {
 						try {
-							selection = in.nextInt(); // need to check if input is between 1 and 4 (exception catching)
+							selection = in.nextInt();
 							if (selection <= 5 && selection >= 1) {
 								break;
 							}
-							throw (new InputMismatchException());
-						} catch (InputMismatchException e) { // is inputmismatchexception appropriate?
+							throw (new Exception());
+						} catch (Exception e) {
 							in.nextLine();
 							System.err.println("That's not a valid category, try again.");
 						}
 					}
 
-					controller.userArray[0].selectedCategory = selection - 1; // because the indices are not 1-5, it's
-																				// 0-4
-					System.out.println("You selected " + model.cardHeader[selection] + ".");
+					// Change indices from 1-5 to 0-4 to match our arrays.
+					controller.getUserArray()[0].selectedCategory = selection - 1;
+					System.out.println("You selected " + model.getHeader(selection - 1) + ".");
 
+					// If the AI won the round.
 				} else {
-					System.out.println(
-							"Player " + controller.userArray[winner].userID + "'s turn to select a category. ");
+					System.out.println("Player " + controller.getUserArray()[winner].getUserID()
+							+ "'s turn to select a category. ");
 
-					controller.userArray[winner].selectCategory(controller.getTopCard(winner));
+					controller.getUserArray()[winner].selectCategory(controller.getTopCard(winner));
 
-					System.out.println("Player " + controller.userArray[winner].userID + " selected "
-							+ model.cardHeader[controller.userArray[winner].selectedCategory + 1] + ".");
-
+					System.out.println("Player " + controller.getUserArray()[winner].userID + " selected "
+							+ model.getHeader(controller.getUserArray()[winner].selectedCategory) + ".");
 				}
 
+				// Write selected category to file.
 				if (writeGameLogsToFile) {
 					writeToLog.writeCategorySelectedAndValuesToFile(roundCounter, model.cardHeader,
-							controller.userArray[winner].selectedCategory, controller.getTopCard(winner),
-							controller.userArray[winner]);
+							controller.getUserArray()[winner].selectedCategory, controller.getTopCard(winner),
+							controller.getUserArray()[winner]);
 				}
 
-				previousWinner = winner; // if there is a draw
+				// In case there is a draw, winner of previous round is saved in a variable.
+				previousWinner = winner;
 				winner = controller.checkRoundWinner(previousWinner);
 
+				// Write cards in personal decks to file.
 				if (writeGameLogsToFile) {
-					for (int j : controller.activeUser) {
-						writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(j),
-								controller.userArray[j]);
+					for (int user : controller.activeUser) {
+						writeToLog.writeContentsOfCurrentCardsInPlayToFile(controller.getTopCard(user),
+								controller.userArray[user]);
 					}
 				}
 
+				// If there was a draw.
 				if (winner == -1) {
 					numberOfDraws++;
 
-					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1); // even though it's
-																									// a
-																									// draw, display one
-																									// of
-																									// the winning cards
+					int winnerInDraw = (int) controller.maxList.get(controller.maxList.size() - 1);
+
+					// Display a winning card even though it was a draw, as Richard did.
 					System.out.println("Round " + roundCounter + ": This round was a draw.");
 					System.out.println(
 							"The winning card was '" + controller.getTopCard(winnerInDraw).getCardName() + "':");
@@ -266,6 +263,8 @@ public class TopTrumpsCLIApplication {
 						System.out.println(model.getHeader(i) + ": "
 								+ controller.getTopCard(winnerInDraw).getAttributeValues()[i]);
 					}
+
+					// If someone won the round.
 				} else {
 					if (winner == 0) {
 						System.out.println("Round " + roundCounter + ": You won this round");
@@ -276,18 +275,22 @@ public class TopTrumpsCLIApplication {
 					for (int i = 0; i < controller.getTopCard(winner).getAttributeValues().length; i++) {
 						System.out.println(
 								model.getHeader(i) + ": " + controller.getTopCard(winner).getAttributeValues()[i]);
-
 					}
 				}
 
-				boolean writeDrawStackToFileQuestionMark = false; // only write drawstack to file if its size changed
+				// Only write drawstack to file if its size has changed.
+				boolean writeDrawStackToFileQuestionMark = false;
 				if (!controller.drawStack.isEmpty() || winner == -1) {
 					writeDrawStackToFileQuestionMark = true;
 				} else {
 					writeDrawStackToFileQuestionMark = false;
 				}
-				controller.changeOwnership(winner); // add losers' cards to winner deck
 
+				// Add losers' cards to winner's deck.
+				controller.changeOwnership(winner);
+
+				// Write the deck contents to file as well as the contents of the drawstack (if
+				// it has changed).
 				if (writeGameLogsToFile) {
 					for (int j = 0; j < controller.userArray.length; j++) {
 						writeToLog.writeUsersDeckContentToFile(controller.userArray[j].personalDeck,
@@ -299,67 +302,60 @@ public class TopTrumpsCLIApplication {
 					writeToLog.writeContentsOFCommunalPileToFile(controller.drawStack);
 				}
 
+				// If a player lost all their cards, they are out of the game.
 				System.out.println("Common pile now has " + controller.drawStack.size() + " cards");
-				controller.excludeLoser(); // if someone has no cards left, get rid of them
+				controller.excludeLoser();
 				roundCounter++;
 
-//				try {
-//					Thread.sleep(500);
-//				} catch (InterruptedException e) {
-//					System.err.println("You woke up the thread!");
-//				}
+				sleepThread();
 
-				for (int j = 0; j < controller.userArray.length; j++) {
-					if (controller.userArray[j].personalDeck.size() == 40) { // if someone has all the cards they win
+				// Check if the game has ended (someone has all the cards).
+				for (int user = 0; user < controller.getUserArray().length; user++) {
+					if (controller.getUserArray()[user].personalDeck.size() == 40) {
 						gameEnd = true;
 
 						System.out.println();
 
+						// Write the winner to file.
 						if (writeGameLogsToFile) {
-							writeToLog.writeWinnerToFile(controller.userArray[j]);
+							writeToLog.writeWinnerToFile(controller.userArray[user]);
 						}
 
-						if (j == 0) {   // if user won
+						if (user == 0) { // if user won
 							System.out.println("Congrats " + userName + ", you win!");
-							gamesHumanWonFinal++;
-						} else {		// if AI won
-							System.out.println("The winner is: AI Player " + j + ".");
-							gamesAIWonFinal++;
+							didHumanWin = true;
+						} else { // if AI won
+							System.out.println("The winner is: AI Player " + user + ".");
+							didHumanWin = false;
 						}
 						System.out.println("Scores:");
-						for (int l = 0; l < controller.userArray.length; l++) {
+						for (int l = 0; l < controller.getUserArray().length; l++) {
 							if (l == 0) {
-								System.out.println(
-										"    " + userName + ": " + controller.userArray[l].numberOfWinsForUser);
+								System.out.println("    " + userName + ": " + controller.getUserArray()[l].roundsWon);
 							} else {
-								System.out.println(
-										"    AI Player " + l + ": " + controller.userArray[l].numberOfWinsForUser);
+								System.out
+										.println("    AI Player " + l + ": " + controller.getUserArray()[l].roundsWon);
 
 							}
 						}
 					}
 				}
 			}
-			//THESE ARE THE VARIABLES YOU WANT FOR UPLOAD STATS
-			//COURTESY OF LINDA THANK YOU LINDA
-			//GAMEID FROM THE DB++ IS THE NEW GAMEID
-			System.out.println("human won? "+gamesHumanWonFinal);
-			System.out.println("ai won? "+gamesAIWonFinal);
-			System.out.println("rounds? "+ (roundCounter-1)); //THE -1 IS VERY IMPORTANT
-			System.out.println("draws? "+numberOfDraws);
-			numberOfGame++; //MAYBE NOT NEEDED
+			// Reset the AIUser's nextID.
 			AIUser.nextID = 1;
-			
-			UploadStats a = new UploadStats(gamesHumanWonFinal,gamesAIWonFinal,roundCounter,numberOfDraws,numberOfGame);
-			a.test_variables();
-//			try {
-//			a.updateValuesInDB();
-//			} catch (SQLException e) {
-//				System.out.println("CANT DO THIS ANYMORE ");
-//			}
+
+			UploadStats upload = new UploadStats(didHumanWin, roundCounter, numberOfDraws);
 		}
 		in.close();
 
 	}
 
+	// Make the thread sleep so that the player sees all the rounds.
+	public static void sleepThread() {
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			System.err.println("You woke up the thread!");
+		}
+	}
 }

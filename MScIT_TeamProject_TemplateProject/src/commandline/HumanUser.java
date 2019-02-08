@@ -1,23 +1,27 @@
 package commandline;
 
+/* HumanUser is an extension of GenericUser, but it only differs from a GenericUser 
+ * by having a userID = 0 (always), as well as having a name (username) to make the gameplay
+ * more personal. 
+ */
+
 public class HumanUser extends GenericUser {
 
-	protected static int userID = 0; // Human player is always ID 0, why not
-	private String name; // Assume human has a name
+	// Variables.
+	protected static int userID = 0;
+	private String name;
 
-	public HumanUser(String name) { // Constructor
+	// Constructor.
+	public HumanUser(String name) {
 		this.name = name;
 	}
 
-//	public int humanSelectCategory(Card card) { // We probably don't need this, but I just put it in
-//		return selectedCategory; // delete if unnecessary (player selecting his own category)
-//	}
-
-	public void setUserName(String name) { // Set the name
+	// Setters and Getters.
+	public void setUserName(String name) {
 		this.name = name;
 	}
 
-	public String getUserName() { // Get the name
+	public String getUserName() {
 		return name;
 	}
 
