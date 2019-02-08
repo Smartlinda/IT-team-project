@@ -109,14 +109,12 @@ public class DownloadStats {
 				"+--------------------------+--------------+---------------------+---------------------+--------------------------------------+%n");
 	}// End of method
 	
-	public Number[] passStats() {
-		Number[] passStats = new Number[queries.length];
-		
-		for(int i = 0; i < queries.length; i++) {
-			query[i] = passStats[i];
-		}
-		
-		return passStats;
+	public Number[] getQuery() {
+		return query;
+	}
+
+	public void setQuery(Number[] query) {
+		this.query = query;
 	}
 
 }// End of class

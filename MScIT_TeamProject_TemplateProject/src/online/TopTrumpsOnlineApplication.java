@@ -48,8 +48,6 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 		// Enable CORS headers (see
 		// https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 		final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
-		// HERE CHANGE --------------------------------------
-//		environment.jersey().setUrlPattern("/api/*");
 
 		// Configure CORS parameters
 		cors.setInitParameter("allowedOrigins", "*");
@@ -90,8 +88,6 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	@Override
 	public void initialize(Bootstrap<TopTrumpsJSONConfiguration> bootstrap) {
 		bootstrap.addBundle(new ViewBundle<TopTrumpsJSONConfiguration>());
-		// HERE CHANGE --------------------------------------
-//		bootstrap.addBundle(new AssetsBundle("/assets", "/myassets/", "index.html"));
 	}
 
 }
