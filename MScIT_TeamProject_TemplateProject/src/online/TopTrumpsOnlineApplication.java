@@ -68,10 +68,12 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 
 		// HTML/Javascript Webpages
 		GameWebPagesResource gameScreen = new GameWebPagesResource();
+		GameWebPagesResource statistics = new GameWebPagesResource();
 
 		// Registration tells Dropwizard to host a resource
 		environment.jersey().register(restAPI);
 		environment.jersey().register(gameScreen);
+		environment.jersey().register(statistics);
 	}
 
 	/**
