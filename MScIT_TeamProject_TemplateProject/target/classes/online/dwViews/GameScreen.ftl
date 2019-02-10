@@ -96,7 +96,7 @@
 		}
 
 	/* background cover header */
-	img {
+	.bg_img {
 		opacity: 0.5;
 		width: 100%;
 	  height: auto;
@@ -427,11 +427,149 @@
 	}
 
 
+/* card styling */
+
+.card1 {
+  position: relative;
+  width: 30%;
+  max-width: 400px;
+}
+
+.card1 .img_hero {
+	position: absolute;
+  width: 50%;
+	top: 10%;
+	left: 10%;
+	/* max-width: auto; */
+	z-index: -1;
+}
+
+.card1 .btn1 {
+  position: absolute;
+  top: 66%;
+  left: 10%;
+	/* margin: 10%; */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card1 .btn2 {
+  position: absolute;
+  top: 66%;
+  left: 30%;
+	/* margin: 10%; */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card1 .btn3 {
+  position: absolute;
+  top: 66%;
+  left: 45%;
+	/* margin: 10%; */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card1 .btn4 {
+  position: absolute;
+  top: 75%;
+  left: 21%;
+	/* margin: 10%; */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card1 .btn5 {
+  position: absolute;
+  top: 75%;
+  left: 38%;
+	/* margin: 10%; */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card1 .btn1:hover .btn2:hover .btn3:hover .btn4:hover .btn5:hover {
+  background-color: black;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+	text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+
 	</style>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#myModal").modal('show');
+		});
+	</script>
+
 
 	</head>
 
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+
+
+			<div id="myModal" class="modal fade">
+			    <div class="modal-dialog">
+			        <div class="modal-content">
+			            <div class="modal-header">
+										<h4 class="modal-title">How much enemies can you handle?</h4>
+			                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			                
+			            </div>
+			            <div class="modal-body">
+										<button type="button" onclick="alert('Hello world!')">1 Enemy (I'm too young to die)</button><br>
+										<button type="button" onclick="alert('Hello world!')">2 Enemies (Hey, not too rough)</button><br>
+										<button type="button" onclick="alert('Hello world!')">3 Enemies (Hurt me plenty)</button><br>
+										<button type="button" onclick="alert('Hello world!')">4 Enemies (Ultra-Violence)</button>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
 
 			<!-- Call the initalize method when the page loads -->
 			<header class="clearfix">
@@ -455,7 +593,24 @@
 
     	<div class="container">
 
-			<img src="https://i.imgur.com/CJ351WN.jpg" alt="background image">
+			<img class="bg_img" src="https://i.imgur.com/CJ351WN.jpg" alt="background image">
+<!-- cards! -->
+
+
+
+				<h2>Player Card</h2>
+				<div class="card1">
+				<img src="https://i.imgur.com/Xh5QDhF.png" alt="card" style="height: 30%; position: relative;">
+				<h2 class="centered">Paarthurnax</h2>
+				<img class="img_hero" src="https://i.gifer.com/XoD1.gif" alt="dragonight"">
+				<button class="btn1" type="button" onclick="alert('You selected Strength')">Strength 2</button>
+				<button class="btn2" type="button" onclick="alert('You selected Size')">Size 10</button>
+				<button class="btn3" type="button" onclick="alert('You selected Dexterity')">Dexterity 8</button>
+				<button class="btn4" type="button" onclick="alert('You selected Armor')">Armor 8</button>
+				<button class="btn5" type="button" onclick="alert('You selected Sneak')">Sneak 8</button>
+			</div>
+
+
 
 
 		</div>
@@ -528,6 +683,53 @@
 						alert("CORS not supported");
 					}
 					return xhr;
+				}
+
+				function testResponse(jsonAsString) {
+					//var response = JSON.parse(jsonAsString)
+					if (jsonAsString == "state error") {
+						$("#error").html("Function cant be used in this state");
+					} else if (jsonAsString == "") {
+						$("#error").html($('#error').text() + " + 1")
+					} else {
+						$("#response").html(jsonAsString);
+						$("#error").html("--------");
+					}
+
+					function newGame() {
+						hideAICards();
+						var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/newGame");
+						xhr.send();
+						xhr.onload = function (e) {
+							testResponse(xhr.response);
+						}
+					}
+				}
+
+				function initialiseGame() {
+					var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/initialiseGameplay");
+					xhr.send();
+					xhr.onload = function (e) {
+						testResponse(xhr.response);
+					}
+				}
+
+				function startARound() {
+					var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/startARound");
+					xhr.send();
+					xhr.onload = function (e) {
+						testResponse(xhr.response);
+					}
+					hideAICards();
+				}
+
+				function chosenCategory(category) {
+					var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/chosenCategory?category=" + category);
+					xhr.send();
+					xhr.onload = function (e) {
+						testResponse(xhr.response);
+					}
+					showAICards();
 				}
 
 		</script>
