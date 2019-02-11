@@ -15,7 +15,7 @@ import io.dropwizard.views.ViewBundle;
 import online.configuration.TopTrumpsJSONConfiguration;
 import online.dwResources.GameWebPagesResource;
 import online.dwResources.TopTrumpsRESTAPI;
-//import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.assets.AssetsBundle;
 
 /**
  * Top Trumps Web Application. This class is complete, you do not need to edit
@@ -88,6 +88,7 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	@Override
 	public void initialize(Bootstrap<TopTrumpsJSONConfiguration> bootstrap) {
 		bootstrap.addBundle(new ViewBundle<TopTrumpsJSONConfiguration>());
+		bootstrap.addBundle(new AssetsBundle("/assets/","/assets", null, "myassets"));
 	}
 
 }
