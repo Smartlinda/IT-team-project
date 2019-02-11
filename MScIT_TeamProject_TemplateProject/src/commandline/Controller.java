@@ -54,6 +54,16 @@ public class Controller {
 		this.userArray = userArray;
 	}
 
+	public void addHuman(HumanUser human) {
+		userArray[0] = human;
+	}
+	
+	public void addAI(AIUser[] AIUserArray) {
+		for (int i=0; i<AIUserArray.length; i++) {
+			userArray[i+1]=AIUserArray[i];
+		}
+	}
+
 	// Methods.
 	/*
 	 * Distribute the shuffled cards to the players' decks fairly.

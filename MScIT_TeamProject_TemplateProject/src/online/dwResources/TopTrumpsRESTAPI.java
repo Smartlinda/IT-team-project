@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 import javax.ws.rs.Consumes;
@@ -16,10 +17,9 @@ import javax.ws.rs.core.MediaType;
 
 import online.configuration.TopTrumpsJSONConfiguration;
 
-import commandline.DownloadStats;
-import commandline.Controller;
-import commandline.Model;
+import commandline.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
@@ -41,6 +41,20 @@ public class TopTrumpsRESTAPI {
 	private Model model = new Model();
 	private DownloadStats db = new DownloadStats();
 	private Controller ctrl = new Controller(model);
+	private HumanUser player;
+	private AIUser[] AIUserArray;
+	private AIUser jeff = new AIUser();
+	private int roundNumber = 0;
+	private int drawStackSize = 0;
+	private int cardsLeft;
+	private int AIPlayers = 0;
+	private int firstRoundChooser = -1;
+	private String Number;
+
+	private String[] playerStates = { "active", "notActive" };
+	private String[] gameStates = { "prestart", "gameStarted", "choosingCategory", "showResults", "roundEndsWithWinner",
+			"roundEndsInDraw", "endGame", "gameQuit" };
+	private String[] current = { playerStates[0], gameStates[0] };
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
 	 * easily.
@@ -59,6 +73,7 @@ public class TopTrumpsRESTAPI {
 		conf.getNumAIPlayers();
 	}
 	
+
 	@GET
 	@Path("statistics/download_stats")
 	public Number[] downloadStats() {
@@ -67,10 +82,95 @@ public class TopTrumpsRESTAPI {
 		return gotStats;
 	}
 
+	@GET
+	@Path("game/preStart")
+	public String preStart() {
+		roundNumber = 0;
+		model = new Model();
+		ctrl = new Controller(model);
+		model.readContent();
+		ctrl.shuffling();
+		ArrayList<Card> deck = ctrl.getShuffledStack();
+		return "The deck has been shuffled.";
+	}
+
+	@GET
+	@Path("game/setupGame")
+	public String setupGame(@QueryParam("Number") String Number) {
+		this.Number = Number;
+		
+		current[1] = gameStates[0];
+		jeff.setNextID(1);
+
+		player = new HumanUser("You");
+		AIPlayers = Integer.parseInt(Number);
+		AIUserArray = new AIUser[AIPlayers];
+
+		for (int AI = 0; AI < AIPlayers; AI++) {
+			AIUser ai = new AIUser();
+			AIUserArray[AI] = ai;
+		}
+
+		for (int user = 0; user < AIPlayers + 1; user++) {
+			ctrl.getActiveUser().add(user);
+		}
+
+		ctrl.setUserArray(new GenericUser[AIPlayers + 1]);
+		ctrl.addHuman(player);
+		ctrl.addAI(AIUserArray);
+		ctrl.distributeCards();
+
+		Random rand = new Random();
+		firstRoundChooser = rand.nextInt(ctrl.getUserArray().length);
+
+		for(int i=0; i < ctrl.getUserArray().length; i++) {
+			System.out.println(ctrl.getUserArray()[i]);
+		}
+		
+		current[1] = gameStates[1];
+
+		return "The game has been started.";
+	}
+	
+
+//	@GET
+//	@Path("game/getCardsLeft")
+//	public String getCardsLeft() {
+//		String[] howManyLeft = new String[ctrl.getUserArray().length];
+//		for(int user = 0; user < howManyLeft.length; user++ ) {
+//			for(int i = 0; i < ctrl.getActiveUser().size(); i++ ) {
+//				if(ctrl.getUserArray()[user].getUserID() == ctrl.getActiveUser().get(i)) {
+//					
+//				}
+//			}
+//		}
+//		oWriter.
+//		return howManyLeft;
+//	}
+
+	@GET
+	@Path("game/getTopCard")
+	public String getTopCard() {
+		String card = "You are out of the game...";
+		if (current[0].equals(playerStates[0])) {
+			try {
+				card = oWriter.writeValueAsString(ctrl.getUserArray()[0].getPersonalDeck().get(0));
+			} catch (JsonProcessingException e) {
+				e.printStackTrace();
+			}
+		}
+		return card;
+	}
+
+	@GET
+	@Path("game/getDrawPile")
+	public String getDrawPile() {
+		String contents = Integer.toString(ctrl.getDrawStack().size());
+		return contents;
+	}
 
 }
-	
-	
+
 //	@GET
 //	@Path("/helloJSONList")
 //	/**
