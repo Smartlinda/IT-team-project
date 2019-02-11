@@ -100,28 +100,32 @@
 			<img class="bg_img" src="../assets/imgs/background.jpg" alt="background image">
 <!-- cards! -->
 
-
-
-				<h2>Player Card</h2>
+ 				<h2>Player Card</h2>
 				<div class="card1">
 				<img src="../assets/imgs/card_layout.png" alt="card" style="height: 30%; position: relative;">
 				<h2 class="centered">Paarthurnax</h2>
 				<img class="img_hero" src="../assets/imgs/hero1.gif" alt="dragonight"">
 
 <div class="skill_select">
-				<form action="/action_page.php" style="text-align: center;">
-				<select class="dropdown1" name="skills">
-					<option value="skill1">Strength 2</option>
-					<option value="skill2">Size 10</option>
-					<option value="skill3">Dexterity 8</option>
-					<option value="skill4">Armor 8</option>
-					<option value="skill5">Sneak 8</option>
+				<form style="text-align: center;" accept-charset="utf-8">
+				<select class="dropdown1" name="Number">
+					<option value="hello">Strength 2</option>
+					<option value="two">Size 10</option>
+					<option value="three">Dexterity 8</option>
+					<option value="four">Armor 8</option>
+					<option value="five">Sneak 8</option>
 				</select>
-				<br><br><input class="w3-button w3-black" type="submit" value="Attack!">
+				<br><br><input class="w3-button w3-black" type="submit"  onclick="skill_select.style.display='none'; this.style.display = 'none';" value="Attack!">
 				</form>
 </div>
 
-				<!-- <button class="btn1" type="button" onclick="alert('You selected Strength')">Strength 2</button>
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" id="mybutt" src="../assets/blah1.html"></iframe>
+			</div>
+			<!--<button id="mybutt" class="btn1" type="button">Strength 2</button>-->
+ 
+
+				<!-- <button class="btn1" type="button" onclick="updateURL();">Strength 2</button>
 				<button class="btn2" type="button" onclick="alert('You selected Size')">Size 10</button>
 				<button class="btn3" type="button" onclick="alert('You selected Dexterity')">Dexterity 8</button>
 				<button class="btn4" type="button" onclick="alert('You selected Armor')">Armor 8</button>
@@ -134,14 +138,41 @@
 		</div>
 
 		<script>
-			var AI;
+			var AI=4;
+			var myyyy = getUrlParameter('Number');
+			
+			
+			if(myyyy==='hello'){
+			document.getElementById('mybutt').src = "../assets/blah2.html";
+			}
 
 			// Was too lazy to load in the headers, we can do it later.
 			var namesArray = new Array("Size","Speed","Range","Firepower","Cargo");
 
+			//function updateURL() {
+			//	if (history.pushState) {
+			//			var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + AI;
+			//			window.history.pushState({path:newurl},'',newurl);
+			//	}
+			//}
+
 			function initalize(){
 				preStart()
 			}
+			
+			function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
 
 			function preStart() {
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/preStart");
