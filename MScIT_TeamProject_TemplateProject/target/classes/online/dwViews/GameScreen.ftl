@@ -62,7 +62,7 @@
 			<div id="blur-bg"></div>
 			<div id="text">
 				<h1>How many enemies can you handle?</h1>
-				<button onclick="disappear(); setupGame(this.value);" class="button4" style="background-color:#84f14e" value="1">1 Enemy<br>(I'm too young to die)</button>&nbsp;
+				<a onclick="updateURL(1); disappear(); setupGame(1);" class="button4" style="background-color:#84f14e" value="1">1 Enemy<br>(I'm too young to die)</a>&nbsp;
 				<a onclick="disappear(); setupGame(2);" class="button4" style="background-color:#4e9af1" value="2">2 Enemies<br>(Hey, not too rough)</a>&nbsp;
 				<a onclick="disappear(); setupGame(text);" class="button4" style="background-color:#f1bb4e" value="3">3 Enemies<br>(Hurt me plenty)</a>&nbsp;
 				<a onclick="disappear(); setupGame(text);" class="button4" style="background-color:#f14e4e" value="4">4 Enemies<br>(Ultra-Violence)</a>
@@ -131,12 +131,12 @@ var AI;
 // Was too lazy to load in the headers, we can do it later.
 var namesArray = new Array("Size", "Speed", "Range", "Firepower", "Cargo");
 
-//function updateURL() {
-//	if (history.pushState) {
-//			var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + AI;
-//			window.history.pushState({path:newurl},'',newurl);
-//	}
-//}
+function updateURL(number) {
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + number;
+		window.history.pushState({path:newurl},'',newurl);
+	}
+}
 
 function initalize() {
 	preStart()
@@ -167,7 +167,7 @@ function setupGame(objButton) {
 	AI = objButton;
 	//  create a CORS request, this is the message we are going to send (a get request in this case)
 	var xhr = createCORSRequest('GET',
-	"http://localhost:7777/toptrumps/game/setupGame?Number = " + AI); // Request type and URL+parameters
+	"http://localhost:7777/toptrumps/game/setupGame?Number=" + AI); // Request type and URL+parameters
 	// Message is not sent yet, but we can check that the browser supports CORS
 	if (!xhr) {
 		alert("CORS not supported");
@@ -175,7 +175,7 @@ function setupGame(objButton) {
 	xhr.send()
 	xhr.onload = function(e) {
 		var responseText = xhr.response; // the text of the response
-//		getTopCard();
+		//		getTopCard();
 		alert(responseText);
 	}
 
@@ -187,14 +187,14 @@ function getTopCard() {
 
 	xhr.onload = function(e) {
 		var responseText = xhr.response;
-//		setCardValues(xhr.response);
+		//		setCardValues(xhr.response);
 		getDrawPile();
 		alert(responseText);
 	}
 }
 
 function getDrawPile() {
-	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile?Number=" + AI);
+	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile");
 	xhr.send();
 
 	xhr.onload = function(e) {
