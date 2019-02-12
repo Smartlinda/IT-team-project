@@ -44,23 +44,24 @@ public class TopTrumpsRESTAPI {
 	private HumanUser player;
 	private AIUser[] AIUserArray;
 	private AIUser jeff = new AIUser();
-	
-	private int roundNumber = 0;  
-	private int drawStackSize = 0;  // HOW MANY CARDS LEFT IN COMMON PILE
-	private int cardsLeft;  // HOW MANY CARDS ARE LEFT IN EACH DECK
+
+	private int roundNumber = 0;
+	private int numberOfDraws = 0;
+	private int drawStackSize = 0; // HOW MANY CARDS LEFT IN COMMON PILE
+	private int cardsLeft; // HOW MANY CARDS ARE LEFT IN EACH DECK
 	private int AIPlayers = 0;
-	private int roundWinner = -1;  // ACTIVE PLAYER
+	private int roundWinner = -1; // ACTIVE PLAYER
 	private int currentCategory = -1; // WHAT IS SELECTED
-	
+
 	private int gameWinner = -1;
-	
+
 	private String Number;
-	//private String Index;
+	// private String Index;
 
 	private String[] playerStates = { "active", "notActive" };
 	private String[] gameStates = { "prestart", "gameStarted", "choosingCategory", "showResults", "roundEndsWithWinner",
 			"roundEndsInDraw", "endGame", "gameQuit" };
-	private String[] current = { playerStates[0], gameStates[0]};
+	private String[] current = { playerStates[0], gameStates[0] };
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
 	 * easily.
@@ -78,7 +79,6 @@ public class TopTrumpsRESTAPI {
 		conf.getDeckFile();
 		conf.getNumAIPlayers();
 	}
-	
 
 	@GET
 	@Path("statistics/download_stats")
@@ -91,12 +91,17 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("game/preStart")
 	public String preStart() {
+		roundWinner = -1;
+		gameWinner = -1;
+		drawStackSize = 0;
+		numberOfDraws = 0;
+		AIPlayers = 0;
 		roundNumber = 0;
 		model = new Model();
 		ctrl = new Controller(model);
 		model.readContent();
 		ctrl.shuffling();
-		ArrayList<Card> deck = ctrl.getShuffledStack();
+		// ArrayList<Card> deck = ctrl.getShuffledStack();
 		return "The deck has been shuffled.";
 	}
 
@@ -104,7 +109,7 @@ public class TopTrumpsRESTAPI {
 	@Path("game/setupGame")
 	public String setupGame(@QueryParam("Number") String Number) {
 		this.Number = Number;
-		
+
 		current[1] = gameStates[0];
 		jeff.setNextID(1);
 
@@ -129,22 +134,23 @@ public class TopTrumpsRESTAPI {
 		Random rand = new Random();
 		roundWinner = rand.nextInt(ctrl.getUserArray().length);
 
-		for(int i=0; i < ctrl.getUserArray().length; i++) {
+		for (int i = 0; i < ctrl.getUserArray().length; i++) {
 			System.out.println(ctrl.getUserArray()[i]);
 		}
-		
+
 		current[1] = gameStates[1];
 
 		return "The game has been started.";
 	}
-	
+
 	@GET
 	@Path("game/getCardsLeft")
 	public String getCardsLeft() {
+		current[1] = gameStates[2];
 		int[] howManyLeft = new int[ctrl.getUserArray().length];
-		for(int user = 0; user < howManyLeft.length; user++ ) {
-			for(int i = 0; i < ctrl.getActiveUser().size(); i++ ) {
-				if(ctrl.getUserArray()[user].getUserID() == ctrl.getActiveUser().get(i)) {
+		for (int user = 0; user < howManyLeft.length; user++) {
+			for (int i = 0; i < ctrl.getActiveUser().size(); i++) {
+				if (ctrl.getUserArray()[user].getUserID() == ctrl.getActiveUser().get(i)) {
 					howManyLeft[user] = ctrl.getUserArray()[user].getPersonalDeck().size();
 					break;
 				} else {
@@ -163,8 +169,8 @@ public class TopTrumpsRESTAPI {
 
 	@GET
 	@Path("game/getTopCard")
-	public String getTopCard() {  // NEED TO CHECK FOR OTHER PLAYERS ALSO
-		String card = "You are out of the game...";
+	public String getTopCard() { // NEED TO CHECK FOR OTHER PLAYERS ALSO
+		String card = "lost";
 		if (current[0].equals(playerStates[0])) {
 			try {
 				card = oWriter.writeValueAsString(ctrl.getUserArray()[0].getPersonalDeck().get(0));
@@ -181,28 +187,56 @@ public class TopTrumpsRESTAPI {
 		String contents = Integer.toString(ctrl.getDrawStack().size());
 		return contents;
 	}
-	
+
 	@GET
 	@Path("game/getRoundCounter")
 	public String getRoundCounter() {
-	 roundNumber++;
-	 String counter = Integer.toString(roundNumber);
-	 return counter;
+		roundNumber++;
+		String counter = Integer.toString(roundNumber);
+		return counter;
+	}
+
+	@GET // if human's turn/human is alive
+	@Path("game/humanSelectCategory")
+	public String humanSelectCategory(@QueryParam("Index") String Index) {
+		// this.Index = Index;
+		currentCategory = Integer.parseInt(Index);
+
+		ctrl.getUserArray()[roundWinner].setSelectedCategory(currentCategory);
+
+		return "You selected " + model.getHeader(currentCategory);
+	}
+
+	@GET
+	@Path("game/AISelectCategory")
+	public String AISelectCategory() {
+		ctrl.getUserArray()[roundWinner].selectCategory(ctrl.getUserArray()[roundWinner].getPersonalDeck().get(0));
+		currentCategory = ctrl.getUserArray()[roundWinner].getSelectedCategory();
+		
+		return "AI selected " + model.getHeader(currentCategory);
+	}
+
+	@GET
+	@Path("game/distributeCards")
+	public String distributeCards() {
+		if (ctrl.checkRoundWinner(roundWinner) != -1) {
+			roundWinner = ctrl.checkRoundWinner(roundWinner);   // get the new round winner
+			return "Cards were given to the winner, player " + roundWinner;
+		}
+		ctrl.changeOwnership(roundWinner);
+		ctrl.excludeLoser();
+		return "The round was a draw, cards go to the common pile.";
 	}
 	
 	@GET
-	@Path("game/selectCategory")
-	public String selectCategory(@QueryParam("Index") String Index) {
-		//this.Index = Index;
-		currentCategory = Integer.parseInt(Index);
-		
-		ctrl.getUserArray()[roundWinner].setSelectedCategory(currentCategory);
-		
-		if (roundWinner == 0) {
-			return "You selected " + model.getHeader(currentCategory);
+	@Path("game/checkForWinner")
+	public int checkForWinner() {
+		if (ctrl.getActiveUser().size() == 1) {
+			gameWinner = ctrl.getActiveUser().get(0);
 		} else {
-			return "Player " + ctrl.getUserArray()[roundWinner].getUserID() + " selected " + model.getHeader(currentCategory);
+			gameWinner = -1;
 		}
+		return gameWinner;
 	}
 }
 
