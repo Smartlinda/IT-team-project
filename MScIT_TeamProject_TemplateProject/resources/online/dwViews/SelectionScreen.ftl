@@ -29,7 +29,7 @@
 </head>
 
 <body onload="initalize()">
-	<img src="../assets/imgs/background.jpg" alt="background image">
+	<img src="../assets/imgs/background.JPG" alt="background image">
 
 	<!-- Call the initalize method when the page loads -->
 	<header class="clearfix">

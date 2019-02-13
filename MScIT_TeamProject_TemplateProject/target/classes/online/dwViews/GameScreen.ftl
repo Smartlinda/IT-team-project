@@ -63,9 +63,9 @@
 			<div id="text">
 				<h1>How many enemies can you handle?</h1>
 				<a onclick="updateURL(1); disappear(); setupGame(1);" class="button4" style="background-color:#84f14e" value="1">1 Enemy<br>(I'm too young to die)</a>&nbsp;
-				<a onclick="disappear(); setupGame(2);" class="button4" style="background-color:#4e9af1" value="2">2 Enemies<br>(Hey, not too rough)</a>&nbsp;
-				<a onclick="disappear(); setupGame(text);" class="button4" style="background-color:#f1bb4e" value="3">3 Enemies<br>(Hurt me plenty)</a>&nbsp;
-				<a onclick="disappear(); setupGame(text);" class="button4" style="background-color:#f14e4e" value="4">4 Enemies<br>(Ultra-Violence)</a>
+				<a onclick="updateURL(2); disappear(); setupGame(2);" class="button4" style="background-color:#4e9af1" value="2">2 Enemies<br>(Hey, not too rough)</a>&nbsp;
+				<a onclick="updateURL(3); disappear(); setupGame(3);" class="button4" style="background-color:#f1bb4e" value="3">3 Enemies<br>(Hurt me plenty)</a>&nbsp;
+				<a onclick="updateURL(4); disappear(); setupGame(4);" class="button4" style="background-color:#f14e4e" value="4">4 Enemies<br>(Ultra-Violence)</a>
 			</div>
 		</div>
 	</div>
@@ -84,17 +84,17 @@
 
 <!-- END OF BLUR BOX -->
 
-
+<div style="width:100%;" class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" id="mybutt" src="../assets/html/1_ai.htm"></iframe>
+</div>
 
 <div class="container">
 
-	<img class="bg_img" src="../assets/imgs/background.jpg" alt="background image">
+	<img class="bg_img" src="../assets/imgs/background.JPG" alt="background image">
 
 	<!-- cards! -->
 
-	<div class="embed-responsive embed-responsive-16by9">
-		<iframe class="embed-responsive-item" id="mybutt" src="../assets/html/blah1.html"></iframe>
-	</div>
+
 
 	<!-- <h2>Player Card</h2>
 	<div class="card1">

@@ -67,7 +67,7 @@
 			</tbody>
 		</table>
 
-		<img src="https://i.imgur.com/CJ351WN.jpg" alt="background image">
+	<img src="../assets/imgs/background.JPG" alt="background image">
 	</div>
 
 	<script type="text/javascript">
