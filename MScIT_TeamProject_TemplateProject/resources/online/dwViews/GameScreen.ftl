@@ -60,7 +60,7 @@
 		<div id="magic-container">
 			<div id="blur-bg"></div>
 			<div id="text">
-				<h1>How many enemies can you handle?</h1>
+				<h1>How many enemies can you handle?</h1>  <!--see below, src is redirected to different files-->
 				<a onclick="updateURL(1); disappear(); go('../assets/html/1_AI.htm'); setupGame(1);" class="button4" style="background-color:#84f14e" value="1">1 Enemy<br>(I'm too young to die)</a>&nbsp;
 				<a onclick="updateURL(2); disappear(); go('../assets/html/2_AI.htm'); setupGame(2);" class="button4" style="background-color:#4e9af1" value="2">2 Enemies<br>(Hey, not too rough)</a>&nbsp;
 				<a onclick="updateURL(3); disappear(); go('../assets/html/3_AI.htm'); setupGame(3);" class="button4" style="background-color:#f1bb4e" value="3">3 Enemies<br>(Hurt me plenty)</a>&nbsp;
@@ -70,6 +70,7 @@
 	</div>
 
 	<script>
+
 	function disappear() {
 		var x = document.getElementById("bg");
 		if (x.style.display === "none") {
@@ -94,18 +95,26 @@
 		<!-- cards! -->
 
 		<script>
-		var AI;
-		var numberOfAI = getUrlParameter('Number');
-		var targetFrame = document.getElementById('cardframe');
-		var innerDoc = targetFrame.contentDocument || targetFrame.contentWindow.document;
+
+		//THE WAY THE WEBSITE WORKS, IS THAT THERE IS AN IFRAME.
+		//WHEN THE USER SELECTS THE NUMBER OF AI PLAYERS, THE IFRAME
+		//STARTS REFERRING TO ONE OF 4 FILES (WITH A DIFFERENT NUMBER OF PLAYERS)
+		//IN THE ASSETS/HTML FOLDER. WHEN REFERRING TO THINGS IN THOSE FILES,
+		//AN ADDITIONAL COMMAND HAS TO BE USED.
+
+		var AI; //the number of AI
+		var numberOfAI = getUrlParameter('Number');  //again, the number of ai from the url
+
 		// Was too lazy to load in the headers, we can do it later.
-		var namesArray = new Array("Health", "Stamina", "Attack","Armor", "Size");
+		var namesArray = new Array("Health", "Stamina", "Attack","Armor", "Size"); //category names
 
 
+		// a function to change the src of the iframe
 		function go(location){
 			document.getElementById('cardframe').src = location;
 		}
 
+		// when we select the number of ai, update the url without reloading the page, to have ?Number=1 (or 2 or 3 or 4)
 		function updateURL(number) {
 			if (history.pushState) {
 				var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + number;
@@ -115,10 +124,12 @@
 			}
 		}
 
+		// when the page loads, do all methods in here (see body tag up top)
 		function initalize() {
 			preStart()
 		}
 
+		// function to get the parameters from the url (i.e. getUrlParameter(Number) would return 1 or 2 or 3 or 4)
 		function getUrlParameter(sParam) {
 			var sPageURL = window.location.search.substring(1);
 			var sURLVariables = sPageURL.split('&');
@@ -130,6 +141,7 @@
 			}
 		}
 
+		// see the restapi java file. we are getting the response it sends from there. run game/ is opened.
 		function preStart() {
 			var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/preStart");
 			xhr.send();
@@ -140,6 +152,7 @@
 			}
 		}
 
+		// setup the game, objButton is a number. see the buttons above. get top cards after we get a response.
 		function setupGame(objButton) {
 			AI = objButton;
 			//  create a CORS request, this is the message we are going to send (a get request in this case)
@@ -166,6 +179,7 @@
 		// 	}
 		// }
 
+		// get the state of the player (active or not active)
 		function getPlayerState() {
 			var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getPlayerState?Number="+AI);
 			xhr.send();
@@ -176,6 +190,8 @@
 			}
 		}
 
+		// get the top cards from all players, convert them to a json array
+		//timeout becuase it's a race condition
 		function getTopCards() {
 			var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getTopCards?Number=" + AI);
 			xhr.send();
@@ -190,6 +206,8 @@
 			}
 		}
 
+		// actually set the values of each card in the iframe
+		//methods are directly below
 		function setCardValues(getArray) {
 			var obj = JSON.parse(getArray);
 			if (AI > 0){
@@ -213,6 +231,7 @@
 			}
 		}
 
+		//one function for each card
 		function getCard1(obj){
 			window.frames[0].document.getElementById("pl1name").innerHTML = obj[0].cardName;
 			window.frames[0].document.getElementById("pl1cat1").innerHTML = namesArray[0] + ": " + obj[0].attributeValues[0];
@@ -257,7 +276,7 @@
 			window.frames[0].document.getElementById("pl5cat5").innerHTML = namesArray[4] + ": " + obj[4].attributeValues[4];
 		}
 
-
+		// get the number of cards in the common pile with this method
 		function getDrawPile() {
 			var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile?Number=" + AI);
 			xhr.send();
@@ -272,6 +291,8 @@
 			}
 		}
 
+
+		//THE REST OF THIS IS UNIMPORTANT -------------------------------------------------------------------------------------------------
 		// This is a reusable method for creating a CORS request. Do not edit this.
 		function createCORSRequest(method, url) {
 			var xhr = new XMLHttpRequest();
