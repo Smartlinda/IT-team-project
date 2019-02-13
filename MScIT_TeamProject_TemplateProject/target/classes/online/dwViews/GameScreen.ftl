@@ -34,12 +34,11 @@
 <!-- Call the initalize method when the page loads -->
 
 <body onload="initalize()">
-
 	<!-- TOP TASK BAR -->
 	<header class="clearfix">
 		<div class="container">
 			<div class="header-left">
-				<h5>Top Trumps Game!</h5>
+				<h5>Top Trumps: Skyrim Edition</h5>
 			</div>
 			<div class="header-right">
 				<label for="open">
@@ -71,32 +70,34 @@
 	</div>
 
 	<script>
-	function disappear() {
-		var x = document.getElementById("bg");
-		if (x.style.display === "none") {
-			x.style.display = "block";
-		} else {
-			x.style.display = "none";
+		function disappear() {
+			var x = document.getElementById("bg");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
 		}
-	}
-</script>
+	</script>
 
 
-<!-- END OF BLUR BOX -->
+	<!-- END OF BLUR BOX -->
 
-<div style="width:100%;" class="embed-responsive embed-responsive-16by9">
-	<iframe class="embed-responsive-item" id="mybutt" src="../assets/html/1_ai.htm"></iframe>
-</div>
+	<div style="width:100%;" class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" id="mybutt" src="../assets/html/4_ai.htm"></iframe>
+	</div>
 
-<div class="container">
+	<div class="container">
 
-	<img class="bg_img" src="../assets/imgs/background.JPG" alt="background image">
-
-	<!-- cards! -->
+		<img class="bg_img" src="../assets/imgs/background.JPG" alt="background image">
 
 
 
-	<!-- <h2>Player Card</h2>
+		<!-- cards! -->
+
+
+
+		<!-- <h2>Player Card</h2>
 	<div class="card1">
 	<img src="../assets/imgs/card_layout.png" alt="card" style="height: 30%; position: relative;">
 	<h2 class="centered">Paarthurnax</h2>
@@ -118,220 +119,222 @@
 
 </div> -->
 
-<script>
-var AI;
-//alert(AI);
-//var myyyy = getUrlParameter('ai_select');
+		<script>
+			var AI;
+			//alert(AI);
+			//var myyyy = getUrlParameter('ai_select');
 
 
-// if (AI === '1') {
-// 	document.getElementById('mybutt').src = "../assets/html/blah2.html";
-//}
+			// if (AI === '1') {
+			// 	document.getElementById('mybutt').src = "../assets/html/blah2.html";
+			//}
 
-// Was too lazy to load in the headers, we can do it later.
-var namesArray = new Array("Size", "Speed", "Range", "Firepower", "Cargo");
+			// Was too lazy to load in the headers, we can do it later.
+			var namesArray = new Array("Size", "Speed", "Range", "Firepower", "Cargo");
 
-function updateURL(number) {
-	if (history.pushState) {
-		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + number;
-		window.history.pushState({path:newurl},'',newurl);
-	}
-}
+			function updateURL(number) {
+				if (history.pushState) {
+					var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + number;
+					window.history.pushState({
+						path: newurl
+					}, '', newurl);
+				}
+			}
 
-function initalize() {
-	preStart()
-}
+			function initalize() {
+				preStart()
+			}
 
-// function getUrlParameter(sParam) {
-// 	var sPageURL = window.location.search.substring(1);
-// 	var sURLVariables = sPageURL.split('&');
-// 	for (var i = 0; i < sURLVariables.length; i++) {
-// 		var sParameterName = sURLVariables[i].split('=');
-// 		if (sParameterName[0] == sParam) {
-// 			return sParameterName[1];
-// 		}
-// 	}
-// }
+			// function getUrlParameter(sParam) {
+			// 	var sPageURL = window.location.search.substring(1);
+			// 	var sURLVariables = sPageURL.split('&');
+			// 	for (var i = 0; i < sURLVariables.length; i++) {
+			// 		var sParameterName = sURLVariables[i].split('=');
+			// 		if (sParameterName[0] == sParam) {
+			// 			return sParameterName[1];
+			// 		}
+			// 	}
+			// }
 
-function preStart() {
-	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/preStart");
-	xhr.send();
+			function preStart() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/preStart");
+				xhr.send();
 
-	xhr.onload = function(e) {
-		var responseText = xhr.response;
-		alert(responseText);
-	}
-}
+				xhr.onload = function(e) {
+					var responseText = xhr.response;
+					alert(responseText);
+				}
+			}
 
-function setupGame(objButton) {
-	AI = objButton;
-	//  create a CORS request, this is the message we are going to send (a get request in this case)
-	var xhr = createCORSRequest('GET',
-	"http://localhost:7777/toptrumps/game/setupGame?Number=" + AI); // Request type and URL+parameters
-	// Message is not sent yet, but we can check that the browser supports CORS
-	if (!xhr) {
-		alert("CORS not supported");
-	}
-	xhr.send()
-	xhr.onload = function(e) {
-		var responseText = xhr.response; // the text of the response
-		//		getTopCard();
-		alert(responseText);
-	}
+			function setupGame(objButton) {
+				AI = objButton;
+				//  create a CORS request, this is the message we are going to send (a get request in this case)
+				var xhr = createCORSRequest('GET',
+					"http://localhost:7777/toptrumps/game/setupGame?Number=" + AI); // Request type and URL+parameters
+				// Message is not sent yet, but we can check that the browser supports CORS
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				xhr.send()
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the response
+					//		getTopCard();
+					alert(responseText);
+				}
 
-}
+			}
 
-function getTopCard() {
-	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getTopCard");
-	xhr.send();
+			function getTopCard() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getTopCard");
+				xhr.send();
 
-	xhr.onload = function(e) {
-		var responseText = xhr.response;
-		//		setCardValues(xhr.response);
-		getDrawPile();
-		alert(responseText);
-	}
-}
+				xhr.onload = function(e) {
+					var responseText = xhr.response;
+					//		setCardValues(xhr.response);
+					getDrawPile();
+					alert(responseText);
+				}
+			}
 
-function getDrawPile() {
-	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile");
-	xhr.send();
+			function getDrawPile() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile");
+				xhr.send();
 
-	xhr.onload = function(e) {
-		var drawContents = xhr.response;
-		alert(drawContents);
-		var draw = JSON.parse(drawContents);
-		document.getElementById("drawStack").innerHTML = "The common pile: " + draw + " cards.";
-	}
-}
+				xhr.onload = function(e) {
+					var drawContents = xhr.response;
+					alert(drawContents);
+					var draw = JSON.parse(drawContents);
+					document.getElementById("drawStack").innerHTML = "The common pile: " + draw + " cards.";
+				}
+			}
 
-// function setCardValues(getArray) {
-// 	var obj = JSON.parse(getArray);
-// 	document.getElementById("playercardname").innerHTML = obj.cardName;
-// 	document.getElementById("cardbtn1").innerHTML = namesArray[0] + ": " + obj.attributeValues[0];
-// 	document.getElementById("cardbtn2").innerHTML = namesArray[1] + ": " + obj.attributeValues[1];
-// 	document.getElementById("cardbtn3").innerHTML = namesArray[2] + ": " + obj.attributeValues[2];
-// 	document.getElementById("cardbtn4").innerHTML = namesArray[3] + ": " + obj.attributeValues[3];
-// 	document.getElementById("cardbtn5").innerHTML = namesArray[4] + ": " + obj.attributeValues[4];
-// }
+			// function setCardValues(getArray) {
+			// 	var obj = JSON.parse(getArray);
+			// 	document.getElementById("playercardname").innerHTML = obj.cardName;
+			// 	document.getElementById("cardbtn1").innerHTML = namesArray[0] + ": " + obj.attributeValues[0];
+			// 	document.getElementById("cardbtn2").innerHTML = namesArray[1] + ": " + obj.attributeValues[1];
+			// 	document.getElementById("cardbtn3").innerHTML = namesArray[2] + ": " + obj.attributeValues[2];
+			// 	document.getElementById("cardbtn4").innerHTML = namesArray[3] + ": " + obj.attributeValues[3];
+			// 	document.getElementById("cardbtn5").innerHTML = namesArray[4] + ": " + obj.attributeValues[4];
+			// }
 
-// This is a reusable method for creating a CORS request. Do not edit this.
-function createCORSRequest(method, url) {
-	var xhr = new XMLHttpRequest();
-	if ("withCredentials" in xhr) {
+			// This is a reusable method for creating a CORS request. Do not edit this.
+			function createCORSRequest(method, url) {
+				var xhr = new XMLHttpRequest();
+				if ("withCredentials" in xhr) {
 
-		// Check if the XMLHttpRequest object has a "withCredentials" property.
-		// "withCredentials" only exists on XMLHTTPRequest2 objects.
-		xhr.open(method, url, true);
+					// Check if the XMLHttpRequest object has a "withCredentials" property.
+					// "withCredentials" only exists on XMLHTTPRequest2 objects.
+					xhr.open(method, url, true);
 
-	} else if (typeof XDomainRequest != "undefined") {
+				} else if (typeof XDomainRequest != "undefined") {
 
-		// Otherwise, check if XDomainRequest.
-		// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-		xhr = new XDomainRequest();
-		xhr.open(method, url);
+					// Otherwise, check if XDomainRequest.
+					// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+					xhr = new XDomainRequest();
+					xhr.open(method, url);
 
-	} else {
+				} else {
 
-		// Otherwise, CORS is not supported by the browser.
-		xhr = null;
+					// Otherwise, CORS is not supported by the browser.
+					xhr = null;
 
-	}
-	return xhr;
-}
+				}
+				return xhr;
+			}
 
-function hideAICards() {
-	//sets the AI card details to hidden at the start
-	var x = document.getElementsByClassName("desc");
-	var i;
-	for (i = 0; i < x.length; i++) {
-		x[i].style.visibility = "hidden";
-	}
-}
+			function hideAICards() {
+				//sets the AI card details to hidden at the start
+				var x = document.getElementsByClassName("desc");
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.visibility = "hidden";
+				}
+			}
 
-function showAICards() {
-	//sets AI card details to visible once a category has been chosen
-	var x = document.getElementsByClassName("desc");
-	var i;
-	for (i = 0; i < x.length; i++) {
-		x[i].style.visibility = "visible";
-	}
-}
-// This is a reusable method for creating a CORS request. Do not edit this.
-function createCORSRequest(method, url) {
-	var xhr = new XMLHttpRequest();
-	if ("withCredentials" in xhr) {
-		// Check if the XMLHttpRequest object has a "withCredentials" property.
-		// "withCredentials" only exists on XMLHTTPRequest2 objects.
-		xhr.open(method, url, true);
-	} else if (typeof XDomainRequest != "undefined") {
-		// Otherwise, check if XDomainRequest.
-		// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-		xhr = new XDomainRequest();
-		xhr.open(method, url);
-	} else {
-		// Otherwise, CORS is not supported by the browser.
-		xhr = null;
-	}
-	return xhr;
-}
+			function showAICards() {
+				//sets AI card details to visible once a category has been chosen
+				var x = document.getElementsByClassName("desc");
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.visibility = "visible";
+				}
+			}
+			// This is a reusable method for creating a CORS request. Do not edit this.
+			function createCORSRequest(method, url) {
+				var xhr = new XMLHttpRequest();
+				if ("withCredentials" in xhr) {
+					// Check if the XMLHttpRequest object has a "withCredentials" property.
+					// "withCredentials" only exists on XMLHTTPRequest2 objects.
+					xhr.open(method, url, true);
+				} else if (typeof XDomainRequest != "undefined") {
+					// Otherwise, check if XDomainRequest.
+					// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+					xhr = new XDomainRequest();
+					xhr.open(method, url);
+				} else {
+					// Otherwise, CORS is not supported by the browser.
+					xhr = null;
+				}
+				return xhr;
+			}
 
-function createCORSReq(method, url) {
-	var xhr = createCORSRequest(method, url);
-	// Message is not sent yet, but we can check that the browser supports CORS
-	if (!xhr) {
-		alert("CORS not supported");
-	}
-	return xhr;
-}
+			function createCORSReq(method, url) {
+				var xhr = createCORSRequest(method, url);
+				// Message is not sent yet, but we can check that the browser supports CORS
+				if (!xhr) {
+					alert("CORS not supported");
+				}
+				return xhr;
+			}
 
-function testResponse(jsonAsString) {
-	//var response = JSON.parse(jsonAsString)
-	if (jsonAsString == "state error") {
-		$("#error").html("Function cant be used in this state");
-	} else if (jsonAsString == "") {
-		$("#error").html($('#error').text() + " + 1")
-	} else {
-		$("#response").html(jsonAsString);
-		$("#error").html("--------");
-	}
+			function testResponse(jsonAsString) {
+				//var response = JSON.parse(jsonAsString)
+				if (jsonAsString == "state error") {
+					$("#error").html("Function cant be used in this state");
+				} else if (jsonAsString == "") {
+					$("#error").html($('#error').text() + " + 1")
+				} else {
+					$("#response").html(jsonAsString);
+					$("#error").html("--------");
+				}
 
-	function newGame() {
-		hideAICards();
-		var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/newGame");
-		xhr.send();
-		xhr.onload = function(e) {
-			testResponse(xhr.response);
-		}
-	}
-}
+				function newGame() {
+					hideAICards();
+					var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/newGame");
+					xhr.send();
+					xhr.onload = function(e) {
+						testResponse(xhr.response);
+					}
+				}
+			}
 
-function initialiseGame() {
-	var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/initialiseGameplay");
-	xhr.send();
-	xhr.onload = function(e) {
-		testResponse(xhr.response);
-	}
-}
+			function initialiseGame() {
+				var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/initialiseGameplay");
+				xhr.send();
+				xhr.onload = function(e) {
+					testResponse(xhr.response);
+				}
+			}
 
-function startARound() {
-	var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/startARound");
-	xhr.send();
-	xhr.onload = function(e) {
-		testResponse(xhr.response);
-	}
-	hideAICards();
-}
+			function startARound() {
+				var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/startARound");
+				xhr.send();
+				xhr.onload = function(e) {
+					testResponse(xhr.response);
+				}
+				hideAICards();
+			}
 
-function chosenCategory(category) {
-	var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/chosenCategory?category=" + category);
-	xhr.send();
-	xhr.onload = function(e) {
-		testResponse(xhr.response);
-	}
-	showAICards();
-}
-</script>
+			function chosenCategory(category) {
+				var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/chosenCategory?category=" + category);
+				xhr.send();
+				xhr.onload = function(e) {
+					testResponse(xhr.response);
+				}
+				showAICards();
+			}
+		</script>
 
 </body>
 
