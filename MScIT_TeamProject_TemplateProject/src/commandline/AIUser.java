@@ -8,36 +8,44 @@ package commandline;
  * as well as the toString method.
  */
 
-public class AIUser extends GenericUser {
+public class AIUser extends GenericUser
+{
 
-	// Variables.
-	protected static int nextID = 1;
+   // Variables.
+   protected static int nextID = 1;
 
-	// Constructor.
-	public AIUser() {
-		this.userID = nextID;
-		nextID++;
-	}
+   // Constructor.
+   public AIUser()
+   {
+      this.userID = nextID;
+      nextID++;
+   }
 
-	// Setters and getters.
-	public int getNextID() {
-		return nextID;
-	}
-	
-	public void setNextID(int nextID) {
-		this.nextID = nextID;
-	}
+   // Setters and getters.
+   public int getNextID()
+   {
+      return nextID;
+   }
 
-	// Methods.
-	public int selectCategory(Card card) {
-		int max = -1;
-		for (int i = 0; i < card.getAttributeValues().length; i++) {
-			if (card.getAttributeValues()[i] > max) { // Calculate the maximum attribute of the card
-				max = card.getAttributeValues()[i];
-				selectedCategory = i;
-			}
-		}
-		return selectedCategory; // Return the index of the highest value
-	}
+   public void setNextID(int nextID)
+   {
+      this.nextID = nextID;
+   }
 
+   // Methods.
+   public int selectCategory(Card card)
+   {
+      int max = -1;
+      for (int i = 0; i < card.getAttributeValues().length; i++)
+      {
+         if (card.getAttributeValues()[i] > max)
+         { // Calculate the maximum attribute of the card
+            max = card.getAttributeValues()[i];
+            selectedCategory = i;
+         }
+      }
+      return selectedCategory; // Return the index of the highest value
+   }
+
+  
 }
