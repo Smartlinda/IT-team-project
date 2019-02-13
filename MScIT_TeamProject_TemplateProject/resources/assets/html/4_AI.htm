@@ -31,49 +31,49 @@
 
 
   <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto;
-      padding: 10px;
-    }
-    .grid-container2 {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+  }
+  .grid-container2 {
     display:grid;
     grid-template-columns: auto auto;
     padding:10px;
 
-    }
-    .grid-item {
-      /* border: 1px solid rgba(0, 0, 0, 0.8); */
-      padding: 20px;
-      text-align: center;
-    }
+  }
+  .grid-item {
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    text-align: center;
+  }
 
-    </style>
+  </style>
 
 
 
 </head>
 
-<body onload="initalize()" style="background-color:transparent;">
+<body onload="initalize();" style="background-color:transparent;">
 
   <!-- <div class="container"> -->
   <div class="grid-container">
     <!-- GRID ITEM 1 -->
-    <div class="grid-item">
+    <div id='card-item1' class="grid-item">
       <h4>Player Card</h4>
       <img src="../imgs/enemies_icons/dragonborn.jpg" style="margin:10px; border:5px solid white;">
       <div class="card1">
         <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
-        <h2 style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <h2 id="pl1name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
         <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
-        <div class=" skill_select">
+        <div  id="category_select1" class=" skill_select">
           <form accept-charset="utf-8">
             <select class="dropdown1" name="Number" style="left:90%;position:relative">
-              <option value="hello">Strength 2</option>
-              <option value="two">Size 10</option>
-              <option value="three">Dexterity 8</option>
-              <option value="four">Armor 8</option>
-              <option value="five">Sneak 8</option>
+              <option id="pl1cat1" value="1"></option>
+              <option id="pl1cat2" value="2"></option>
+              <option id="pl1cat3" value="3"></option>
+              <option id="pl1cat4" value="4"></option>
+              <option id="pl1cat5" value="5"></option>
             </select>
             <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
           </form>
@@ -87,18 +87,18 @@
       <img src="../imgs/enemies_icons/volkihar_master_vampire.jpg" style="margin:10px; border:5px solid white;">
       <div class="card1">
         <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
-        <h2 style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <h2 id="pl2name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
         <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
-        <div class=" skill_select">
+        <div id="category_select2" class=" skill_select">
           <form accept-charset="utf-8">
             <select class="dropdown1" name="Number" style="left:90%;position:relative">
-              <option value="hello">Strength 2</option>
-              <option value="two">Size 10</option>
-              <option value="three">Dexterity 8</option>
-              <option value="four">Armor 8</option>
-              <option value="five">Sneak 8</option>
+              <option id="pl2cat1" value="1"></option>
+              <option id="pl2cat2" value="2"></option>
+              <option id="pl2cat3" value="3"></option>
+              <option id="pl2cat4" value="4"></option>
+              <option id="pl2cat5" value="5"></option>
             </select>
-            <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
           </form>
         </div>
       </div>
@@ -110,18 +110,18 @@
       <img src="../imgs/enemies_icons/dremora_valkynaz.jpg" style="margin:10px; border:5px solid white;">
       <div class="card1">
         <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
-        <h2 style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <h2 id="pl3name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
         <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
-        <div class=" skill_select">
+        <div id="category_select3" class=" skill_select">
           <form accept-charset="utf-8">
             <select class="dropdown1" name="Number" style="left:90%;position:relative">
-              <option value="hello">Strength 2</option>
-              <option value="two">Size 10</option>
-              <option value="three">Dexterity 8</option>
-              <option value="four">Armor 8</option>
-              <option value="five">Sneak 8</option>
+              <option id="pl3cat1" value="1"></option>
+              <option id="pl3cat2" value="2"></option>
+              <option id="pl3cat3" value="3"></option>
+              <option id="pl3cat4" value="4"></option>
+              <option id="pl3cat5" value="5"></option>
             </select>
-            <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
           </form>
         </div>
       </div>
@@ -133,18 +133,18 @@
       <img src="../imgs/enemies_icons/dragon_priest.jpg" style="margin:10px; border:5px solid white;">
       <div class="card1">
         <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
-        <h2 style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <h2 id="pl4name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
         <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
-        <div class=" skill_select">
+        <div id="category_select4" class=" skill_select">
           <form accept-charset="utf-8">
             <select class="dropdown1" name="Number" style="left:90%;position:relative">
-              <option value="hello">Strength 2</option>
-              <option value="two">Size 10</option>
-              <option value="three">Dexterity 8</option>
-              <option value="four">Armor 8</option>
-              <option value="five">Sneak 8</option>
+              <option id="pl4cat1" value="1"></option>
+              <option id="pl4cat2" value="2"></option>
+              <option id="pl4cat3" value="3"></option>
+              <option id="pl4cat4" value="4"></option>
+              <option id="pl4cat5" value="5"></option>
             </select>
-            <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
           </form>
         </div>
       </div>
@@ -156,18 +156,18 @@
       <img src="../imgs/enemies_icons/falmer_warmonger.jpg" style="margin:10px; border:5px solid white;">
       <div class="card1">
         <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
-        <h2 style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <h2 id="pl5name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
         <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
-        <div class=" skill_select">
+        <div id="category_select5" class=" skill_select">
           <form accept-charset="utf-8">
             <select class="dropdown1" name="Number" style="left:90%;position:relative">
-              <option value="hello">Strength 2</option>
-              <option value="two">Size 10</option>
-              <option value="three">Dexterity 8</option>
-              <option value="four">Armor 8</option>
-              <option value="five">Sneak 8</option>
+              <option id="pl5cat1" value="1"></option>
+              <option id="pl5cat2" value="2"></option>
+              <option id="pl5cat3" value="3"></option>
+              <option id="pl5cat4" value="4"></option>
+              <option id="pl5cat5" value="5"></option>
             </select>
-            <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
           </form>
         </div>
       </div>
@@ -179,232 +179,22 @@
   <div class="grid-container2">
     <!-- HERE GOES THE STATS -->
     <div class="grid-item">
-      <h3>ROUND 3</h3><br />
-      <h4>Player turn<h4>
-      <h4>Number of cards in deck: 10</h4>
-      <h4>Number of cards in common pile: 32<h4>
+      <h3 id="round-counter" >ROUND 3</h3><br/>
+      <h4 id="whose-turn">Player turn</h4>
+      <h4 id="card-counter">Number of cards in deck: 10</h4>
+      <h4 id="common-pile" >Number of cards in common pile: 32</h4>
     </div>
     <!-- HERE ENDS THE STATS -->
     <div class="grid-item">
-      <a class="w3-button w3-black" href="/toptrumps/">Quit Game</a>
+      <!-- <a class="w3-button w3-black" href="/toptrumps/">Quit Game</a> -->
       <input class="w3-button w3-black" type="submit" value="Next round"><br>
     </div>
   </div>
 
-  <!-- </div> -->
-
   <script>
-    var AI = 4;
-    var myyyy = getUrlParameter('ai_select');
-
-
-    if (myyyy === 'hello') {
-      document.getElementById('mybutt').src = "../html/blah2.html";
-    }
-
-    // Was too lazy to load in the headers, we can do it later.
-    var namesArray = new Array("Size", "Speed", "Range", "Firepower", "Cargo");
-
-    //function updateURL() {
-    //	if (history.pushState) {
-    //			var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?Number=' + AI;
-    //			window.history.pushState({path:newurl},'',newurl);
-    //	}
-    //}
-
-    function initalize() {
-      preStart()
-    }
-
-    function getUrlParameter(sParam) {
-      var sPageURL = window.location.search.substring(1);
-      var sURLVariables = sPageURL.split('&');
-      for (var i = 0; i < sURLVariables.length; i++) {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) {
-          return sParameterName[1];
-        }
-      }
-    }
-
-    function preStart() {
-      var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/preStart");
-      xhr.send();
-
-      xhr.onload = function(e) {
-        var responseText = xhr.response;
-        //alert(responseText);
-      }
-    }
-
-    function setupGame(objButton) {
-      AI = objButton.value;
-      //  create a CORS request, this is the message we are going to send (a get request in this case)
-      var xhr = createCORSRequest('GET',
-        "http://localhost:7777/toptrumps/game/setupGame?Number=" + AI); // Request type and URL+parameters
-      // Message is not sent yet, but we can check that the browser supports CORS
-      if (!xhr) {
-        alert("CORS not supported");
-      }
-      xhr.send()
-      xhr.onload = function(e) {
-        var responseText = xhr.response; // the text of the response
-        getTopCard();
-        //alert(responseText);
-      }
-
-    }
-
-    function getTopCard() {
-      var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getTopCard?Number=" + AI);
-      xhr.send();
-
-      xhr.onload = function(e) {
-        var responseText = xhr.response;
-        setCardValues(xhr.response);
-        getDrawPile();
-        //alert(responseText);
-      }
-    }
-
-    function getDrawPile() {
-      var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/game/getDrawPile?Number=" + AI);
-      xhr.send();
-
-      xhr.onload = function(e) {
-        var drawContents = xhr.response;
-        alert(drawContents);
-        var draw = JSON.parse(drawContents);
-        document.getElementById("drawStack").innerHTML = "The common pile: " + draw + " cards.";
-      }
-    }
-
-    function setCardValues(getArray) {
-      var obj = JSON.parse(getArray);
-      document.getElementById("playercardname").innerHTML = obj.cardName;
-      document.getElementById("cardbtn1").innerHTML = namesArray[0] + ": " + obj.attributeValues[0];
-      document.getElementById("cardbtn2").innerHTML = namesArray[1] + ": " + obj.attributeValues[1];
-      document.getElementById("cardbtn3").innerHTML = namesArray[2] + ": " + obj.attributeValues[2];
-      document.getElementById("cardbtn4").innerHTML = namesArray[3] + ": " + obj.attributeValues[3];
-      document.getElementById("cardbtn5").innerHTML = namesArray[4] + ": " + obj.attributeValues[4];
-    }
-
-    // This is a reusable method for creating a CORS request. Do not edit this.
-    function createCORSRequest(method, url) {
-      var xhr = new XMLHttpRequest();
-      if ("withCredentials" in xhr) {
-
-        // Check if the XMLHttpRequest object has a "withCredentials" property.
-        // "withCredentials" only exists on XMLHTTPRequest2 objects.
-        xhr.open(method, url, true);
-
-      } else if (typeof XDomainRequest != "undefined") {
-
-        // Otherwise, check if XDomainRequest.
-        // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-
-      } else {
-
-        // Otherwise, CORS is not supported by the browser.
-        xhr = null;
-
-      }
-      return xhr;
-    }
-
-    function hideAICards() {
-      //sets the AI card details to hidden at the start
-      var x = document.getElementsByClassName("desc");
-      var i;
-      for (i = 0; i < x.length; i++) {
-        x[i].style.visibility = "hidden";
-      }
-    }
-
-    function showAICards() {
-      //sets AI card details to visible once a category has been chosen
-      var x = document.getElementsByClassName("desc");
-      var i;
-      for (i = 0; i < x.length; i++) {
-        x[i].style.visibility = "visible";
-      }
-    }
-    // This is a reusable method for creating a CORS request. Do not edit this.
-    function createCORSRequest(method, url) {
-      var xhr = new XMLHttpRequest();
-      if ("withCredentials" in xhr) {
-        // Check if the XMLHttpRequest object has a "withCredentials" property.
-        // "withCredentials" only exists on XMLHTTPRequest2 objects.
-        xhr.open(method, url, true);
-      } else if (typeof XDomainRequest != "undefined") {
-        // Otherwise, check if XDomainRequest.
-        // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-      } else {
-        // Otherwise, CORS is not supported by the browser.
-        xhr = null;
-      }
-      return xhr;
-    }
-
-    function createCORSReq(method, url) {
-      var xhr = createCORSRequest(method, url);
-      // Message is not sent yet, but we can check that the browser supports CORS
-      if (!xhr) {
-        alert("CORS not supported");
-      }
-      return xhr;
-    }
-
-    function testResponse(jsonAsString) {
-      //var response = JSON.parse(jsonAsString)
-      if (jsonAsString == "state error") {
-        $("#error").html("Function cant be used in this state");
-      } else if (jsonAsString == "") {
-        $("#error").html($('#error').text() + " + 1")
-      } else {
-        $("#response").html(jsonAsString);
-        $("#error").html("--------");
-      }
-
-      function newGame() {
-        hideAICards();
-        var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/newGame");
-        xhr.send();
-        xhr.onload = function(e) {
-          testResponse(xhr.response);
-        }
-      }
-    }
-
-    function initialiseGame() {
-      var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/initialiseGameplay");
-      xhr.send();
-      xhr.onload = function(e) {
-        testResponse(xhr.response);
-      }
-    }
-
-    function startARound() {
-      var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/startARound");
-      xhr.send();
-      xhr.onload = function(e) {
-        testResponse(xhr.response);
-      }
-      hideAICards();
-    }
-
-    function chosenCategory(category) {
-      var xhr = createCORSReq('GET', "http://localhost:7777/toptrumps/game/chosenCategory?category=" + category);
-      xhr.send();
-      xhr.onload = function(e) {
-        testResponse(xhr.response);
-      }
-      showAICards();
-    }
+  function initalize(){
+    alert("Four opponents remaining!");
+  }
   </script>
 
 

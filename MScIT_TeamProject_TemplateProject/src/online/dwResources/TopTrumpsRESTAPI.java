@@ -141,7 +141,7 @@ public class TopTrumpsRESTAPI {
 
 		current[1] = gameStates[1];
 
-		return "The game has been started.";
+		return Integer.toString(roundWinner);
 	}
 
 	@GET
@@ -169,16 +169,21 @@ public class TopTrumpsRESTAPI {
 	}
 
 	@GET
-	@Path("game/getTopCard")
-	public String getTopCard() { // NEED TO CHECK FOR OTHER PLAYERS ALSO
+	@Path("game/getTopCards")
+	public String getTopCards(@QueryParam("Number") String Number) { // NEED TO CHECK FOR OTHER PLAYERS ALSO
+		this.Number = Number;
 		String card = "lost";
-		if (current[0].equals(playerStates[0])) {
-			try {
-				card = oWriter.writeValueAsString(ctrl.getUserArray()[0].getPersonalDeck().get(0));
-			} catch (JsonProcessingException e) {
-				e.printStackTrace();
-			}
+		Card[] topCards = new Card[ctrl.getActiveUser().size()];
+		for (int i = 0; i < ctrl.getActiveUser().size(); i++) {
+			topCards[i] = ctrl.getUserArray()[ctrl.getActiveUser().get(i)].getPersonalDeck().get(0);
 		}
+
+		try {
+			card = oWriter.writeValueAsString(topCards);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+		System.out.println(card);
 		return card;
 	}
 
@@ -197,7 +202,7 @@ public class TopTrumpsRESTAPI {
 		return counter;
 	}
 
-	@GET // if human's turn/human is alive
+	@GET // if human's turn/human is alive //NOT RIGHT
 	@Path("game/humanSelectCategory")
 	public String humanSelectCategory(@QueryParam("Index") String Index) {
 		// this.Index = Index;
@@ -213,7 +218,7 @@ public class TopTrumpsRESTAPI {
 	public String AISelectCategory() {
 		ctrl.getUserArray()[roundWinner].selectCategory(ctrl.getUserArray()[roundWinner].getPersonalDeck().get(0));
 		currentCategory = ctrl.getUserArray()[roundWinner].getSelectedCategory();
-		
+
 		return "AI selected " + model.getHeader(currentCategory);
 	}
 
@@ -221,14 +226,14 @@ public class TopTrumpsRESTAPI {
 	@Path("game/distributeCards")
 	public String distributeCards() {
 		if (ctrl.checkRoundWinner(roundWinner) != -1) {
-			roundWinner = ctrl.checkRoundWinner(roundWinner);   // get the new round winner
+			roundWinner = ctrl.checkRoundWinner(roundWinner); // get the new round winner
 			return "Cards were given to the winner, player " + roundWinner;
 		}
 		ctrl.changeOwnership(roundWinner);
 		ctrl.excludeLoser();
 		return "The round was a draw, cards go to the common pile.";
 	}
-	
+
 	@GET
 	@Path("game/checkForWinner")
 	public int checkForWinner() {
@@ -238,6 +243,16 @@ public class TopTrumpsRESTAPI {
 			gameWinner = -1;
 		}
 		return gameWinner;
+	}
+
+	@GET
+	@Path("game/getPlayerState")
+	public String getPlayerState() {
+		if (current[0].equals("active")) {
+			return "0";
+		} else {
+			return "1";
+		}
 	}
 }
 
