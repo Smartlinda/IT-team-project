@@ -44,9 +44,9 @@ public class TopTrumpsRESTAPI {
 	private Controller ctrl = new Controller(model);
 	private HumanUser player;
 	private AIUser[] AIUserArray;
-	private AIUser jeff = new AIUser();
+	private AIUser jeff = new AIUser();  //
 
-	private int roundNumber = 0;
+	private int roundNumber = 0;  // i think this is all we need.
 	private int numberOfDraws = 0;
 	private int drawStackSize = 0; // HOW MANY CARDS LEFT IN COMMON PILE
 	private int cardsLeft; // HOW MANY CARDS ARE LEFT IN EACH DECK
@@ -81,7 +81,7 @@ public class TopTrumpsRESTAPI {
 		conf.getNumAIPlayers();
 	}
 
-	@GET
+	@GET //don't touch, it works
 	@Path("statistics/download_stats")
 	public Number[] downloadStats() {
 		Number[] gotStats = new Number[db.getQuery().length];
@@ -89,7 +89,7 @@ public class TopTrumpsRESTAPI {
 		return gotStats;
 	}
 
-	@GET
+	@GET // reset everything when /game is opened
 	@Path("game/preStart")
 	public String preStart() {
 		roundWinner = -1;
@@ -106,7 +106,7 @@ public class TopTrumpsRESTAPI {
 		return "The deck has been shuffled.";
 	}
 
-	@GET
+	@GET // set up the game at the start, return the random first round winner
 	@Path("game/setupGame")
 	public String setupGame(@QueryParam("Number") String Number) {
 		this.Number = Number;
@@ -144,7 +144,7 @@ public class TopTrumpsRESTAPI {
 		return Integer.toString(roundWinner);
 	}
 
-	@GET
+	@GET // return array with number of cards left for every player
 	@Path("game/getCardsLeft")
 	public String getCardsLeft() {
 		current[1] = gameStates[2];
@@ -168,7 +168,7 @@ public class TopTrumpsRESTAPI {
 		return returned;
 	}
 
-	@GET
+	@GET	// give the top cards to the website, according to the 'number' parameter in the url
 	@Path("game/getTopCards")
 	public String getTopCards(@QueryParam("Number") String Number) { // NEED TO CHECK FOR OTHER PLAYERS ALSO
 		this.Number = Number;
@@ -187,14 +187,14 @@ public class TopTrumpsRESTAPI {
 		return card;
 	}
 
-	@GET
+	@GET	// give the number of cards in the draw pile to the website
 	@Path("game/getDrawPile")
 	public String getDrawPile() {
 		String contents = Integer.toString(ctrl.getDrawStack().size());
 		return contents;
 	}
 
-	@GET
+	@GET	// give the round counter to the website
 	@Path("game/getRoundCounter")
 	public String getRoundCounter() {
 		roundNumber++;
@@ -202,7 +202,7 @@ public class TopTrumpsRESTAPI {
 		return counter;
 	}
 
-	@GET // if human's turn/human is alive //NOT RIGHT
+	@GET // NOT CORRECT 
 	@Path("game/humanSelectCategory")
 	public String humanSelectCategory(@QueryParam("Index") String Index) {
 		// this.Index = Index;
@@ -213,7 +213,7 @@ public class TopTrumpsRESTAPI {
 		return "You selected " + model.getHeader(currentCategory);
 	}
 
-	@GET
+	@GET	// if its an ai's turn, ai selects a category.
 	@Path("game/AISelectCategory")
 	public String AISelectCategory() {
 		ctrl.getUserArray()[roundWinner].selectCategory(ctrl.getUserArray()[roundWinner].getPersonalDeck().get(0));
@@ -222,7 +222,7 @@ public class TopTrumpsRESTAPI {
 		return "AI selected " + model.getHeader(currentCategory);
 	}
 
-	@GET
+	@GET	// distribute the cards between all the players (dealing out), returns status strings
 	@Path("game/distributeCards")
 	public String distributeCards() {
 		if (ctrl.checkRoundWinner(roundWinner) != -1) {
@@ -234,7 +234,7 @@ public class TopTrumpsRESTAPI {
 		return "The round was a draw, cards go to the common pile.";
 	}
 
-	@GET
+	@GET 	// send the game winner to the website
 	@Path("game/checkForWinner")
 	public int checkForWinner() {
 		if (ctrl.getActiveUser().size() == 1) {
@@ -245,7 +245,7 @@ public class TopTrumpsRESTAPI {
 		return gameWinner;
 	}
 
-	@GET
+	@GET   // sends the state of the player (active or not) to the website
 	@Path("game/getPlayerState")
 	public String getPlayerState() {
 		if (current[0].equals("active")) {
