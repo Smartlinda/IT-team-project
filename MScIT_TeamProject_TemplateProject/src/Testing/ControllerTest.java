@@ -14,6 +14,12 @@ import commandline.Model;
 public class ControllerTest
 {
 
+   /**
+    * This test will allow to test if the checkRoundWinner method
+    * will return a tie, if it returns -1, a draw occurred in the round
+    * 
+    *
+    */
    @Test
    public void testCheckRoundWinner()
    {
@@ -30,10 +36,11 @@ public class ControllerTest
       controller.getUserArray()[1].addCard(card2);
       controller.getActiveUser().add(0);
       controller.getActiveUser().add(1);
-
       controller.getUserArray()[0].selectCategory(card);
+      
       int actual = controller.checkRoundWinner(0);
-      int expected = 0;
+      //tests for -1 to see if there is draw
+      int expected = -1;
 
       assertEquals(expected, actual);
 
