@@ -26,6 +26,10 @@ public class ControllerTest
       
       model = new Model();
       controller = new Controller(model);
+
+      activeUser = new ArrayList<Integer>();
+      activeUser.add(1);
+      activeUser.add(2);
    }
    /**
     * This test will allow to test if the checkRoundWinner method
@@ -43,13 +47,7 @@ public class ControllerTest
       Card card2 = new Card("another card", array, model);
       GenericUser[] userArray = { new AIUser(), new HumanUser("adriano") };
 
-      controller.setUserArray(userArray);
-      controller.getUserArray()[0].addCard(card);
-      controller.getUserArray()[1].addCard(card2);
-      controller.getActiveUser().add(0);
-      controller.getActiveUser().add(1);
-      controller.getUserArray()[0].selectCategory(card);
-      
+     
       int actual = controller.checkRoundWinner(0);
       //tests for -1 to see if there is draw
       int expected = -1;
@@ -61,22 +59,17 @@ public class ControllerTest
    @SuppressWarnings("unchecked")
    @Test
    public void testExcludeLoser()
-   {       
-      activeUser = new ArrayList<Integer>();
-      activeUser.add(1);
-      activeUser.add(2);
-      
-      GenericUser[] userArray = {new AIUser(), new HumanUser("adriano")};
+   {          
+      GenericUser[] userArray = { new AIUser(), new HumanUser("adriano") };
       copy = new ArrayList<Integer>();
-      
-      
       copy = (ArrayList<Integer>) activeUser.clone();
-      for(int user : activeUser) {
-         if(userArray[user].getPersonalDeck().size() == 0) {
-            
+      for (int user : activeUser)
+      {
+         if (userArray[user].getPersonalDeck().size() == 0)
+         {
+
          }
       }
-      
       
    }
 
