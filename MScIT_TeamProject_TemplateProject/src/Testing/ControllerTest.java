@@ -2,6 +2,9 @@ package Testing;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import commandline.AIUser;
@@ -13,7 +16,17 @@ import commandline.Model;
 
 public class ControllerTest
 {
-
+   static Model model;
+   static Controller controller;
+   static ArrayList<Integer> activeUser;
+   static ArrayList<Integer> copy;
+   
+   @BeforeClass
+   public static void setup() {
+      
+      model = new Model();
+      controller = new Controller(model);
+   }
    /**
     * This test will allow to test if the checkRoundWinner method
     * will return a tie, if it returns -1, a draw occurred in the round
@@ -24,8 +37,7 @@ public class ControllerTest
    public void testCheckRoundWinner()
    {
 
-      Model model = new Model();
-      Controller controller = new Controller(model);
+      
       int[] array = { 1, 2, 3, 4, 5 };
       Card card = new Card("One card", array, model);
       Card card2 = new Card("another card", array, model);
@@ -42,14 +54,30 @@ public class ControllerTest
       //tests for -1 to see if there is draw
       int expected = -1;
 
-      assertEquals(expected, actual);
+      assertEquals("This test will check if the input matches the output",expected, actual);
 
    }
 
+   @SuppressWarnings("unchecked")
    @Test
    public void testExcludeLoser()
-   {
-
+   {       
+      activeUser = new ArrayList<Integer>();
+      activeUser.add(1);
+      activeUser.add(2);
+      
+      GenericUser[] userArray = {new AIUser(), new HumanUser("adriano")};
+      copy = new ArrayList<Integer>();
+      
+      
+      copy = (ArrayList<Integer>) activeUser.clone();
+      for(int user : activeUser) {
+         if(userArray[user].getPersonalDeck().size() == 0) {
+            
+         }
+      }
+      
+      
    }
 
 }
