@@ -7,62 +7,76 @@ import java.util.ArrayList;
  * 
  */
 
-public class GenericUser {
+public class GenericUser
+{
 
-	// Variables.
-	protected int userID; 
-	protected ArrayList<Card> personalDeck = new ArrayList<Card>(); 
-	protected int roundsWon = 0; 
-	protected int selectedCategory;
+   // Variables.
+   protected int userID;
+   protected ArrayList<Card> personalDeck = new ArrayList<Card>();
+   protected int roundsWon = 0;
+   protected int selectedCategory;
 
-	// Constructor.
-	GenericUser() {
-	}
+   // Constructor.
+   GenericUser()
+   {
+   }
 
-	// Getters and Setters.
-	public ArrayList<Card> getPersonalDeck() {
-		return personalDeck;
-	}
-	
-	public int getUserID() {
-		return userID;
-	}
-	
-	public int getRoundsWon() {
-		return roundsWon;
-	}
-	
-	public int getSelectedCategory() {
-		return selectedCategory;
-	}
-	
-	public void setSelectedCategory(int selectedCategory) {
-		this.selectedCategory = selectedCategory;
-	}
+   // Getters and Setters.
+   public ArrayList<Card> getPersonalDeck()
+   {
+      return personalDeck;
+   }
 
-	// Methods.
-	public void roundWinner() {
-		roundsWon++;
-	}
-	
-	public int selectCategory(Card card) {
-		return selectedCategory;
-	}
+   public int getUserID()
+   {
+      return userID;
+   }
 
-	// Add given card to the bottom of the pile.
-	public void addCard(Card card) {
-		personalDeck.add(card);
-	}
+   public int getRoundsWon()
+   {
+      return roundsWon;
+   }
 
-	// Remove the topmost card from the pile. 
-	public void removeTopCard(Card card) { 
-		personalDeck.remove(0);
-	}
+   public int getSelectedCategory()
+   {
+      return selectedCategory;
+   }
 
-	// A toString method.
-	public String toString() {
-		String str = String.format("Player %2d: %2d rounds won, %2d cards left in deck.", userID, roundsWon, personalDeck.size());
-		return str;
-	}
+   public void setSelectedCategory(int selectedCategory)
+   {
+      this.selectedCategory = selectedCategory;
+   }
+
+   // Methods.
+   public void roundWinner()
+   {
+      roundsWon++;
+   }
+
+   public int selectCategory(Card card)
+   {
+      return selectedCategory;
+   }
+
+   // Add given card to the bottom of the pile.
+   public void addCard(Card card)
+   {
+      personalDeck.add(card);
+   }
+
+   // Remove the topmost card from the pile.
+   public void removeTopCard(Card card)
+   {
+      personalDeck.remove(0);
+   }
+
+   // A toString method.
+   public String toString()
+   {
+      String str = String.format(
+            "Player %2d: %2d rounds won, %2d cards left in deck.", userID,
+            roundsWon, personalDeck.size());
+      return str;
+   }
 
 }
