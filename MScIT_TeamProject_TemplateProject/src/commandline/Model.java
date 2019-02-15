@@ -7,52 +7,31 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+/*
+ * The Model class is responsible for reading in StarCitizenDeck.txt and storing the Cards in the deck 'cardCon'.
+ * ****THE FILE PATH MUST BE CHANGED FOR RUNNING IN THE COMMANDLINE OR FOR MACS****
+ */
+
 public class Model {
-	
-	private String filePath = "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt" ;
-	//private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt" ;
+
+	// Variables.
+	// private String filePath =
+	// "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
+	//private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt";
+	private String filePath = System.getProperty("user.dir") + "\\SkyrimCards.txt";
+
 	protected String[] cardHeader = new String[6];
-	private String[][] cards;
-	protected static int numberOfAllCards;
-	private int numberOfPlayers;
 	private String[] row;
 	private String[] subrow;
-	private int[] aV;
+	private int[] attributeValues;
 	protected ArrayList<Card> cardCon = new ArrayList<Card>(); // all cards
 
+	// Constructor.
 	public Model() {
 	}
 
-	public void readContent() {
-		cardCon = new ArrayList<Card>();
-		try {
-			BufferedReader brd = new BufferedReader(new FileReader(filePath));
-			String head = brd.readLine(); // read in the first line which are the
-											// headers
-			cardHeader = head.split(" ");
-			while (brd.ready()) {
-				String con = brd.readLine();// read in one row
-				row = con.split(" "); // split it
-				subrow = Arrays.copyOfRange(row, 1, row.length);// extract the
-																// integer part from
-																// the row
-				aV = Arrays.stream(subrow).mapToInt(Integer::parseInt).toArray();// convert
-																					// from
-																					// string[]
-																					// to
-																					// int[]
-				Card card = new Card(row[0], aV, this);// make a card object
-				cardCon.add(card); // store into the arraylist that contains all
-									// cards
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		numberOfAllCards = cardCon.size();
-	}
-
+	// Getters.
 	public String getHeader(int index) {
-		// +1 to avoid description
 		return cardHeader[index + 1];
 	}
 
@@ -60,4 +39,37 @@ public class Model {
 		return cardCon.size();
 	}
 
+	public ArrayList<Card> getDeck() {
+		return cardCon;
+	}
+
+	public String[] getHeader() {
+		return cardHeader;
+	}
+
+	// Methods.
+	public void readContent() {
+		try {
+			BufferedReader brd = new BufferedReader(new FileReader(filePath));
+			String head = brd.readLine(); // Read in the first line.
+			cardHeader = head.split(" ");
+			while (brd.ready()) {
+				String con = brd.readLine(); // Read in one row.
+				row = con.split(" ");
+				
+				// Extract the integers from the row.
+				subrow = Arrays.copyOfRange(row, 1, row.length);
+				// Convert from String[] to int[].
+				attributeValues = Arrays.stream(subrow).mapToInt(Integer::parseInt).toArray();
+				
+				
+				Card card = new Card(row[0], attributeValues, this); // Make a card object.
+				cardCon.add(card); // Add to the deck.
+			}
+			brd.close();
+		} catch (IOException e) {
+			System.out.println("An exception occurred!");
+			e.printStackTrace();
+		}
+	}
 }

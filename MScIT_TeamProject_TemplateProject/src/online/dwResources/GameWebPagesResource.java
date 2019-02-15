@@ -44,10 +44,10 @@ public class GameWebPagesResource {
     }
 	
 	@GET
-	@Path("/stats")
+	@Path("/statistics")
 	/**
 	 * The Web page that shows past game statistics
-	 * Hosted at 'http://localhost:7777/toptrumps/stats'
+	 * Hosted at 'http://localhost:7777/toptrumps/statistics'
 	 * @return
 	 */
     public StatisticsView getStatisticsView() {

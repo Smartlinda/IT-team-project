@@ -15,7 +15,7 @@ import io.dropwizard.views.ViewBundle;
 import online.configuration.TopTrumpsJSONConfiguration;
 import online.dwResources.GameWebPagesResource;
 import online.dwResources.TopTrumpsRESTAPI;
-//import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.assets.AssetsBundle;
 
 /**
  * Top Trumps Web Application. This class is complete, you do not need to edit
@@ -48,8 +48,6 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 		// Enable CORS headers (see
 		// https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 		final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
-		// HERE CHANGE --------------------------------------
-//		environment.jersey().setUrlPattern("/api/*");
 
 		// Configure CORS parameters
 		cors.setInitParameter("allowedOrigins", "*");
@@ -68,10 +66,12 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 
 		// HTML/Javascript Webpages
 		GameWebPagesResource gameScreen = new GameWebPagesResource();
+		GameWebPagesResource statistics = new GameWebPagesResource();
 
 		// Registration tells Dropwizard to host a resource
 		environment.jersey().register(restAPI);
 		environment.jersey().register(gameScreen);
+		environment.jersey().register(statistics);
 	}
 
 	/**
@@ -88,8 +88,7 @@ public class TopTrumpsOnlineApplication extends Application<TopTrumpsJSONConfigu
 	@Override
 	public void initialize(Bootstrap<TopTrumpsJSONConfiguration> bootstrap) {
 		bootstrap.addBundle(new ViewBundle<TopTrumpsJSONConfiguration>());
-		// HERE CHANGE --------------------------------------
-//		bootstrap.addBundle(new AssetsBundle("/assets", "/myassets/", "index.html"));
+		bootstrap.addBundle(new AssetsBundle("/assets/","/assets", null, "myassets"));
 	}
 
 }

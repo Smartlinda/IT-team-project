@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Web page title -->
+  <title>Top Trumps</title>
+
+  <link href="../imgs/favicon/favicon.ico" rel="icon" type="image/x-icon" />
+
+  <!-- <link rel="stylesheet" href="../assets/styling/modal.css"> -->
+
+  <link rel="stylesheet" href="../styling/bootstrap.min.css">
+  <link rel="stylesheet" href="../styling/vex.css" />
+  <link rel="stylesheet" href="../styling/vex-theme-os.css" />
+  <link rel="stylesheet" href="../styling/font-awesome.min.css">
+  <link rel="stylesheet" href="../styling/style.css">
+  <link rel="stylesheet" href="../styling/w3.css">
+  <link rel="stylesheet" href="../styling/jquery-ui.css">
+
+
+  <script src="../js/jquery-2.1.1.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/vex.combined.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="../styling/style.css">
+
+
+  <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+  }
+  .grid-container2 {
+    display:grid;
+    grid-template-columns: auto auto;
+    padding:10px;
+
+  }
+  .grid-item {
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    text-align: center;
+  }
+
+  </style>
+
+
+
+</head>
+
+<body onload="initalize();" style="background-color:transparent;">
+
+  <!-- <div class="container"> -->
+  <div class="grid-container">
+    <!-- GRID ITEM 1 -->
+    <div id='card-item1' class="grid-item">
+      <h4>Player Card</h4>
+      <img src="../imgs/enemies_icons/dragonborn.jpg" style="margin:10px; border:5px solid white;">
+      <div class="card1">
+        <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
+        <h2 id="pl1name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
+        <div  id="category_select1" class=" skill_select">
+          <form accept-charset="utf-8">
+            <select class="dropdown1" name="Number" style="left:90%;position:relative">
+              <option id="pl1cat1" value="1"></option>
+              <option id="pl1cat2" value="2"></option>
+              <option id="pl1cat3" value="3"></option>
+              <option id="pl1cat4" value="4"></option>
+              <option id="pl1cat5" value="5"></option>
+            </select>
+            <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END OF GRID ITEM 1 -->
+    <!-- GRID ITEM 2 -->
+    <div class="grid-item">
+      <h4>Volkihar Master Vampire</h4>
+      <img src="../imgs/enemies_icons/volkihar_master_vampire.jpg" style="margin:10px; border:5px solid white;">
+      <div class="card1">
+        <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
+        <h2 id="pl2name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
+        <div id="category_select2" class=" skill_select">
+          <form accept-charset="utf-8">
+            <select class="dropdown1" name="Number" style="left:90%;position:relative">
+              <option id="pl2cat1" value="1"></option>
+              <option id="pl2cat2" value="2"></option>
+              <option id="pl2cat3" value="3"></option>
+              <option id="pl2cat4" value="4"></option>
+              <option id="pl2cat5" value="5"></option>
+            </select>
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END OF GRID ITEM 2 -->
+    <!-- GRID ITEM 3 -->
+    <div class="grid-item">
+      <h4>Dremora Valkynaz</h4>
+      <img src="../imgs/enemies_icons/dremora_valkynaz.jpg" style="margin:10px; border:5px solid white;">
+      <div class="card1">
+        <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
+        <h2 id="pl3name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
+        <div id="category_select3" class=" skill_select">
+          <form accept-charset="utf-8">
+            <select class="dropdown1" name="Number" style="left:90%;position:relative">
+              <option id="pl3cat1" value="1"></option>
+              <option id="pl3cat2" value="2"></option>
+              <option id="pl3cat3" value="3"></option>
+              <option id="pl3cat4" value="4"></option>
+              <option id="pl3cat5" value="5"></option>
+            </select>
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END OF GRID ITEM 3 -->
+    <!-- GRID ITEM 4 -->
+    <div class="grid-item">
+      <h4>Dragon Priest</h4>
+      <img src="../imgs/enemies_icons/dragon_priest.jpg" style="margin:10px; border:5px solid white;">
+      <div class="card1">
+        <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
+        <h2 id="pl4name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
+        <div id="category_select4" class=" skill_select">
+          <form accept-charset="utf-8">
+            <select class="dropdown1" name="Number" style="left:90%;position:relative">
+              <option id="pl4cat1" value="1"></option>
+              <option id="pl4cat2" value="2"></option>
+              <option id="pl4cat3" value="3"></option>
+              <option id="pl4cat4" value="4"></option>
+              <option id="pl4cat5" value="5"></option>
+            </select>
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END OF GRID ITEM 4 -->
+    <!-- GRID ITEM 5 -->
+    <div class="grid-item">
+      <h4>Falmer Warmonger</h4>
+      <img src="../imgs/enemies_icons/falmer_warmonger.jpg" style="margin:10px; border:5px solid white;">
+      <div class="card1">
+        <img src="../imgs/card_layout.png" alt="card" style="width: 200%; position: relative;left:60%;">
+        <h2 id="pl5name" style="text-align:center; position:absolute;top:45%;left:70%;">Paarthurnax</h2>
+        <img class="img_hero" style="width:150%;left:90%;z-index:100;" src="../imgs/hero1.gif" alt="dragonight">
+        <div id="category_select5" class=" skill_select">
+          <form accept-charset="utf-8">
+            <select class="dropdown1" name="Number" style="left:90%;position:relative">
+              <option id="pl5cat1" value="1"></option>
+              <option id="pl5cat2" value="2"></option>
+              <option id="pl5cat3" value="3"></option>
+              <option id="pl5cat4" value="4"></option>
+              <option id="pl5cat5" value="5"></option>
+            </select>
+            <!-- <br><br><input class="w3-button w3-black" type="submit" onclick="skill_select.style.display='none'; this.style.display = 'none';" style="top:60%; left:100%; position:absolute;" value="Attack!"> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END OF GRID ITEM 5 -->
+    <!-- <button id="mybutt" class="btn1" type="button">Strength 2</button> -->
+  </div>
+
+  <div class="grid-container2">
+    <!-- HERE GOES THE STATS -->
+    <div class="grid-item">
+      <h3 id="round-counter" >ROUND 3</h3><br/>
+      <h4 id="whose-turn">Player turn</h4>
+      <h4 id="card-counter">Number of cards in deck: 10</h4>
+      <h4 id="common-pile" >Number of cards in common pile: 32</h4>
+    </div>
+    <!-- HERE ENDS THE STATS -->
+    <div class="grid-item">
+      <!-- <a class="w3-button w3-black" href="/toptrumps/">Quit Game</a> -->
+      <input class="w3-button w3-black" type="submit" value="Next round"><br>
+    </div>
+  </div>
+
+  <script>
+  function initalize(){
+    alert("Four opponents remaining!");
+  }
+  </script>
+
+
+</body>
+
+</html>
