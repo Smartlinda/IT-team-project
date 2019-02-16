@@ -1,24 +1,23 @@
 package commandline;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /*
  * The Model class is responsible for reading in StarCitizenDeck.txt and storing the Cards in the deck 'cardCon'.
- * ****THE FILE PATH MUST BE CHANGED FOR RUNNING IN THE COMMANDLINE OR FOR MACS****
  */
 
 public class Model {
 
 	// Variables.
+	InputStream in = getClass().getResourceAsStream("SkyrimCards.txt");
+	InputStreamReader isr = new InputStreamReader(in);
+
 	// private String filePath =
 	// "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
+	
 	//private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt";
-	private String filePath = System.getProperty("user.dir") + "\\SkyrimCards.txt";
+	//private String filePath = System.getProperty("user.dir") + "\\SkyrimCards.txt";
 
 	protected String[] cardHeader = new String[6];
 	private String[] row;
@@ -50,7 +49,7 @@ public class Model {
 	// Methods.
 	public void readContent() {
 		try {
-			BufferedReader brd = new BufferedReader(new FileReader(filePath));
+			BufferedReader brd = new BufferedReader(isr);
 			String head = brd.readLine(); // Read in the first line.
 			cardHeader = head.split(" ");
 			while (brd.ready()) {

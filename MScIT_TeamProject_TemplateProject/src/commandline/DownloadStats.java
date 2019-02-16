@@ -12,7 +12,6 @@ import java.sql.Statement;
  * ****THE LOGIN DETAILS MUST BE CHANGED FOR YOUR SPECIFIC DATABASE****
  */
 
-
 public class DownloadStats {
 
 	// Variables.
