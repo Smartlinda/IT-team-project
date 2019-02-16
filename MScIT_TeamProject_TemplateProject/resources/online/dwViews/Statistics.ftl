@@ -15,7 +15,7 @@
 
 	<script src="../assets/js/jquery-2.1.1.js"></script>
 	<script src="../assets/js/jquery-ui.js"></script>
-	<script src="../assets/js/vex.combined.min.js"></script>
+	<script src="../assets/s/vex.combined.min.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
 
@@ -67,7 +67,7 @@
 			</tbody>
 		</table>
 
-	<img src="../assets/imgs/background.JPG" alt="background image">
+		<img class="bg_img" src="../assets/imgs/background.jpg" alt="background image">
 	</div>
 
 	<script type="text/javascript">
