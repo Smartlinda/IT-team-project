@@ -167,7 +167,7 @@
 				var responseText = xhr.response; // the text of the response
 				//alert(responseText);
 				getTopCards();
-				//setTimeout(setPlayerTurn, 1500, responseText);
+				//setPlayerTurn(responseText);
 			}
 		}
 
