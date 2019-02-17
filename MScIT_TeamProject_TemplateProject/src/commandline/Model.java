@@ -1,15 +1,10 @@
 package commandline;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /*
  * The Model class is responsible for reading in StarCitizenDeck.txt and storing the Cards in the deck 'cardCon'.
- * ****THE FILE PATH MUST BE CHANGED FOR RUNNING IN THE COMMANDLINE OR FOR MACS****
  */
 
 public class Model {
@@ -17,6 +12,7 @@ public class Model {
 	// Variables.
 	// private String filePath =
 	// "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
+	
 	//private String filePath = System.getProperty("user.dir") + "\\StarCitizenDeck.txt";
 	private String filePath = System.getProperty("user.dir") + "\\SkyrimCards.txt";
 

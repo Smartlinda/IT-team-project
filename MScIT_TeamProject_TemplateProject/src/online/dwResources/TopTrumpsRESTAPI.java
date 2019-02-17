@@ -135,9 +135,9 @@ public class TopTrumpsRESTAPI {
 		Random rand = new Random();
 		roundWinner = rand.nextInt(ctrl.getUserArray().length);
 
-		for (int i = 0; i < ctrl.getUserArray().length; i++) {
-			System.out.println(ctrl.getUserArray()[i]);
-		}
+//		for (int i = 0; i < ctrl.getUserArray().length; i++) {
+//			System.out.println(ctrl.getUserArray()[i]);
+//		}
 
 		current[1] = gameStates[1];
 
@@ -183,7 +183,7 @@ public class TopTrumpsRESTAPI {
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-		System.out.println(card);
+//		System.out.println(card);
 		return card;
 	}
 

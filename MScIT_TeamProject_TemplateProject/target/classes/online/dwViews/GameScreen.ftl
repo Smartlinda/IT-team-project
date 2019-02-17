@@ -15,12 +15,12 @@
 	<link rel="stylesheet" href="../assets/styling/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/styling/style.css">
 	<link rel="stylesheet" href="../assets/styling/w3.css">
+
 	<link rel="stylesheet" href="../assets/styling/jquery-ui.css">
 
-
 	<script src="../assets/js/jquery-2.1.1.js"></script>
-	<script src="../assets/js/jquery-ui.js"></script>
 	<script src="../assets/js/vex.combined.min.js"></script>
+	<script src="../assets/js/jquery-ui.js"></script>
 	<script src="../assets/js/bootstrap.min.js"></script>
 	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -65,6 +65,7 @@
 				<a onclick="updateURL(2); disappear(); go('../assets/html/2_AI.htm'); setupGame(2);" class="button4" style="background-color:#4e9af1" value="2">2 Enemies<br>(Hey, not too rough)</a>&nbsp;
 				<a onclick="updateURL(3); disappear(); go('../assets/html/3_AI.htm'); setupGame(3);" class="button4" style="background-color:#f1bb4e" value="3">3 Enemies<br>(Hurt me plenty)</a>&nbsp;
 				<a onclick="updateURL(4); disappear(); go('../assets/html/4_AI.htm'); setupGame(4);" class="button4" style="background-color:#f14e4e" value="4">4 Enemies<br>(Ultra-Violence)</a>
+
 			</div>
 		</div>
 	</div>
@@ -90,7 +91,7 @@
 
 	<div class="container">
 
-		<img class="bg_img" src="../assets/imgs/background.JPG" alt="background image">
+		<img class="bg_img" src="../assets/imgs/background.jpg" alt="background image">
 
 		<!-- cards! -->
 
@@ -167,7 +168,7 @@
 				var responseText = xhr.response; // the text of the response
 				//alert(responseText);
 				getTopCards();
-				//setTimeout(setPlayerTurn, 1500, responseText);
+				//setPlayerTurn(responseText);
 			}
 		}
 
