@@ -90,7 +90,7 @@
 
 	<div class="container">
 
-		<img class="bg_img" src="../assets/imgs/background.JPG" alt="background image">
+		<img class="bg_img" src="../assets/imgs/background.jpg" alt="background image">
 
 		<!-- cards! -->
 
@@ -201,7 +201,7 @@
 				var cardArray = JSON.parse(responseText);
 
 				setTimeout(setCardValues, 500, xhr.response);
-				getDrawPile();
+				//getDrawPile();
 				//alert(targetFrame.contentDocument.getElementById("pl1cat1").value);
 			}
 		}
@@ -210,6 +210,7 @@
 		//methods are directly below
 		function setCardValues(getArray) {
 			var obj = JSON.parse(getArray);
+			alert(obj[0]);
 			if (AI > 0){
 				// FOR HUMAN CARD, FILL IN STUFF
 				getCard1(obj);

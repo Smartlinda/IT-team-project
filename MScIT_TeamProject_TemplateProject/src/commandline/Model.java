@@ -10,6 +10,8 @@ import java.util.*;
 public class Model {
 
 	// Variables.
+	//InputStream in = getClass().getClassLoader().getResourceAsStream("SkyrimCards.txt");
+	//InputStreamReader isr = new InputStreamReader(in);
 	// private String filePath =
 	// "H:\\git\\IT-team-project1\\MScIT_TeamProject_TemplateProject\\StarCitizenDeck.txt";
 	
@@ -47,6 +49,7 @@ public class Model {
 	public void readContent() {
 		try {
 			BufferedReader brd = new BufferedReader(new FileReader(filePath));
+			//BufferedReader brd = new BufferedReader(isr);
 			String head = brd.readLine(); // Read in the first line.
 			cardHeader = head.split(" ");
 			while (brd.ready()) {
