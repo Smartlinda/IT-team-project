@@ -37,7 +37,7 @@
 	}
 	</script>
 	<audio id="my_audio" src="../assets/audio/bg.mp3" loop="loop"></audio>
-			<img src="../assets/imgs/background.jpg" alt="background image">
+	<img src="../assets/imgs/background.JPG" alt="background image">
 
 	<!-- Call the initalize method when the page loads -->
 	<header class="clearfix">
