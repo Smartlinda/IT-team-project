@@ -9,7 +9,7 @@ import java.sql.Statement;
 /*
  * This class creates a connection to the database and retrieves all the required statistics from it,
  * then displays the numbers in a pretty table. 
- * ****THE LOGIN DETAILS MUST BE CHANGED FOR YOUR SPECIFIC DATABASE****
+ * ****THE LOGIN IS FOR m_18_2416090c SERVER, IT CONNECTS TO THAT ONE SPECIFICALLY
  */
 
 public class DownloadStats {
@@ -52,10 +52,10 @@ public class DownloadStats {
 		try {
 
 			// Change connection details according to desired configuration.
-			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
-					"Cttbsr48P");
-//			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
-//					"2416090c");
+//			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+//					"Cttbsr48P");
+			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
+					"2416090c");
 
 			System.out.println("Connection Established.");
 			getTableStats();

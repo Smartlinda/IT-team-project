@@ -57,10 +57,10 @@ public class UploadStats {
 	public void initializeConnection() {
 		try {
 			// Change connection details according to desired configuration.
-			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
-					"Cttbsr48P");
-//						connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
-//								"2416090c");
+//			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres",
+//					"Cttbsr48P");
+			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2416090c",
+					"2416090c");
 
 			System.out.println("Connection Established.");
 		} catch (SQLException e) {
